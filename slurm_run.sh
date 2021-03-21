@@ -1,10 +1,10 @@
 #!/bin/bash
 #SBATCH -p gpu20
-#SBATCH -o /HPS/Navami/work/code/nnti/Vision-Project-Image-Segmentation/slurm-output/slurm-%j.out
+#SBATCH -o /HPS/Navami/work/code/nnti/R2U-Net/slurm-output/slurm-%j.out
 #SBATCH -t 0-04:00:00
-#SBATCH --gres gpu:2
+#SBATCH --gres gpu:1
 
-cd /HPS/Navami/work/code/nnti/Vision-Project-Image-Segmentation
+cd /HPS/Navami/work/code/nnti/R2U-Net
 #sbatch slurm_run.sh
 
 ## RUN
