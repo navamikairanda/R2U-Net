@@ -25,7 +25,6 @@ class Segnet(nn.Module):
     #define the forward pass
     x = self.vgg_model.features(x) # B, 
     output = self.vgg_model.avgpool(x) # B, 512, 512, 7
-    output_zero = torch.zeros([4, 21, 512, 512], requires_grad=True) #always background
     score = self.bn1(self.relu(self.deconv1(x)))     # size=(N, 512, x.H/16, x.W/16)
     score = self.bn2(self.relu(self.deconv2(score)))  # size=(N, 256, x.H/8, x.W/8)
     score = self.bn3(self.relu(self.deconv3(score)))  # size=(N, 128, x.H/4, x.W/4)

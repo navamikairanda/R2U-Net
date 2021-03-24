@@ -6,3 +6,9 @@ conda install -c conda-forge imageio tqdm
 conda install pytorch-lightning -c conda-forge
 
 mkdir data
+
+git clone https://github.com/mcordts/cityscapesScripts.git
+pip install cityscapesScripts
+CITYSCAPES_DATASET_PATH=/HPS/Navami/work/code/nnti/R2U-Net/cityscapes/
+export CITYSCAPES_DATASET=$CITYSCAPES_DATASET_PATH
+python cityscapesScripts/cityscapesscripts/preparation/createTrainIdLabelImgs.py

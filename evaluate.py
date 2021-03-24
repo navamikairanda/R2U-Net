@@ -1,7 +1,11 @@
 from os.path import join as pjoin
+import torch
+import numpy as np
 from pytorch_lightning import metrics
 
-def setup_metrics():
+device = torch.device("cuda")#TODO move to util
+
+def setup_metrics(n_classes):
     auroc = metrics.AUROC(num_classes=n_classes).to(device)
     f1 = metrics.F1(num_classes=n_classes).to(device)
     iou = metrics.IoU(num_classes=n_classes).to(device)
@@ -15,7 +19,7 @@ def setup_metrics():
                     }
     return eval_metrics
                     
-def evaluate(epoch, dataloader, eval_metrics): 
+def evaluate(epoch, dataloader, model, eval_metrics): 
     #st = time.time()
     model.eval()
     with torch.no_grad():
@@ -86,7 +90,7 @@ def image_grid(images, rows=None, cols=None, fill=True, show_axes=False):
 
 
 # TODO - plot for test images      
-def visualize(epoch, dst, image_ids, rows, cols):
+def visualize(epoch, dst, model, image_ids, rows, cols):
     images_vis = []
     for image_id in image_ids: 
         image, label = dst[image_id][0], dst[image_id][1]

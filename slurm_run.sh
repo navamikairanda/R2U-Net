@@ -13,5 +13,6 @@ eval "$(conda shell.bash hook)"
 # Activate a conda environment:
 conda activate nnti
 
-python -u task_1.py logs/expt1
+#python -u task_1.py logs/expt1
+python -u train.py logs/expt1
 
