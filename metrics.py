@@ -1,10 +1,9 @@
-from os.path import join as pjoin
 import torch
 import torch.nn as nn
 from pytorch_lightning import metrics
+import matplotlib.pyplot as plt
+import os
 import pdb
-
-#device = torch.device("cuda")#TODO move to util
 
 class Metrics():
     def __init__(self, n_classes, dataloader, device, expt_logdir):
@@ -46,7 +45,7 @@ class Metrics():
                                     for key in self.eval_metrics)
         print("Training epoch: {}, Eval metrics - ".format(epoch) + metrics_string) 
 
-    def plot(epoch, ): 
+    def plot(self, epoch): 
         fig = plt.figure(figsize=(13, 5))
         ax = fig.gca()
         #pdb.set_trace()
@@ -57,5 +56,5 @@ class Metrics():
         ax.set_xlabel("Epochs", fontsize="16")
         ax.set_ylabel("Metric", fontsize="16")
         ax.set_title("Evaluation metric vs epochs", fontsize="16")
-        plt.savefig(pjoin(expt_logdir, 'metric_{}_{}.png'.format('train', epoch)))
+        plt.savefig(os.path.join(self.expt_logdir, 'metric_{}_{}.png'.format('train', epoch)))
     

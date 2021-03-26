@@ -1,12 +1,13 @@
 import torch
 #from torchvision import datasets
-from dataset import Cityscapes
+
 import torchvision.transforms as transforms
 import pdb
 import numpy as np
-from collections import namedtuple
 
-ignoreClassId = 19
+from dataset import Cityscapes
+from dataset import ignoreClassId
+
 img_size = 256
 
 def targetToTensor(target):

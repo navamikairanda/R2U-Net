@@ -6,7 +6,9 @@ from typing import Any, Callable, Dict, List, Optional, Union, Tuple
 from torchvision.datasets.utils import extract_archive, verify_str_arg, iterable_to_str
 from torchvision.datasets.vision import VisionDataset
 from PIL import Image
+import numpy as np
 import pdb
+ignoreClassId = 19
 
 class Cityscapes(VisionDataset):
     """`Cityscapes <http://www.cityscapes-dataset.com/>`_ Dataset.
@@ -163,6 +165,8 @@ class Cityscapes(VisionDataset):
 
                 self.images.append(os.path.join(img_dir, file_name))
                 self.targets.append(target_types)
+        
+        self.trainId2Color = {label.train_id : label.color for label in self.classes}
 
     def __getitem__(self, index: int) -> Tuple[Any, Any]:
         """
@@ -226,28 +230,10 @@ class Cityscapes(VisionDataset):
         Returns:
             (np.ndarray, optional): the resulting decoded color image.
         """
-        # trainId to label object
-        #pdb.set_trace()
-        import numpy as np
-        label_mask = np.where(label_mask == 19, 255, label_mask)
-        #trainId2label = { label.train_id : label for label in reversed(self.classes) }
-        trainId2Color = { label.train_id : label.color for label in self.classes }
-        #trainId = 0
-        #color = trainId2label[trainId].color
-        r = label_mask.copy()
-        g = label_mask.copy()
-        b = label_mask.copy()
-        #len(self.classes)
-        #for ll in range(0, 20):
-        for ll in trainId2Color.keys():
-            #rgb[trainId] = trainId2label[label_mask].color
-            #rgb[] = trainId2Color[label_mask==ll]
-            r[label_mask == ll] = trainId2Color[ll][0]
-            g[label_mask == ll] = trainId2Color[ll][1]
-            b[label_mask == ll] = trainId2Color[ll][2]
-        rgb = np.zeros((label_mask.shape[0], label_mask.shape[1], 3))
-        rgb[:, :, 0] = r #/ 255.0
-        rgb[:, :, 1] = g #/ 255.0
-        rgb[:, :, 2] = b #/ 255.0
-        #pdb.set_trace()
+        rgb = np.zeros((label_mask.shape[0], label_mask.shape[1], 3)) 
+        for trainId, color in self.trainId2Color.items():
+            if trainId == 255:
+                trainId = ignoreClassId
+            rgb[label_mask == trainId] = color
+        rgb = rgb /255.0
         return rgb

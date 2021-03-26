@@ -1,7 +1,7 @@
 import torch
 import numpy as np
 import matplotlib.pyplot as plt
-from os.path import join as pjoin
+import os
 import pdb
  
  
@@ -70,4 +70,4 @@ def visualize(epoch, dst, model, image_ids, rows, cols, expt_logdir): #TODO make
     
     images_vis = np.concatenate(images_vis, axis=0)
     image_grid(images_vis, rows=rows, cols=3*cols) 
-    plt.savefig(pjoin(expt_logdir, 'seg_{}_{}.png'.format(dst.split, epoch)))
+    plt.savefig(os.path.join(expt_logdir, 'seg_{}_{}.png'.format(dst.split, epoch)))
