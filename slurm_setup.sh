@@ -1,12 +1,10 @@
-wget http://host.robots.ox.ac.uk/pascal/VOC/voc2012/VOCtrainval_11-May-2012.tar
-tar -xvf VOCtrainval_11-May-2012.tar
+# Python modules remain same as task 1
 
-pip install scipy==1.1.0
-conda install -c conda-forge imageio tqdm
-conda install pytorch-lightning -c conda-forge
+# Dataset preparation
+# Download and unzip gtFine_trainvaltest.zip (241MB) and leftImg8bit_trainvaltest.zip (11GB) from cityscapes site
+https://www.cityscapes-dataset.com/downloads/
 
-mkdir data
-
+# Generate trainId labels for the dataset, using the scripts provided by Cityscape authors https://github.com/mcordts/cityscapesScripts 
 git clone https://github.com/mcordts/cityscapesScripts.git
 pip install cityscapesScripts
 CITYSCAPES_DATASET_PATH=/HPS/Navami/work/code/nnti/R2U-Net/cityscapes/

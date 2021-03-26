@@ -23,13 +23,13 @@ n_classes = 20
 img_size = 224 
 
 # Training parameters
-epochs = 1 #use 200 
+epochs = 50 #use 200 
 lr = 0.001
 #TODO weight decay, plot results for validation data
 
 # Logging options
-i_save = 1#save model after every i_save epochs
-i_vis = 1
+i_save = 50#save model after every i_save epochs
+i_vis = 5
 rows, cols = 5, 2 #Show 10 images in the dataset along with target and predicted masks
 
 device = torch.device("cuda")# if torch.cuda.is_available() else "cpu")
@@ -52,10 +52,10 @@ train_metrics = Metrics(n_classes, trainloader, device, expt_logdir)
 #TODO random seed
 image_ids = np.random.randint(len(train_dst), size=rows*cols)
 epoch = -1
-#train_metrics.evaluate(epoch, model)
-#train_metrics.plot(epoch, losses)
-visualize(epoch, train_dst, model, image_ids, rows, cols, expt_logdir)
+train_metrics.evaluate(epoch, model)
 train_metrics.plot(epoch)
+visualize(epoch, train_dst, model, image_ids, rows, cols, expt_logdir)
+
 
 losses = []
 for epoch in range(epochs):
@@ -65,7 +65,6 @@ for epoch in range(epochs):
         opt.zero_grad()
         inputs = inputs.to(device)
         labels = labels.to(device)
-        #pdb.set_trace()
         predictions = model(inputs)
         loss = loss_f(predictions, labels)
         loss.backward()
@@ -75,7 +74,7 @@ for epoch in range(epochs):
     print("Training epoch: {}, loss: {}, time elapsed: {},".format(epoch, loss, time.time() - st))
     
     train_metrics.evaluate(epoch, model)
-    if epoch % i_save == 0:
+    if (epoch + 1) % i_save == 0:
         torch.save(model.state_dict(), os.path.join(expt_logdir, "{}.tar".format(epoch)))
     if epoch % i_vis == 0:
         train_metrics.plot(epoch) #TODO plot losses
