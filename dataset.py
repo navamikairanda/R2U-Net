@@ -6,6 +6,7 @@ from typing import Any, Callable, Dict, List, Optional, Union, Tuple
 from torchvision.datasets.utils import extract_archive, verify_str_arg, iterable_to_str
 from torchvision.datasets.vision import VisionDataset
 from PIL import Image
+import pdb
 
 class Cityscapes(VisionDataset):
     """`Cityscapes <http://www.cityscapes-dataset.com/>`_ Dataset.
@@ -115,7 +116,6 @@ class Cityscapes(VisionDataset):
         self.split = split
         self.images = []
         self.targets = []
-
         verify_str_arg(mode, "mode", ("fine", "coarse"))
         if mode == "fine":
             valid_modes = ("train", "test", "val")
@@ -215,3 +215,39 @@ class Cityscapes(VisionDataset):
             return '{}_color.png'.format(mode)
         else:
             return '{}_polygons.json'.format(mode)
+    
+    def decode_segmap(self, label_mask):
+        """Decode segmentation class labels into a color image
+
+        Args:
+            label_mask (np.ndarray): an (M,N) array of integer values denoting
+              the class label at each spatial location.
+
+        Returns:
+            (np.ndarray, optional): the resulting decoded color image.
+        """
+        # trainId to label object
+        #pdb.set_trace()
+        import numpy as np
+        label_mask = np.where(label_mask == 19, 255, label_mask)
+        #trainId2label = { label.train_id : label for label in reversed(self.classes) }
+        trainId2Color = { label.train_id : label.color for label in self.classes }
+        #trainId = 0
+        #color = trainId2label[trainId].color
+        r = label_mask.copy()
+        g = label_mask.copy()
+        b = label_mask.copy()
+        #len(self.classes)
+        #for ll in range(0, 20):
+        for ll in trainId2Color.keys():
+            #rgb[trainId] = trainId2label[label_mask].color
+            #rgb[] = trainId2Color[label_mask==ll]
+            r[label_mask == ll] = trainId2Color[ll][0]
+            g[label_mask == ll] = trainId2Color[ll][1]
+            b[label_mask == ll] = trainId2Color[ll][2]
+        rgb = np.zeros((label_mask.shape[0], label_mask.shape[1], 3))
+        rgb[:, :, 0] = r #/ 255.0
+        rgb[:, :, 1] = g #/ 255.0
+        rgb[:, :, 2] = b #/ 255.0
+        #pdb.set_trace()
+        return rgb

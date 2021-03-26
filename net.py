@@ -32,5 +32,3 @@ class Segnet(nn.Module):
     score = self.bn5(self.relu(self.deconv5(score)))  # size=(N, 32, x.H, x.W)
     score = self.classifier(score)                    # size=(N, n_classes, x.H/1, x.W/1)
     return score  # size=(N, n_class, x.H/1, x.W/1)
-
-#model = Segnet(21)#.to(device)

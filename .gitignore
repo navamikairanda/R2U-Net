@@ -1,2 +1,4 @@
 slurm-output/*
 logs/*
+cityscapes/*
+__pycache__/*

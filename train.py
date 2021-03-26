@@ -3,21 +3,28 @@ import torch.nn as nn
 import torch.optim as optim
 import numpy as np
 from os.path import join as pjoin
-from net import Segnet
-from data import load_dataset
 import time
 import pdb
-from evaluate import setup_metrics, plot_metrics, visualize
+
+from net import Segnet
+from dataloader import load_dataset
+from metrics import Metrics#setup_metrics, plot_metrics, visualize
+from vis import visualize
+
+expt_logdir = sys.argv[1]
+os.makedirs(expt, exist_ok=True)
 
 #local_path = 'VOCdevkit/VOC2012/' # modify it according to your device
-#bs = 32 #TODO increase
-#num_workers = 8 
-n_classes = 30 #TODO change?
-img_size = 224 #'same'
-#TODO weight decay, plot results for validation data
+#Dataset parameters
+num_workers = 8
+batch_size = 16 #TODO mulit-gpu, increase
+n_classes = 20
+img_size = 224 
+
 # Training parameters
 epochs = 1 #use 200 
 lr = 0.001
+#TODO weight decay, plot results for validation data
 
 # Logging options
 i_save = 50#save model after every i_save epochs
@@ -27,25 +34,27 @@ rows, cols = 5, 2 #Show 10 images in the dataset along with target and predicted
 device = torch.device("cuda")# if torch.cuda.is_available() else "cpu")
 num_gpu = list(range(torch.cuda.device_count()))  
 
-trainloader, train_dst = load_dataset()
+trainloader, train_dst = load_dataset(batch_size, num_workers)
 
-# Creating an instance of the model defined above. 
-# You can modify it incase you need to pass paratemers to the constructor.
+# Creating an instance of the model defined in net.py 
 #model = Segnet().to(device)
 model = nn.DataParallel(Segnet(n_classes), device_ids=num_gpu).to(device)
+
 # loss function
-loss_f = nn.CrossEntropyLoss() 
+loss_f = nn.CrossEntropyLoss(ignore_index=19) #TODO s ignore_index required?
 softmax = nn.Softmax(dim=1)
 
 # optimizer variable
 opt = optim.Adam(model.parameters(), lr=lr) #Try SGD like in paper.. 
 
-train_metrics = setup_metrics(n_classes)
-#image_ids = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+train_metrics = Metrics(n_classes, trainloader, device)
+#TODO random seed
 image_ids = np.random.randint(len(train_dst), size=rows*cols)
-#epoch = -1
-#evaluate(epoch, trainloader, train_metrics)
-#visualize(epoch, train_dst, image_ids)
+epoch = -1
+#train_metrics.evaluate(epoch, model)
+#train_metrics.plot(epoch, losses)
+visualize(epoch, train_dst, model, image_ids, rows, cols)
+train_metrics.plot(epoch)
 
 losses = []
 for epoch in range(epochs):
@@ -60,14 +69,14 @@ for epoch in range(epochs):
         loss = loss_f(predictions, labels)
         loss.backward()
         opt.step()
-        print("Finish iter {}, loss {}".format(i, loss.data))
+        print("Finish iter: {}, loss {}".format(i, loss.data))
     losses.append(loss)
     print("Training epoch: {}, loss: {}, time elapsed: {},".format(epoch, loss, time.time() - st))
     
-    evaluate(epoch, trainloader, model, train_metrics)
+    train_metrics.evaluate(epoch, model)
     if epoch % i_save == 0:
         torch.save(model.state_dict(), pjoin(expt, "{}.tar".format(epoch)))
     if epoch % i_vis == 0:
-        plot_metrics(epoch, train_metrics, losses)
+        train_metrics.plot(epoch, losses)
         visualize(epoch, train_dst, model, image_ids, rows, cols)
 
