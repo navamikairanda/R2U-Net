@@ -24,7 +24,7 @@ class Metrics():
         self.expt_logdir = expt_logdir
         self.split = split
         
-    def evaluate(self, epoch, model): 
+    def compute(self, epoch, model): 
         #st = time.time()
         model.eval()
         with torch.no_grad():
@@ -44,7 +44,7 @@ class Metrics():
                 self.eval_metrics[key]['module'].reset()
         metrics_string = " ; ".join("{}: {:05.3f}".format(key, self.eval_metrics[key]['values'][-1])
                                     for key in self.eval_metrics)
-        print("Training epoch: {}, Eval metrics - ".format(epoch) + metrics_string) 
+        print("Split: {}, epoch: {}, metrics: ".format(self.split, epoch) + metrics_string) 
 
     def plot(self, epoch): 
         fig = plt.figure(figsize=(13, 5))
