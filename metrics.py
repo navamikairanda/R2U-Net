@@ -5,19 +5,36 @@ import matplotlib.pyplot as plt
 import os
 import pdb
 
+class Dice(metrics.Metric): 
+    
+    def __init__(self): 
+        super().__init__()
+        self.add_state("dice_score", default=[])
+    
+    def update(self, pred, target):
+        dice_score_val = metrics.functional.classification.dice_score(pred, target, bg=True)
+        self.dice_score.append(dice_score_val.item())
+    
+    def compute(self):
+        self.dice_score = torch.tensor(self.dice_score)
+        return torch.mean(self.dice_score)
+
+    
 class Metrics():
     def __init__(self, n_classes, dataloader, split, device, expt_logdir):
         self.dataloader = dataloader
         self.device = device
+        #TODO, ROC-curve, Accuracy, AUC, SE, SP, IOU, F1, Dice
         accuracy = metrics.Accuracy().to(self.device) #TODO ignore_index doesn't work ignore_index=255
-        #auroc = metrics.AUROC(num_classes=n_classes, ignore_index=255).to(self.device)
-        #f1 = metrics.F1(num_classes=n_classes, ignore_index=255).to(self.device)
+        dice = Dice().to(self.device)
+        #auroc = metrics.AUROC(num_classes=n_classes).to(self.device)
+
         iou = metrics.IoU(num_classes=n_classes).to(self.device)
            
         #maintain all metrics required in this dictionary- these are used in the training and evaluation loops
         self.eval_metrics = {'accuracy': {'module': accuracy, 'values': []}, 
-                        #'f1': {'module': f1, 'values': []}, #TODO, results are exactly same as accuracy, why? 
-                        'iou': {'module': iou, 'values': []}
+                        'iou': {'module': iou, 'values': []}, 
+                        'dice': {'module': dice, 'values': []}
                         #'auroc':{'module': auroc, 'values': []}
                         }
         self.softmax = nn.Softmax(dim=1)
@@ -33,9 +50,9 @@ class Metrics():
                 labels = labels.to(self.device) #N, H, W
                 #mask = (labels != self.255)
                 #labels = labels[mask]
-                #pdb.set_trace()
                 predictions = model(inputs) #N, C, H, W
                 predictions = self.softmax(predictions)
+
                 for key in self.eval_metrics: 
                     self.eval_metrics[key]['module'].update(predictions, labels)
             for key in self.eval_metrics: 
@@ -49,13 +66,12 @@ class Metrics():
     def plot(self, epoch): 
         fig = plt.figure(figsize=(13, 5))
         ax = fig.gca()
-        #pdb.set_trace()
         for k, l in self.eval_metrics.items():
             ax.plot(l['values'], label=k)
-        #ax.plot(losses, label='loss')
         ax.legend(fontsize="16")
         ax.set_xlabel("Epochs", fontsize="16")
         ax.set_ylabel("Metric", fontsize="16")
         ax.set_title("Evaluation metric vs epochs", fontsize="16")
         plt.savefig(os.path.join(self.expt_logdir, 'metric_{}_{}.png'.format(self.split, epoch)))
+        plt.clf()
     

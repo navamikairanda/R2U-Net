@@ -5,7 +5,7 @@
 #SBATCH --gres gpu:2
 
 cd /HPS/Navami/work/code/nnti/R2U-Net
-#sbatch slurm_run.sh
+#sbatch scripts/slurm_run.sh
 
 ## RUN
 # Make conda available:
@@ -13,4 +13,4 @@ eval "$(conda shell.bash hook)"
 # Activate a conda environment:
 conda activate nnti
 
-python -u train.py logs/expt1
+python -u main.py logs/expt2

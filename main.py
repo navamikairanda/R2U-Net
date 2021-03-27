@@ -61,16 +61,14 @@ train_metrics = Metrics(n_classes, trainloader, 'train', device, expt_logdir)
 test_metrics = Metrics(n_classes, testloader, test_split, device, expt_logdir)
 
 epoch = -1
-'''
 train_vis.visualize(epoch, model)
 train_metrics.compute(epoch, model)
-'''
-st = time.time()
+#st = time.time()
 test_vis.visualize(epoch, model)
-et = time.time()
-print("Visualize time: {}".format(et - st))
+#et = time.time()
+#print("Visualize time: {}".format(et - st))
 test_metrics.compute(epoch, model)
-print("Metric evaluation time: {}".format(time.time() - et))
+#print("Metric evaluation time: {}".format(time.time() - et))
 
 
 losses = []
