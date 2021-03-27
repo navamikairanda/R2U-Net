@@ -6,7 +6,7 @@ import os
 import pdb
 
 class Metrics():
-    def __init__(self, n_classes, dataloader, device, expt_logdir):
+    def __init__(self, n_classes, dataloader, split, device, expt_logdir):
         self.dataloader = dataloader
         self.device = device
         accuracy = metrics.Accuracy().to(self.device) #TODO ignore_index doesn't work ignore_index=255
@@ -22,6 +22,7 @@ class Metrics():
                         }
         self.softmax = nn.Softmax(dim=1)
         self.expt_logdir = expt_logdir
+        self.split = split
         
     def evaluate(self, epoch, model): 
         #st = time.time()
@@ -56,5 +57,5 @@ class Metrics():
         ax.set_xlabel("Epochs", fontsize="16")
         ax.set_ylabel("Metric", fontsize="16")
         ax.set_title("Evaluation metric vs epochs", fontsize="16")
-        plt.savefig(os.path.join(self.expt_logdir, 'metric_{}_{}.png'.format('train', epoch)))
+        plt.savefig(os.path.join(self.expt_logdir, 'metric_{}_{}.png'.format(self.split, epoch)))
     
