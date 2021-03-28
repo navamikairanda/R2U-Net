@@ -17,10 +17,9 @@ from vis import Vis
 expt_logdir = sys.argv[1]
 os.makedirs(expt_logdir, exist_ok=True)
 
-#local_path = 'VOCdevkit/VOC2012/' # modify it according to your device
 #Dataset parameters
 num_workers = 8
-batch_size = 32 #TODO mulit-gpu, increase
+batch_size = 8 #TODO mulit-gpu, increase
 n_classes = 20
 img_size = 224 
 test_split = 'val'
@@ -61,14 +60,17 @@ train_metrics = Metrics(n_classes, trainloader, 'train', device, expt_logdir)
 test_metrics = Metrics(n_classes, testloader, test_split, device, expt_logdir)
 
 epoch = -1
-train_vis.visualize(epoch, model)
+'''
 train_metrics.compute(epoch, model)
-#et = time.time()
-#print("Visualize time: {}".format(et - st))
-test_metrics.compute(epoch, model)
-test_metrics.plot_roc(epoch) 
-#print("Metric evaluation time: {}".format(time.time() - et))
+train_metrics.plot_scalar_metrics(epoch)
+train_metrics.plot_roc(epoch) 
+'''
+train_vis.visualize(epoch, model)
 
+test_metrics.compute(epoch, model)
+test_metrics.plot_scalar_metrics(epoch)
+test_metrics.plot_roc(epoch) 
+test_vis.visualize(epoch, model)
 
 losses = []
 for epoch in range(epochs):
@@ -87,16 +89,19 @@ for epoch in range(epochs):
     losses.append(loss)
     print("Training epoch: {}, loss: {}, time elapsed: {},".format(epoch, loss, time.time() - st))
     
-    train_metrics.compute(epoch, model)
+    #train_metrics.compute(epoch, model)
     test_metrics.compute(epoch, model)
     
     if epoch % i_save == 0:
         torch.save(model.state_dict(), os.path.join(expt_logdir, "{}.tar".format(epoch)))
     if epoch % i_vis == 0:
-        train_metrics.plot(epoch) #TODO plot losses
-        test_metrics.plot_roc(epoch) 
+        '''
+        train_metrics.plot_scalar_metrics(epoch) 
+        train_metrics.plot_roc(epoch) 
         train_vis.visualize(epoch, model)
+        '''        
+        train_metrics.plot_loss(epoch, losses) 
         
-        test_metrics.plot(epoch) 
+        test_metrics.plot_scalar_metrics(epoch) 
         test_metrics.plot_roc(epoch) 
         test_vis.visualize(epoch, model)

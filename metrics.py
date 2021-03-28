@@ -1,6 +1,7 @@
 import torch
 import torch.nn as nn
 from pytorch_lightning import metrics
+from pytorch_lightning.metrics.functional import auc
 import matplotlib.pyplot as plt
 import os
 import pdb
@@ -28,23 +29,26 @@ class Metrics():
         accuracy = metrics.Accuracy().to(self.device) 
         iou = metrics.IoU(num_classes=n_classes).to(self.device)
         dice = Dice().to(self.device)
-        roc = metrics.ROC(num_classes=n_classes).to(self.device)
-        #auroc = metrics.AUROC(num_classes=n_classes).to(self.device)
+        roc = metrics.ROC(num_classes=n_classes,dist_sync_on_step=True).to(self.device)
         
-        #maintain all metrics required in this dictionary- these are used in the training and evaluation loops
         self.eval_metrics = {'accuracy': {'module': accuracy, 'values': []}, 
                         'iou': {'module': iou, 'values': []}, 
                         'dice': {'module': dice, 'values': []},
-                        'roc': {'module': roc, 'values': []}
-                        #'auroc':{'module': auroc, 'values': []}
+                        'auroc': {'module': roc, 'values': []}
                         }
         self.softmax = nn.Softmax(dim=1)
         self.expt_logdir = expt_logdir
         self.split = split
+    
+    def compute_auroc(self, value): 
+        self.fpr, self.tpr, _ = value
+        #auc_scores = [auc(x, y, reorder=True) for x, y in zip(self.fpr, self.tpr)]
+        auc_scores = [torch.trapz(y, x) for x, y in zip(self.fpr, self.tpr)]
+        #TODO average over all classes
+        return torch.mean(torch.stack(auc_scores))
         
     def compute(self, epoch, model): 
         model.eval()
-        metrics_string = ''
         with torch.no_grad():
             for i, (inputs, labels) in enumerate(self.dataloader):
                 inputs = inputs.to(self.device)#N, H, W
@@ -58,21 +62,18 @@ class Metrics():
                     
             for key in self.eval_metrics: 
                 value = self.eval_metrics[key]['module'].compute()
-                if key == 'roc':
-                    self.eval_metrics[key]['values'] = value
-                else: 
-                    self.eval_metrics[key]['values'].append(value.item())
-                    metrics_string += "{}: {:05.3f}, ".format(key, value.item())
+                if key == 'auroc':
+                    value = self.compute_auroc(value)
+                self.eval_metrics[key]['values'].append(value.item())
                 self.eval_metrics[key]['module'].reset()
                 
+        metrics_string = " ; ".join("{}: {:05.3f}".format(key, self.eval_metrics[key]['values'][-1]) for key in self.eval_metrics)
         print("Split: {}, epoch: {}, metrics: ".format(self.split, epoch) + metrics_string) 
 
-    def plot(self, epoch): 
+    def plot_scalar_metrics(self, epoch): 
         fig = plt.figure(figsize=(13, 5))
         ax = fig.gca()
         for key, metric in self.eval_metrics.items():
-            if key == 'roc':
-                continue
             ax.plot(metric['values'], label=key)
         ax.legend(fontsize="16")
         ax.set_xlabel("Epochs", fontsize="16")
@@ -84,12 +85,21 @@ class Metrics():
     def plot_roc(self, epoch): 
         fig = plt.figure(figsize=(13, 5))
         ax = fig.gca()
-        fpr, tpr, thresholds = self.eval_metrics['roc']['values']
-        for x, y in zip(fpr, tpr):
+        for x, y in zip(self.fpr, self.tpr):
             ax.plot(x.cpu().numpy(), y.cpu().numpy())   
         ax.set_xlabel("FPR (False Positive Rate)", fontsize="16")
         ax.set_ylabel("TPR (True Positive Rate)", fontsize="16")
         ax.set_title("ROC Curve", fontsize="16")
         plt.savefig(os.path.join(self.expt_logdir, 'roc_{}_{}.png'.format(self.split, epoch)))
+        plt.clf()
+        
+    def plot_loss(self, epoch, losses): 
+        fig = plt.figure(figsize=(13, 5))
+        ax = fig.gca()
+        ax.plot(losses)   
+        ax.set_xlabel("Epochs", fontsize="16")
+        ax.set_ylabel("Loss", fontsize="16")
+        ax.set_title("Training loss vs. epochs", fontsize="16")
+        plt.savefig(os.path.join(self.expt_logdir, 'loss_{}.png'.format(epoch)))
         plt.clf()
     
