@@ -63,11 +63,10 @@ test_metrics = Metrics(n_classes, testloader, test_split, device, expt_logdir)
 epoch = -1
 train_vis.visualize(epoch, model)
 train_metrics.compute(epoch, model)
-#st = time.time()
-test_vis.visualize(epoch, model)
 #et = time.time()
 #print("Visualize time: {}".format(et - st))
 test_metrics.compute(epoch, model)
+test_metrics.plot_roc(epoch) 
 #print("Metric evaluation time: {}".format(time.time() - et))
 
 
@@ -95,6 +94,9 @@ for epoch in range(epochs):
         torch.save(model.state_dict(), os.path.join(expt_logdir, "{}.tar".format(epoch)))
     if epoch % i_vis == 0:
         train_metrics.plot(epoch) #TODO plot losses
+        test_metrics.plot_roc(epoch) 
         train_vis.visualize(epoch, model)
+        
         test_metrics.plot(epoch) 
+        test_metrics.plot_roc(epoch) 
         test_vis.visualize(epoch, model)
