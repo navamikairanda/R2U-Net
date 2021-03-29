@@ -58,6 +58,10 @@ class Metrics():
                 predictions = self.softmax(predictions)
 
                 for key in self.eval_metrics: 
+                    #Evaluate AUC/ROC on subset of the training data, otherwise leads to OOM errors on GPU
+                    #Full evaluation on validation/test data
+                    if key == 'auroc' and i > 20: 
+                        continue
                     self.eval_metrics[key]['module'].update(predictions, labels)
                     
             for key in self.eval_metrics: 
@@ -85,8 +89,11 @@ class Metrics():
     def plot_roc(self, epoch): 
         fig = plt.figure(figsize=(13, 5))
         ax = fig.gca()
-        for x, y in zip(self.fpr, self.tpr):
-            ax.plot(x.cpu().numpy(), y.cpu().numpy())   
+        trainId2Name = self.dataloader.dataset.trainId2Name
+        for class_idx, (x, y) in enumerate(zip(self.fpr, self.tpr)):
+            class_idx = 255 if class_idx == 19 else class_idx
+            ax.plot(x.cpu().numpy(), y.cpu().numpy(), label=trainId2Name[class_idx])
+        ax.legend(fontsize="8", ncol=2, loc='lower right')
         ax.set_xlabel("FPR (False Positive Rate)", fontsize="16")
         ax.set_ylabel("TPR (True Positive Rate)", fontsize="16")
         ax.set_title("ROC Curve", fontsize="16")

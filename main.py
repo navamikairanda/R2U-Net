@@ -10,16 +10,20 @@ import os
 
 from fcn import Segnet
 from r2unet import U_Net, R2U_Net
+#from deeplabv3_torchvision import DeepLabHead
+from deeplabv3 import DeepLabV3
 from dataloader import load_dataset
 from metrics import Metrics
 from vis import Vis
+
+from torchvision.models.segmentation.segmentation import deeplabv3_resnet50
 
 expt_logdir = sys.argv[1]
 os.makedirs(expt_logdir, exist_ok=True)
 
 #Dataset parameters
 num_workers = 8
-batch_size = 8 #TODO mulit-gpu, increase
+batch_size = 16 
 n_classes = 20
 img_size = 224 
 test_split = 'val'
@@ -42,8 +46,12 @@ testloader, test_dst = load_dataset(batch_size, num_workers, split=test_split)
 
 # Creating an instance of the model defined in net.py 
 #model = nn.DataParallel(Segnet(n_classes), device_ids=num_gpu).to(device) #Fully Convolutional Networks
-model = nn.DataParallel(U_Net(img_ch=3,output_ch=n_classes), device_ids=num_gpu).to(device) #U Network
-#model = nn.DataParallel(R2U_Net(img_ch=3,output_ch=n_classes,t=2), device_ids=num_gpu).to(device) #Residual Recurrent U Network
+#model = nn.DataParallel(U_Net(img_ch=3,output_ch=n_classes), device_ids=num_gpu).to(device) #U Network
+#model = nn.DataParallel(R2U_Net(img_ch=3,output_ch=n_classes,t=2), device_ids=num_gpu).to(device) #Residual Recurrent U Network (t=2)
+#model = nn.DataParallel(R2U_Net(img_ch=3,output_ch=n_classes,t=2), device_ids=num_gpu).to(device) #Residual Recurrent U Network (t=3)
+#model = nn.DataParallel(DeepLabHead(3,n_classes), device_ids=num_gpu).to(device) #DeepLabHead
+#model = nn.DataParallel(deeplabv3_resnet50(pretrained=True, progress=True, num_classes=21, aux_loss=None)).to(device)
+model = nn.DataParallel(DeepLabV3(n_classes), device_ids=num_gpu).to(device) #DeepLabV3
 
 # loss function
 loss_f = nn.CrossEntropyLoss() #TODO s ignore_index required? ignore_index=19
@@ -64,8 +72,8 @@ epoch = -1
 train_metrics.compute(epoch, model)
 train_metrics.plot_scalar_metrics(epoch)
 train_metrics.plot_roc(epoch) 
-'''
 train_vis.visualize(epoch, model)
+'''
 
 test_metrics.compute(epoch, model)
 test_metrics.plot_scalar_metrics(epoch)
@@ -89,19 +97,21 @@ for epoch in range(epochs):
     losses.append(loss)
     print("Training epoch: {}, loss: {}, time elapsed: {},".format(epoch, loss, time.time() - st))
     
-    #train_metrics.compute(epoch, model)
+    train_metrics.compute(epoch, model)
     test_metrics.compute(epoch, model)
     
     if epoch % i_save == 0:
         torch.save(model.state_dict(), os.path.join(expt_logdir, "{}.tar".format(epoch)))
     if epoch % i_vis == 0:
-        '''
-        train_metrics.plot_scalar_metrics(epoch) 
-        train_metrics.plot_roc(epoch) 
-        train_vis.visualize(epoch, model)
-        '''        
-        train_metrics.plot_loss(epoch, losses) 
-        
         test_metrics.plot_scalar_metrics(epoch) 
         test_metrics.plot_roc(epoch) 
         test_vis.visualize(epoch, model)
+        
+        '''
+        train_metrics.plot_scalar_metrics(epoch) 
+        train_metrics.plot_roc(epoch) 
+        train_vis.visualize(epoch, model)    
+        '''
+        
+        train_metrics.plot_loss(epoch, losses) 
+        

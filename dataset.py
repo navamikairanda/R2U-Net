@@ -167,6 +167,7 @@ class Cityscapes(VisionDataset):
                 self.targets.append(target_types)
         
         self.trainId2Color = {label.train_id : label.color for label in self.classes}
+        self.trainId2Name = {label.train_id : label.name for label in self.classes}
 
     def __getitem__(self, index: int) -> Tuple[Any, Any]:
         """

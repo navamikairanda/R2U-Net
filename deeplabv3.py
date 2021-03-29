@@ -1,92 +1,77 @@
 import torch
 from torch import nn
 from torch.nn import functional as F
-
-from ._utils import _SimpleSegmentationModel
-
-
-__all__ = ["DeepLabV3"]
-
-
-class DeepLabV3(_SimpleSegmentationModel):
-    """
-    Implements DeepLabV3 model from
-    `"Rethinking Atrous Convolution for Semantic Image Segmentation"
-    <https://arxiv.org/abs/1706.05587>`_.
-    Args:
-        backbone (nn.Module): the network used to compute the features for the model.
-            The backbone should return an OrderedDict[Tensor], with the key being
-            "out" for the last feature map used, and "aux" if an auxiliary classifier
-            is used.
-        classifier (nn.Module): module that takes the "out" element returned from
-            the backbone and returns a dense prediction.
-        aux_classifier (nn.Module, optional): auxiliary classifier used during training
-    """
-    pass
-
-
-class DeepLabHead(nn.Sequential):
-    def __init__(self, in_channels, num_classes):
-        super(DeepLabHead, self).__init__(
-            ASPP(in_channels, [12, 24, 36]),
-            nn.Conv2d(256, 256, 3, padding=1, bias=False),
-            nn.BatchNorm2d(256),
-            nn.ReLU(),
-            nn.Conv2d(256, num_classes, 1)
-        )
-
-
-class ASPPConv(nn.Sequential):
-    def __init__(self, in_channels, out_channels, dilation):
-        modules = [
-            nn.Conv2d(in_channels, out_channels, 3, padding=dilation, dilation=dilation, bias=False),
-            nn.BatchNorm2d(out_channels),
-            nn.ReLU()
-        ]
-        super(ASPPConv, self).__init__(*modules)
-
-
-class ASPPPooling(nn.Sequential):
-    def __init__(self, in_channels, out_channels):
-        super(ASPPPooling, self).__init__(
-            nn.AdaptiveAvgPool2d(1),
-            nn.Conv2d(in_channels, out_channels, 1, bias=False),
-            nn.BatchNorm2d(out_channels),
-            nn.ReLU())
-
-    def forward(self, x):
-        size = x.shape[-2:]
-        for mod in self:
-            x = mod(x)
-        return F.interpolate(x, size=size, mode='bilinear', align_corners=False)
-
+import torchvision.models.vgg as vgg
 
 class ASPP(nn.Module):
-    def __init__(self, in_channels, atrous_rates, out_channels=256):
+    def __init__(self, num_classes):
         super(ASPP, self).__init__()
-        modules = []
-        modules.append(nn.Sequential(
-            nn.Conv2d(in_channels, out_channels, 1, bias=False),
-            nn.BatchNorm2d(out_channels),
-            nn.ReLU()))
 
-        rates = tuple(atrous_rates)
-        for rate in rates:
-            modules.append(ASPPConv(in_channels, out_channels, rate))
+        self.conv_1x1_1 = nn.Conv2d(512, 256, kernel_size=1)
+        self.bn_conv_1x1_1 = nn.BatchNorm2d(256)
 
-        modules.append(ASPPPooling(in_channels, out_channels))
+        self.conv_3x3_1 = nn.Conv2d(512, 256, kernel_size=3, stride=1, padding=6, dilation=6)
+        self.bn_conv_3x3_1 = nn.BatchNorm2d(256)
 
-        self.convs = nn.ModuleList(modules)
+        self.conv_3x3_2 = nn.Conv2d(512, 256, kernel_size=3, stride=1, padding=12, dilation=12)
+        self.bn_conv_3x3_2 = nn.BatchNorm2d(256)
 
-        self.project = nn.Sequential(
-            nn.Conv2d(len(self.convs) * out_channels, out_channels, 1, bias=False),
-            nn.BatchNorm2d(out_channels),
-            nn.ReLU(),
-            nn.Dropout(0.5))
+        self.conv_3x3_3 = nn.Conv2d(512, 256, kernel_size=3, stride=1, padding=18, dilation=18)
+        self.bn_conv_3x3_3 = nn.BatchNorm2d(256)
+
+        self.avg_pool = nn.AdaptiveAvgPool2d(1)
+
+        self.conv_1x1_2 = nn.Conv2d(512, 256, kernel_size=1)
+        self.bn_conv_1x1_2 = nn.BatchNorm2d(256)
+
+        self.conv_1x1_3 = nn.Conv2d(1280, 256, kernel_size=1) # (1280 = 5*256)
+        self.bn_conv_1x1_3 = nn.BatchNorm2d(256)
+
+        self.conv_1x1_4 = nn.Conv2d(256, num_classes, kernel_size=1)
+
+    def forward(self, feature_map):
+        # (feature_map has shape (batch_size, 512, h/16, w/16)) (assuming self.resnet is ResNet18_OS16 or ResNet34_OS16. If self.resnet instead is ResNet18_OS8 or ResNet34_OS8, it will be (batch_size, 512, h/8, w/8))
+        #print(feature_map.size())
+        feature_map_h = feature_map.size()[2] # (== h/16)
+        feature_map_w = feature_map.size()[3] # (== w/16)
+
+        out_1x1 = F.relu(self.bn_conv_1x1_1(self.conv_1x1_1(feature_map))) # (shape: (batch_size, 256, h/16, w/16))
+        out_3x3_1 = F.relu(self.bn_conv_3x3_1(self.conv_3x3_1(feature_map))) # (shape: (batch_size, 256, h/16, w/16))
+        out_3x3_2 = F.relu(self.bn_conv_3x3_2(self.conv_3x3_2(feature_map))) # (shape: (batch_size, 256, h/16, w/16))
+        out_3x3_3 = F.relu(self.bn_conv_3x3_3(self.conv_3x3_3(feature_map))) # (shape: (batch_size, 256, h/16, w/16))
+
+        out_img = self.avg_pool(feature_map) # (shape: (batch_size, 512, 1, 1))
+        out_img = F.relu(self.bn_conv_1x1_2(self.conv_1x1_2(out_img))) # (shape: (batch_size, 256, 1, 1))
+        #out_img = F.upsample(out_img, size=(feature_map_h, feature_map_w), mode="bilinear") # (shape: (batch_size, 256, h/16, w/16))
+        out_img = F.interpolate(out_img, size=(feature_map_h, feature_map_w), scale_factor=None, mode="bilinear", align_corners=True, recompute_scale_factor=None)
+
+        out = torch.cat([out_1x1, out_3x3_1, out_3x3_2, out_3x3_3, out_img], 1) # (shape: (batch_size, 1280, h/16, w/16))
+        out = F.relu(self.bn_conv_1x1_3(self.conv_1x1_3(out))) # (shape: (batch_size, 256, h/16, w/16))
+        out = self.conv_1x1_4(out) # (shape: (batch_size, num_classes, h/16, w/16))
+
+        return out
+
+class DeepLabV3(nn.Module):
+    def __init__(self, n_class):
+        super(DeepLabV3, self).__init__()
+
+        self.num_classes = n_class
+
+        self.pretrained = vgg.vgg16(pretrained=True) # NOTE! specify the type of ResNet here
+        self.aspp = ASPP(num_classes=self.num_classes) # NOTE! if you use ResNet50-152, set self.aspp = ASPP_Bottleneck(num_classes=self.num_classes) instead
 
     def forward(self, x):
-        res = []
-        for conv in self.convs:
-            res.append(conv(x))
-        res = torch.cat(res, dim=1)
-        return self.project(res)
+        # (x has shape (batch_size, 3, h, w))
+        
+        #print(x.shape)
+        h = x.size()[2]
+        w = x.size()[3]
+
+        feature_map = self.pretrained.features(x) # (shape: (batch_size, 512, h/16, w/16)) (assuming self.resnet is ResNet18_OS16 or ResNet34_OS16. If self.resnet is ResNet18_OS8 or ResNet34_OS8, it will be (batch_size, 512, h/8, w/8). If self.resnet is ResNet50-152, it will be (batch_size, 4*512, h/16, w/16))
+
+        output = self.aspp(feature_map) # (shape: (batch_size, num_classes, h/16, w/16))
+        #print(output.shape)
+        #output = F.upsample(output, size=(h, w), mode="bilinear",align_corners=True) # (shape: (batch_size, num_classes, h, w))
+        output=F.interpolate(output, size=(h, w), scale_factor=None, mode="bilinear", align_corners=True, recompute_scale_factor=None)
+        #print(output.shape)
+        return output
