@@ -5,12 +5,11 @@ class Segnet(nn.Module):
   
   def __init__(self, n_classes):
     super(Segnet, self).__init__()
-    #define the layers for your model
     self.vgg_model = vgg.vgg16(pretrained=True, progress=True)#.to(device)
     #del self.vgg_model.classifier
     self.relu    = nn.ReLU(inplace=True)
     self.deconv1 = nn.ConvTranspose2d(512, 512, kernel_size=3, stride=2, padding=1, dilation=1, output_padding=1)
-    self.bn1     = nn.BatchNorm2d(512) #TODO BN not mentioned in paper
+    self.bn1     = nn.BatchNorm2d(512) 
     self.deconv2 = nn.ConvTranspose2d(512, 256, kernel_size=3, stride=2, padding=1, dilation=1, output_padding=1)
     self.bn2     = nn.BatchNorm2d(256)
     self.deconv3 = nn.ConvTranspose2d(256, 128, kernel_size=3, stride=2, padding=1, dilation=1, output_padding=1)
@@ -22,7 +21,6 @@ class Segnet(nn.Module):
     self.classifier = nn.Conv2d(32, n_classes, kernel_size=1)
 
   def forward(self, x):
-    #define the forward pass
     x = self.vgg_model.features(x) # B, 
     output = self.vgg_model.avgpool(x) # B, 512, 512, 7
     score = self.bn1(self.relu(self.deconv1(x)))     # size=(N, 512, x.H/16, x.W/16)

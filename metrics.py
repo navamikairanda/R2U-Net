@@ -1,7 +1,6 @@
 import torch
 import torch.nn as nn
 from pytorch_lightning import metrics
-from pytorch_lightning.metrics.functional import auc
 import matplotlib.pyplot as plt
 import os
 import pdb
@@ -25,15 +24,16 @@ class Metrics():
     def __init__(self, n_classes, dataloader, split, device, expt_logdir):
         self.dataloader = dataloader
         self.device = device
-        #TODO, ROC-curve, Accuracy, AUC, SE, SP, IOU, F1, Dice
         accuracy = metrics.Accuracy().to(self.device) 
         iou = metrics.IoU(num_classes=n_classes).to(self.device)
         dice = Dice().to(self.device)
+        recall = metrics.Recall(num_classes=n_classes,average='macro', mdmc_average='global').to(self.device)
         roc = metrics.ROC(num_classes=n_classes,dist_sync_on_step=True).to(self.device)
         
         self.eval_metrics = {'accuracy': {'module': accuracy, 'values': []}, 
                         'iou': {'module': iou, 'values': []}, 
                         'dice': {'module': dice, 'values': []},
+                        'sensitivity': {'module': recall, 'values': []},
                         'auroc': {'module': roc, 'values': []}
                         }
         self.softmax = nn.Softmax(dim=1)
@@ -42,9 +42,7 @@ class Metrics():
     
     def compute_auroc(self, value): 
         self.fpr, self.tpr, _ = value
-        #auc_scores = [auc(x, y, reorder=True) for x, y in zip(self.fpr, self.tpr)]
         auc_scores = [torch.trapz(y, x) for x, y in zip(self.fpr, self.tpr)]
-        #TODO average over all classes
         return torch.mean(torch.stack(auc_scores))
         
     def compute(self, epoch, model): 

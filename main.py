@@ -9,7 +9,7 @@ import sys
 import os
 
 from fcn import Segnet
-from r2unet import U_Net, R2U_Net
+from r2unet import U_Net, R2U_Net, RecU_Net
 #from deeplabv3_torchvision import DeepLabHead
 from deeplabv3 import DeepLabV3
 from dataloader import load_dataset
@@ -23,19 +23,19 @@ os.makedirs(expt_logdir, exist_ok=True)
 
 #Dataset parameters
 num_workers = 8
-batch_size = 16 
+batch_size = 16
 n_classes = 20
 img_size = 224 
 test_split = 'val'
 
 # Training parameters
-epochs = 51 #use 200 
+epochs = 300 #use 200 
 lr = 0.001
 #TODO weight decay, plot results for validation data
 
 # Logging options
 i_save = 50#save model after every i_save epochs
-i_vis = 1
+i_vis = 10
 rows, cols = 5, 2 #Show 10 images in the dataset along with target and predicted masks
 
 device = torch.device("cuda")# if torch.cuda.is_available() else "cpu")
@@ -44,15 +44,20 @@ num_gpu = list(range(torch.cuda.device_count()))
 trainloader, train_dst = load_dataset(batch_size, num_workers, split='train')
 testloader, test_dst = load_dataset(batch_size, num_workers, split=test_split)
 
-# Creating an instance of the model defined in net.py 
-#model = nn.DataParallel(Segnet(n_classes), device_ids=num_gpu).to(device) #Fully Convolutional Networks
-#model = nn.DataParallel(U_Net(img_ch=3,output_ch=n_classes), device_ids=num_gpu).to(device) #U Network
-#model = nn.DataParallel(R2U_Net(img_ch=3,output_ch=n_classes,t=2), device_ids=num_gpu).to(device) #Residual Recurrent U Network (t=2)
-#model = nn.DataParallel(R2U_Net(img_ch=3,output_ch=n_classes,t=2), device_ids=num_gpu).to(device) #Residual Recurrent U Network (t=3)
-#model = nn.DataParallel(DeepLabHead(3,n_classes), device_ids=num_gpu).to(device) #DeepLabHead
-#model = nn.DataParallel(deeplabv3_resnet50(pretrained=True, progress=True, num_classes=21, aux_loss=None)).to(device)
-model = nn.DataParallel(DeepLabV3(n_classes), device_ids=num_gpu).to(device) #DeepLabV3
+# Creating an instance of the model 
+#model = Segnet(n_classes) #Fully Convolutional Networks
+#model = U_Net(img_ch=3,output_ch=n_classes) #U Network
+#model = R2U_Net(img_ch=3,output_ch=n_classes,t=2) #Residual Recurrent U Network, R2Unet (t=2)
+#model = R2U_Net(img_ch=3,output_ch=n_classes,t=3) #Residual Recurrent U Network, R2Unet (t=3)
+model = RecU_Net(img_ch=3,output_ch=n_classes,t=2) #Recurrent U Network, RecUnet (t=2)
+#model = ResU_Net(img_ch=3,output_ch=n_classes,t=3) #Residual U Network, ResUnet (t=2)
+#model = DeepLabHead(3,n_classes) #DeepLabHead
+#model = deeplabv3_resnet50(pretrained=True, progress=True, num_classes=21, aux_loss=None)
+#model = DeepLabV3(n_classes) #DeepLabV3
 
+print('Experiment logs for model: {}'.format(model.__class__.__name__))
+
+model = nn.DataParallel(model, device_ids=num_gpu).to(device)
 # loss function
 loss_f = nn.CrossEntropyLoss() #TODO s ignore_index required? ignore_index=19
 
@@ -68,12 +73,10 @@ train_metrics = Metrics(n_classes, trainloader, 'train', device, expt_logdir)
 test_metrics = Metrics(n_classes, testloader, test_split, device, expt_logdir)
 
 epoch = -1
-'''
 train_metrics.compute(epoch, model)
 train_metrics.plot_scalar_metrics(epoch)
 train_metrics.plot_roc(epoch) 
 train_vis.visualize(epoch, model)
-'''
 
 test_metrics.compute(epoch, model)
 test_metrics.plot_scalar_metrics(epoch)
@@ -107,11 +110,9 @@ for epoch in range(epochs):
         test_metrics.plot_roc(epoch) 
         test_vis.visualize(epoch, model)
         
-        '''
         train_metrics.plot_scalar_metrics(epoch) 
         train_metrics.plot_roc(epoch) 
         train_vis.visualize(epoch, model)    
-        '''
         
         train_metrics.plot_loss(epoch, losses) 
         

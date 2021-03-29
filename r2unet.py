@@ -66,6 +66,34 @@ class RRCNN_block(nn.Module):
         x1 = self.RCNN(x)
         return x+x1
 
+class RCNN_block(nn.Module):
+    def __init__(self,ch_in,ch_out,t=2):
+        super(RCNN_block,self).__init__()
+        self.RCNN = nn.Sequential(
+            Recurrent_block(ch_out,t=t),
+            Recurrent_block(ch_out,t=t)
+        )
+        self.Conv_1x1 = nn.Conv2d(ch_in,ch_out,kernel_size=1,stride=1,padding=0)
+
+    def forward(self,x):
+        x = self.Conv_1x1(x)
+        x = self.RCNN(x)
+        return x 
+        
+class ResCNN_block(nn.Module):
+    def __init__(self,ch_in,ch_out,t=2):
+        super(RCNN_block,self).__init__()
+        self.RCNN = nn.Sequential(
+            conv_block(ch_out,t=t),
+            Recurrent_block(ch_out,t=t)
+        )
+        self.Conv_1x1 = nn.Conv2d(ch_in,ch_out,kernel_size=1,stride=1,padding=0)
+
+    def forward(self,x):
+        x = self.Conv_1x1(x)
+        x = self.RCNN(x)
+        return x 
+
 class U_Net(nn.Module):
     def __init__(self,img_ch=3,output_ch=1):
         super(U_Net,self).__init__()
@@ -197,6 +225,76 @@ class R2U_Net(nn.Module):
         d2 = self.Up2(d3)
         d2 = torch.cat((x1,d2),dim=1)
         d2 = self.Up_RRCNN2(d2)
+
+        d1 = self.Conv_1x1(d2)
+
+        return d1
+
+class RecU_Net(nn.Module):
+    def __init__(self,img_ch=3,output_ch=1,t=2):
+        super(RecU_Net,self).__init__()
+        
+        self.Maxpool = nn.MaxPool2d(kernel_size=2,stride=2)
+        self.Upsample = nn.Upsample(scale_factor=2)
+
+        self.RCNN1 = RCNN_block(ch_in=img_ch,ch_out=64,t=t)
+
+        self.RCNN2 = RCNN_block(ch_in=64,ch_out=128,t=t)
+        
+        self.RCNN3 = RCNN_block(ch_in=128,ch_out=256,t=t)
+        
+        self.RCNN4 = RCNN_block(ch_in=256,ch_out=512,t=t)
+        
+        self.RCNN5 = RCNN_block(ch_in=512,ch_out=1024,t=t)
+        
+
+        self.Up5 = up_conv(ch_in=1024,ch_out=512)
+        self.Up_RCNN5 = RCNN_block(ch_in=1024, ch_out=512,t=t)
+        
+        self.Up4 = up_conv(ch_in=512,ch_out=256)
+        self.Up_RCNN4 = RCNN_block(ch_in=512, ch_out=256,t=t)
+        
+        self.Up3 = up_conv(ch_in=256,ch_out=128)
+        self.Up_RCNN3 = RCNN_block(ch_in=256, ch_out=128,t=t)
+        
+        self.Up2 = up_conv(ch_in=128,ch_out=64)
+        self.Up_RCNN2 = RCNN_block(ch_in=128, ch_out=64,t=t)
+
+        self.Conv_1x1 = nn.Conv2d(64,output_ch,kernel_size=1,stride=1,padding=0)
+
+
+    def forward(self,x):
+        # encoding path
+        x1 = self.RCNN1(x)
+
+        x2 = self.Maxpool(x1)
+        x2 = self.RCNN2(x2)
+        
+        x3 = self.Maxpool(x2)
+        x3 = self.RCNN3(x3)
+
+        x4 = self.Maxpool(x3)
+        x4 = self.RCNN4(x4)
+
+        x5 = self.Maxpool(x4)
+        x5 = self.RCNN5(x5)
+
+        # decoding + concat path
+        d5 = self.Up5(x5)
+        d5 = torch.cat((x4,d5),dim=1)
+        d5 = self.Up_RCNN5(d5)
+        
+        d4 = self.Up4(d5)
+        d4 = torch.cat((x3,d4),dim=1)
+        d4 = self.Up_RCNN4(d4)
+
+        d3 = self.Up3(d4)
+        d3 = torch.cat((x2,d3),dim=1)
+        d3 = self.Up_RCNN3(d3)
+
+        d2 = self.Up2(d3)
+        d2 = torch.cat((x1,d2),dim=1)
+        d2 = self.Up_RCNN2(d2)
 
         d1 = self.Conv_1x1(d2)
 

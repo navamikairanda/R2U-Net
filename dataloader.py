@@ -39,17 +39,8 @@ target_transform = transforms.Compose([
 # Load Cityscapes train and test datasets 
 def load_dataset(batch_size, num_workers, split='train'):
 
-    train_data = Cityscapes(root='cityscapes', split=split, mode='fine', target_type='semantic_basic', transform=image_transform, target_transform=target_transform)
-    #test_data = datasets.Cityscapes(root='cityscapes', split='test', mode='fine', target_type='semantic', transform=transform)
-        
-    train_loader = torch.utils.data.DataLoader(train_data, batch_size=batch_size, num_workers=num_workers)
-    #test_loader = torch.utils.data.DataLoader(test_data, batch_size=batch_size, num_workers=num_workers)
-    return train_loader, train_data #test_loader
+    data_set = Cityscapes(root='cityscapes', split=split, mode='fine', target_type='semantic_basic', transform=image_transform, target_transform=target_transform)
     
-'''
-train_loader, train_data = load_dataset(8, 8)
-data = train_data[0]
-pdb.set_trace()
-seg = data[1].detach().cpu().numpy()
-train_data.decode_segmap(seg)
-'''
+    data_loader = torch.utils.data.DataLoader(data_set, batch_size=batch_size, num_workers=num_workers, shuffle=True, pin_memory=True)
+    return data_loader, data_set
+    
