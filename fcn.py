@@ -10,7 +10,7 @@ class Segnet(nn.Module):
     n_classes: number of classes to be predicted
     
   Returns:
-    feature map 
+    feature map size=(N, n_class, x.H/1, x.W/1)
   
   
   '''
