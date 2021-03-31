@@ -8,7 +8,7 @@ class conv_block(nn.Module):
 		ch_in : number of input channels
 		ch_out : number of outut channels
 	Returns:
-		feature map of the given input
+		feature map of the giv
 	'''
     def __init__(self,ch_in,ch_out):
         super(conv_block,self).__init__()
@@ -152,7 +152,7 @@ class U_Net(nn.Module):
 		output_ch: Number of channels expected in the output
 		
 	Returns:
-		Feature map of input	
+		Feature map of input (batch_size, output_ch=1,h,w)
 	'''
     def __init__(self,img_ch=3,output_ch=1):
         super(U_Net,self).__init__()
@@ -230,7 +230,7 @@ class R2U_Net(nn.Module):
 		t: number of recurrent blocks expected
 		
 	Returns:
-		Feature map of input	
+		Feature map of input (batch_size, output_ch=1,h,w)
 	'''
     def __init__(self,img_ch=3,output_ch=1,t=2):
         super(R2U_Net,self).__init__()
@@ -312,7 +312,7 @@ class RecU_Net(nn.Module):
 		t: number of recurrent blocks expected
 		
 	Returns:
-		Feature map of input	
+		Feature map of input (batch_size, output_ch=1,h,w)	
 	'''
     def __init__(self,img_ch=3,output_ch=1,t=2):
         super(RecU_Net,self).__init__()
@@ -393,7 +393,7 @@ class ResU_Net(nn.Module):
 		output_ch: Number of channels expected in the output
 				
 	Returns:
-		Feature map of input	
+		Feature map of size (batch_size, output_ch,h,w)	
 	'''
     def __init__(self,img_ch=3,output_ch=1):
         super(ResU_Net,self).__init__()
