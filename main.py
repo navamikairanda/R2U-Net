@@ -39,9 +39,11 @@ i_save = 50#save model after every i_save epochs
 i_vis = 10
 rows, cols = 5, 2 #Show 10 images in the dataset along with target and predicted masks
 
+# Setting up the device
 device = torch.device("cuda")# if torch.cuda.is_available() else "cpu")
 num_gpu = list(range(torch.cuda.device_count()))  
 
+#Loading training and testing data
 trainloader, train_dst = load_dataset(batch_size, num_workers, split='train')
 testloader, test_dst = load_dataset(batch_size, num_workers, split=test_split)
 
@@ -67,10 +69,11 @@ lr_scheduler = optim.lr_scheduler.ExponentialLR(optimizer=opt, gamma=decayRate)
 #torch.optim.lr_scheduler.StepLR(optimizer,step_size=3, gamma=0.1)
 
 #TODO random seed
-
+#Visualization of train and test data
 train_vis = Vis(train_dst, expt_logdir, rows, cols)
 test_vis = Vis(test_dst, expt_logdir, rows, cols)
 
+#Metrics calculator for train and test data
 train_metrics = Metrics(n_classes, trainloader, 'train', device, expt_logdir)
 test_metrics = Metrics(n_classes, testloader, test_split, device, expt_logdir)
 
@@ -85,6 +88,7 @@ test_metrics.plot_scalar_metrics(epoch)
 test_metrics.plot_roc(epoch) 
 test_vis.visualize(epoch, model)
 
+#Training
 losses = []
 for epoch in range(epochs):
     st = time.time()
@@ -107,8 +111,8 @@ for epoch in range(epochs):
     test_metrics.compute(epoch, model)
     
     if epoch % i_save == 0:
-        torch.save(model.state_dict(), os.path.join(expt_logdir, "{}.tar".format(epoch)))
-    if epoch % i_vis == 0:
+        torch.save(model.state_dict(), os.path.join(expt_logdir, "{}.tar".format(epoch))) #file name example: '0.tar'
+    if epoch % i_vis == 0:                               # Metric calculation and visualization
         test_metrics.plot_scalar_metrics(epoch) 
         test_metrics.plot_roc(epoch) 
         test_vis.visualize(epoch, model)
