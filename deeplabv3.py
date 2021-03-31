@@ -3,7 +3,6 @@ from torch import nn
 from torch.nn import functional as F
 import torchvision.models.vgg as vgg
 from resnet import ResNet50_OS16
-from aspp import ASPP_Bottleneck
 
 class ASPP(nn.Module):
     def __init__(self, num_classes):
@@ -107,11 +106,11 @@ class DeepLabV3(nn.Module):
         self.num_classes = n_class
         
         if backbone == 'vgg':
-            self.pretrained = vgg.vgg16(pretrained=True).features 
+            self.features = vgg.vgg16(pretrained=True).features 
             self.aspp = ASPP(num_classes=self.num_classes) 
-        elif
-        self.features = ResNet50_OS16()
-        self.aspp = ASPP_Bottleneck(num_classes=self.num_classes)
+        elif backbone == 'resnet':
+            self.features = ResNet50_OS16()
+            self.aspp = ASPP_Bottleneck(num_classes=self.num_classes)
     
     def forward(self, x):
         # (x has shape (batch_size, 3, h, w))

@@ -31,6 +31,7 @@ test_split = 'val'
 # Training parameters
 epochs = 300 #use 200 
 lr = 0.001
+decayRate = 0.96
 #TODO weight decay, plot results for validation data
 
 # Logging options
@@ -51,8 +52,8 @@ testloader, test_dst = load_dataset(batch_size, num_workers, split=test_split)
 #model = R2U_Net(img_ch=3,output_ch=n_classes,t=3) #Residual Recurrent U Network, R2Unet (t=3)
 #model = RecU_Net(img_ch=3,output_ch=n_classes,t=2) #Recurrent U Network, RecUnet (t=2)
 #model = ResU_Net(img_ch=3,output_ch=n_classes) #Residual U Network, ResUnet 
-#model = DeepLabV3(n_classes) #DeepLabV3 VGG backbone
-model = DeepLabV3(n_classes) #DeepLabV3 Resnet backbone
+#model = DeepLabV3(n_classes, 'vgg') #DeepLabV3 VGG backbone
+model = DeepLabV3(n_classes, 'resnet') #DeepLabV3 Resnet backbone
 
 print('Experiment logs for model: {}'.format(model.__class__.__name__))
 
@@ -62,6 +63,8 @@ loss_f = nn.CrossEntropyLoss() #TODO s ignore_index required? ignore_index=19
 
 # optimizer variable
 opt = optim.Adam(model.parameters(), lr=lr) 
+lr_scheduler = optim.lr_scheduler.ExponentialLR(optimizer=opt, gamma=decayRate)
+#torch.optim.lr_scheduler.StepLR(optimizer,step_size=3, gamma=0.1)
 
 #TODO random seed
 
@@ -96,6 +99,7 @@ for epoch in range(epochs):
         opt.step()
         if i % 20 == 0:
             print("Finish iter: {}, loss {}".format(i, loss.data))
+    lr_scheduler.step()
     losses.append(loss)
     print("Training epoch: {}, loss: {}, time elapsed: {},".format(epoch, loss, time.time() - st))
     

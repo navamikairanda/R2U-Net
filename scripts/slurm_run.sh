@@ -20,4 +20,5 @@ conda activate nnti
 #python -u main.py logs/expt5_0 #Recurrent U-Net
 #python -u main.py logs/expt6_0 #Residual U-Net
 #python -u main.py logs/expt7_0 #DeepLab V3 VGG backbone, bs=16
-python -u main.py logs/expt8_0 #DeepLab V3 Resnet backbone, bs=16
+#python -u main.py logs/expt8_0 #DeepLab V3 Resnet backbone, bs=16
+python -u main.py logs/expt8_1 #DeepLab V3 Resnet backbone, bs=16, LR decay
