@@ -1,35 +1,54 @@
 # R2U-net
-Pytorch Implementation of "Fully Convolutional Network","Recurrent Residual Convolutional Neural Network based on U-Net (R2U-Net)" and "DeepLabV3" on PascalVOC and Cityscapes dataset.
+Pytorch Implementation of "Fully Convolutional Network", "Recurrent Residual Convolutional Neural Network based on U-Net (R2U-Net)" and "DeepLabV3" on PascalVOC and Cityscapes dataset.
+
+## Requirements
+
+Packages with tested versions
+
+* python 3.8
+* pytorch 1.7
+* torchvision 0.8.1
+* pytorch-lightning 1.2.3
+
+## Prerequisites
+
+
+For tasks 2 and 3, 
+### Dataset preparation
+Download and unzip gtFine_trainvaltest.zip (241MB) and leftImg8bit_trainvaltest.zip (11GB) from cityscapes site
+https://www.cityscapes-dataset.com/downloads/
+
+Generate trainId labels for the dataset, using the scripts provided by Cityscape authors https://github.com/mcordts/cityscapesScripts 
+```
+git clone https://github.com/mcordts/cityscapesScripts.git
+pip install cityscapesScripts
+CITYSCAPES_DATASET_PATH=/HPS/Navami/work/code/nnti/R2U-Net/cityscapes/
+export CITYSCAPES_DATASET=$CITYSCAPES_DATASET_PATH
+python /HPS/Navami/work/code/nnti/cityscapesScripts/cityscapesscripts/preparation/createTrainIdLabelImgs.py
+```
+
+## Train and Test
+
+For task 1, run Vision_task_1.ipynb jupyter notebook
+
+For tasks 2 and 3, 
+
+python main.py /path/to/expt/logdir
+
+
+## Test
+
+For tasks 2 and 3, 
+
+python eval.py /path/to/expt/logdir {model_name}.tar
 
 
 
 
+##References
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Reference Material:
-Task1:
+Task 1:
 Jonathan Long, Evan Shelhamer, and Trevor Darrell. Fully Convolutional Networks for
 Semantic Segmentation. arXiv e-prints, page arXiv:1411.4038, November 2014.
 
