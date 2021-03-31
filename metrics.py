@@ -22,7 +22,7 @@ class Dice(metrics.Metric):
     
     def update(self, pred, target):
         '''
-        update the parameters of dice coefficient
+        Updates the parameters of dice coefficient
         Args:
             pred: The predicted value from the net
             target: The target value given
@@ -35,7 +35,7 @@ class Dice(metrics.Metric):
     
     def compute(self):
         '''
-        compute the dice coefficient for the given parameters
+        Computes the dice coefficient for the given parameters
         Args:
             None
          Returns:
