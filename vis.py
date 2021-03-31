@@ -41,7 +41,20 @@ def image_grid(images, rows=None, cols=None, fill=True, show_axes=False):
             ax.set_axis_off()
 
 class Vis():
-    
+    """
+    Visualization module
+    Saves the visualized segmentation images of dataset provided.
+
+    Args:
+        dst: train or validation dataset
+        expt_logdir: number of rows in the grid
+        rows: number of rows of the image
+        cols: number of columns of the image
+     
+
+    Returns:
+        None
+    """
     def __init__(self, dst, expt_logdir, rows, cols):
         
         self.dst = dst
@@ -83,4 +96,4 @@ class Vis():
         rgb_vis = np.array(rgb_vis)
         
         image_grid(rgb_vis, rows=self.rows, cols=3*self.cols) 
-        plt.savefig(os.path.join(self.expt_logdir, 'seg_{}_{}.png'.format(self.dst.split, epoch)))
+        plt.savefig(os.path.join(self.expt_logdir, 'seg_{}_{}.png'.format(self.dst.split, epoch)))  #example file name: seg_val_0.png
