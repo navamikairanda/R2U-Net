@@ -13,7 +13,7 @@ class ASPP(nn.Module):
         feature_map: feature map produced from the backbone net.
         
     Returns:
-        feature map after performing ASPP on it 
+        feature map after performing ASPP of shape (batch_size, num_classes, h/16, w/16)
     '''
     def __init__(self, num_classes):
         super(ASPP, self).__init__()
@@ -70,7 +70,7 @@ class ASPP_Bottleneck(nn.Module):
         feature_map: feature map produced from the backbone net.
         
     Returns:
-        feature map after performing ASPP on it 
+        feature map after performing ASPP of shape (batch_size, num_classes, h/16, w/16) 
     '''
     def __init__(self, num_classes):
         super(ASPP_Bottleneck, self).__init__()
@@ -128,7 +128,7 @@ class DeepLabV3(nn.Module):
         backbone: takes either 'vgg' or 'resnet'. This decides the pretrianed backbone selected.
         
     Returns:
-        feature map after extracted by DeepLabV3 net.
+        feature map after extracted by DeepLabV3 net of shape (batch_size, num_classes, h, w)
         
     '''
     def __init__(self, n_class, backbone):
