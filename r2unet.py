@@ -81,18 +81,15 @@ class RCNN_block(nn.Module):
         return x 
         
 class ResCNN_block(nn.Module):
-    def __init__(self,ch_in,ch_out,t=2):
-        super(RCNN_block,self).__init__()
-        self.RCNN = nn.Sequential(
-            conv_block(ch_out,t=t),
-            Recurrent_block(ch_out,t=t)
-        )
+    def __init__(self,ch_in,ch_out):
+        super(ResCNN_block,self).__init__()
+        self.Conv = conv_block(ch_in, ch_out)
         self.Conv_1x1 = nn.Conv2d(ch_in,ch_out,kernel_size=1,stride=1,padding=0)
 
     def forward(self,x):
-        x = self.Conv_1x1(x)
-        x = self.RCNN(x)
-        return x 
+        x1 = self.Conv_1x1(x)
+        x = self.Conv(x)
+        return x+x1 
 
 class U_Net(nn.Module):
     def __init__(self,img_ch=3,output_ch=1):
@@ -295,6 +292,76 @@ class RecU_Net(nn.Module):
         d2 = self.Up2(d3)
         d2 = torch.cat((x1,d2),dim=1)
         d2 = self.Up_RCNN2(d2)
+
+        d1 = self.Conv_1x1(d2)
+
+        return d1
+
+class ResU_Net(nn.Module):
+    def __init__(self,img_ch=3,output_ch=1):
+        super(ResU_Net,self).__init__()
+        
+        self.Maxpool = nn.MaxPool2d(kernel_size=2,stride=2)
+        self.Upsample = nn.Upsample(scale_factor=2)
+
+        self.ResCNN1 = ResCNN_block(ch_in=img_ch,ch_out=64)
+
+        self.ResCNN2 = ResCNN_block(ch_in=64,ch_out=128)
+        
+        self.ResCNN3 = ResCNN_block(ch_in=128,ch_out=256)
+        
+        self.ResCNN4 = ResCNN_block(ch_in=256,ch_out=512)
+        
+        self.ResCNN5 = ResCNN_block(ch_in=512,ch_out=1024)
+        
+
+        self.Up5 = up_conv(ch_in=1024,ch_out=512)
+        self.Up_ResCNN5 = ResCNN_block(ch_in=1024, ch_out=512)
+        
+        self.Up4 = up_conv(ch_in=512,ch_out=256)
+        self.Up_ResCNN4 = ResCNN_block(ch_in=512, ch_out=256)
+        
+        self.Up3 = up_conv(ch_in=256,ch_out=128)
+        self.Up_ResCNN3 = ResCNN_block(ch_in=256, ch_out=128)
+        
+        self.Up2 = up_conv(ch_in=128,ch_out=64)
+        self.Up_ResCNN2 = ResCNN_block(ch_in=128, ch_out=64)
+
+        self.Conv_1x1 = nn.Conv2d(64,output_ch,kernel_size=1,stride=1,padding=0)
+
+
+    def forward(self,x):
+        # encoding path
+        x1 = self.ResCNN1(x)
+
+        x2 = self.Maxpool(x1)
+        x2 = self.ResCNN2(x2)
+        
+        x3 = self.Maxpool(x2)
+        x3 = self.ResCNN3(x3)
+
+        x4 = self.Maxpool(x3)
+        x4 = self.ResCNN4(x4)
+
+        x5 = self.Maxpool(x4)
+        x5 = self.ResCNN5(x5)
+
+        # decoding + concat path
+        d5 = self.Up5(x5)
+        d5 = torch.cat((x4,d5),dim=1)
+        d5 = self.Up_ResCNN5(d5)
+        
+        d4 = self.Up4(d5)
+        d4 = torch.cat((x3,d4),dim=1)
+        d4 = self.Up_ResCNN4(d4)
+
+        d3 = self.Up3(d4)
+        d3 = torch.cat((x2,d3),dim=1)
+        d3 = self.Up_ResCNN3(d3)
+
+        d2 = self.Up2(d3)
+        d2 = torch.cat((x1,d2),dim=1)
+        d2 = self.Up_ResCNN2(d2)
 
         d1 = self.Conv_1x1(d2)
 

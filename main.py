@@ -9,7 +9,7 @@ import sys
 import os
 
 from fcn import Segnet
-from r2unet import U_Net, R2U_Net, RecU_Net
+from r2unet import U_Net, R2U_Net, RecU_Net, ResU_Net
 #from deeplabv3_torchvision import DeepLabHead
 from deeplabv3 import DeepLabV3
 from dataloader import load_dataset
@@ -49,11 +49,10 @@ testloader, test_dst = load_dataset(batch_size, num_workers, split=test_split)
 #model = U_Net(img_ch=3,output_ch=n_classes) #U Network
 #model = R2U_Net(img_ch=3,output_ch=n_classes,t=2) #Residual Recurrent U Network, R2Unet (t=2)
 #model = R2U_Net(img_ch=3,output_ch=n_classes,t=3) #Residual Recurrent U Network, R2Unet (t=3)
-model = RecU_Net(img_ch=3,output_ch=n_classes,t=2) #Recurrent U Network, RecUnet (t=2)
-#model = ResU_Net(img_ch=3,output_ch=n_classes,t=3) #Residual U Network, ResUnet (t=2)
-#model = DeepLabHead(3,n_classes) #DeepLabHead
-#model = deeplabv3_resnet50(pretrained=True, progress=True, num_classes=21, aux_loss=None)
-#model = DeepLabV3(n_classes) #DeepLabV3
+#model = RecU_Net(img_ch=3,output_ch=n_classes,t=2) #Recurrent U Network, RecUnet (t=2)
+#model = ResU_Net(img_ch=3,output_ch=n_classes) #Residual U Network, ResUnet 
+#model = DeepLabV3(n_classes) #DeepLabV3 VGG backbone
+model = DeepLabV3(n_classes) #DeepLabV3 Resnet backbone
 
 print('Experiment logs for model: {}'.format(model.__class__.__name__))
 
