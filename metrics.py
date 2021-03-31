@@ -10,7 +10,7 @@ class Dice(metrics.Metric):
     Module to calcuate Dice metric
     
     Args:
-        object of class Metric
+        None
         
     Returns:
         None
