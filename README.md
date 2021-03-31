@@ -1,9 +1,14 @@
 # R2U-net
 Pytorch Implementation of "Fully Convolutional Network", "Recurrent Residual Convolutional Neural Network based on U-Net (R2U-Net)" and "DeepLabV3" on PascalVOC and Cityscapes dataset.
 
+## Contributors
+
+Navami Kairanda
+Priyanka Mohanta
+
 ## Requirements
 
-Packages with tested versions
+Following packages are used
 
 * python 3.8
 * pytorch 1.7
@@ -47,7 +52,7 @@ python eval.py /path/to/expt/logdir {model_name}.tar
 
 
 
-##References
+## References
 
 
 Task 1:
