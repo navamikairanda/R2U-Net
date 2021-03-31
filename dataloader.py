@@ -38,6 +38,16 @@ target_transform = transforms.Compose([
         
 # Load Cityscapes train and test datasets 
 def load_dataset(batch_size, num_workers, split='train'):
+      """
+    A util function for loading dataset and dataloader
+    Args:
+        batch_size: batch size (hyperparameters)
+        num_workers: num_workers (hyperparameters)
+        split: Takes input as string. Can be any split allowed by the dataloader.
+    Returns:
+        data_loader: An iterable element of the dataset
+        data_set: Loaded with processed dataset
+    """
 
     data_set = Cityscapes(root='cityscapes', split=split, mode='fine', target_type='semantic_basic', transform=image_transform, target_transform=target_transform)
     

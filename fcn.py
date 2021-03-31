@@ -2,7 +2,18 @@ import torch.nn as nn
 import torchvision.models.vgg as vgg
 
 class Segnet(nn.Module):
+  '''
+  Fully Convolutional Network (FCN)
   
+  Performs fcn on the inputs and returns the feature map. This section is a decoder of the fcn network which starts from the 7th layer of pretrained vgg model.
+  Args:
+    n_classes: number of classes to be predicted
+    
+  Returns:
+    feature map size=(N, n_class, x.H/1, x.W/1)
+  
+  
+  '''
   def __init__(self, n_classes):
     super(Segnet, self).__init__()
     self.vgg_model = vgg.vgg16(pretrained=True, progress=True)#.to(device)

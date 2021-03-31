@@ -2,6 +2,14 @@ import torch
 import torch.nn as nn
 
 class conv_block(nn.Module):
+	'''
+	Block for convolutional layer of U-Net at the encoder end.
+	Args:
+		ch_in : number of input channels
+		ch_out : number of outut channels
+	Returns:
+		feature map of the giv
+	'''
     def __init__(self,ch_in,ch_out):
         super(conv_block,self).__init__()
         self.conv = nn.Sequential(
@@ -19,6 +27,14 @@ class conv_block(nn.Module):
         return x
 
 class up_conv(nn.Module):
+	'''
+	Block for deconvolutional layer of U-Net at the decoder end
+	Args:
+		ch_in : number of input channels
+		ch_out : number of outut channels
+	Returns:
+		feature map of the given input
+	'''
     def __init__(self,ch_in,ch_out):
         super(up_conv,self).__init__()
         self.up = nn.Sequential(
@@ -33,6 +49,14 @@ class up_conv(nn.Module):
         return x
 
 class Recurrent_block(nn.Module):
+	'''
+	Recurrent convolution block for RU-Net and R2U-Net
+	Args:
+		ch_out : number of outut channels
+		t: the number of recurrent convolution block to be used
+	Returns:
+		feature map of the given input
+	'''
     def __init__(self,ch_out,t=2):
         super(Recurrent_block,self).__init__()
         self.t = t
@@ -53,6 +77,15 @@ class Recurrent_block(nn.Module):
         return x1
         
 class RRCNN_block(nn.Module):
+	'''
+	Recurrent Residual convolution block for R2U-Net
+	Args:
+		ch_in  : number of input channels
+		ch_out : number of outut channels
+		t	: the number of recurrent residual convolution block to be used
+	Returns:
+		feature map of the given input
+	'''
     def __init__(self,ch_in,ch_out,t=2):
         super(RRCNN_block,self).__init__()
         self.RCNN = nn.Sequential(
@@ -64,9 +97,18 @@ class RRCNN_block(nn.Module):
     def forward(self,x):
         x = self.Conv_1x1(x)
         x1 = self.RCNN(x)
-        return x+x1
+        return x+x1	#residual learning
 
 class RCNN_block(nn.Module):
+	'''
+	Recurrent convolution block for RU-Net
+	Args:
+		ch_in  : number of input channels
+		ch_out : number of outut channels
+		t	: the number of recurrent residual convolution block to be used
+	Returns:
+		feature map of the given input
+	'''
     def __init__(self,ch_in,ch_out,t=2):
         super(RCNN_block,self).__init__()
         self.RCNN = nn.Sequential(
@@ -81,6 +123,15 @@ class RCNN_block(nn.Module):
         return x 
         
 class ResCNN_block(nn.Module):
+	'''
+	Residual convolution block 
+	Args:
+		ch_in  : number of input channels
+		ch_out : number of outut channels
+		
+	Returns:
+		feature map of the given input
+	'''
     def __init__(self,ch_in,ch_out):
         super(ResCNN_block,self).__init__()
         self.Conv = conv_block(ch_in, ch_out)
@@ -92,6 +143,17 @@ class ResCNN_block(nn.Module):
         return x+x1 
 
 class U_Net(nn.Module):
+	'''
+	U-Net Network.
+	Implements traditional U-Net with a compressive encoder and an expanding decoder
+	
+	Args:
+		img_ch: Input image channels
+		output_ch: Number of channels expected in the output
+		
+	Returns:
+		Feature map of input (batch_size, output_ch=1,h,w)
+	'''
     def __init__(self,img_ch=3,output_ch=1):
         super(U_Net,self).__init__()
         
@@ -158,6 +220,18 @@ class U_Net(nn.Module):
 
 
 class R2U_Net(nn.Module):
+	'''
+	R2U-Net Network.
+	Implements U-Net with a RRCNN block.
+	
+	Args:
+		img_ch: Input image channels
+		output_ch: Number of channels expected in the output
+		t: number of recurrent blocks expected
+		
+	Returns:
+		Feature map of input (batch_size, output_ch=1,h,w)
+	'''
     def __init__(self,img_ch=3,output_ch=1,t=2):
         super(R2U_Net,self).__init__()
         
@@ -228,6 +302,18 @@ class R2U_Net(nn.Module):
         return d1
 
 class RecU_Net(nn.Module):
+	'''
+	RU-Net Network.
+	Implements U-Net with a RCNN block.
+	
+	Args:
+		img_ch: Input image channels
+		output_ch: Number of channels expected in the output
+		t: number of recurrent blocks expected
+		
+	Returns:
+		Feature map of input (batch_size, output_ch=1,h,w)	
+	'''
     def __init__(self,img_ch=3,output_ch=1,t=2):
         super(RecU_Net,self).__init__()
         
@@ -298,6 +384,17 @@ class RecU_Net(nn.Module):
         return d1
 
 class ResU_Net(nn.Module):
+	'''
+	Residual U-Net Network.
+	Implements U-Net with a ResCNN block.
+	
+	Args:
+		img_ch: Input image channels
+		output_ch: Number of channels expected in the output
+				
+	Returns:
+		Feature map of size (batch_size, output_ch,h,w)	
+	'''
     def __init__(self,img_ch=3,output_ch=1):
         super(ResU_Net,self).__init__()
         
