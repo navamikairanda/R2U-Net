@@ -5,6 +5,16 @@ import torchvision.models.vgg as vgg
 from resnet import ResNet50_OS16
 
 class ASPP(nn.Module):
+    '''
+    This module implements Atrous spatial pyramid pooling(ASPP) on the DeepLab net with VGG backbone.
+    
+    Args: 
+        num_classes: number of class to be predicted
+        feature_map: feature map produced from the backbone net.
+        
+    Returns:
+        feature map after performing ASPP on it 
+    '''
     def __init__(self, num_classes):
         super(ASPP, self).__init__()
 
@@ -52,6 +62,16 @@ class ASPP(nn.Module):
         return out
 
 class ASPP_Bottleneck(nn.Module):
+    '''
+    This module implements Atrous spatial pyramid pooling(ASPP) on the DeepLab net with ResNet50 backbone.
+    
+    Args: 
+        num_classes: number of class to be predicted
+        feature_map: feature map produced from the backbone net.
+        
+    Returns:
+        feature map after performing ASPP on it 
+    '''
     def __init__(self, num_classes):
         super(ASPP_Bottleneck, self).__init__()
 
@@ -100,6 +120,17 @@ class ASPP_Bottleneck(nn.Module):
         return out
         
 class DeepLabV3(nn.Module):
+    '''
+    DeepLabV3 net framework
+    
+    Args: 
+        n_class: number of class to be predicted
+        backbone: takes either 'vgg' or 'resnet'. This decides the pretrianed backbone selected.
+        
+    Returns:
+        feature map after extracted by DeepLabV3 net.
+        
+    '''
     def __init__(self, n_class, backbone):
         super(DeepLabV3, self).__init__()
 
