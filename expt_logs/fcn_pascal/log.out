@@ -1,0 +1,1757 @@
+/HPS/Navami/static00/anaconda3/envs/nnti/lib/python3.8/site-packages/pytorch_lightning/utilities/distributed.py:50: UserWarning: Metric `ROC` will save all targets and predictions in buffer. For large datasets this may lead to large memory footprint.
+  warnings.warn(*args, **kwargs)
+Split: train, epoch: -1, metrics: accuracy: 0.194 ; iou: 0.012 ; dice: 0.019 ; sensitivity: 0.048 ; auroc: 0.500
+Split: val, epoch: -1, metrics: accuracy: 0.194 ; iou: 0.012 ; dice: 0.019 ; sensitivity: 0.048 ; auroc: 0.500
+Finish iter: 0, loss 3.1139578819274902
+Finish iter: 20, loss 2.4982235431671143
+Finish iter: 40, loss 2.4419283866882324
+Training epoch: 0, loss: 2.389582872390747, time elapsed: 14.058023929595947,
+Split: train, epoch: 0, metrics: accuracy: 0.682 ; iou: 0.044 ; dice: 0.054 ; sensitivity: 0.070 ; auroc: 0.673
+Split: val, epoch: 0, metrics: accuracy: 0.676 ; iou: 0.044 ; dice: 0.054 ; sensitivity: 0.069 ; auroc: 0.681
+Finish iter: 0, loss 2.1732683181762695
+Finish iter: 20, loss 2.2103610038757324
+Finish iter: 40, loss 1.868191123008728
+Training epoch: 1, loss: 1.8491613864898682, time elapsed: 14.138071775436401,
+Split: train, epoch: 1, metrics: accuracy: 0.751 ; iou: 0.039 ; dice: 0.046 ; sensitivity: 0.051 ; auroc: 0.692
+Split: val, epoch: 1, metrics: accuracy: 0.749 ; iou: 0.038 ; dice: 0.044 ; sensitivity: 0.050 ; auroc: 0.689
+Finish iter: 0, loss 1.937495231628418
+Finish iter: 20, loss 1.728329062461853
+Finish iter: 40, loss 1.6072310209274292
+Training epoch: 2, loss: 1.6361063718795776, time elapsed: 14.196649312973022,
+Split: train, epoch: 2, metrics: accuracy: 0.749 ; iou: 0.048 ; dice: 0.059 ; sensitivity: 0.067 ; auroc: 0.664
+Split: val, epoch: 2, metrics: accuracy: 0.743 ; iou: 0.045 ; dice: 0.055 ; sensitivity: 0.064 ; auroc: 0.654
+Finish iter: 0, loss 1.598098635673523
+Finish iter: 20, loss 1.493315577507019
+Finish iter: 40, loss 1.392153263092041
+Training epoch: 3, loss: 1.41159188747406, time elapsed: 14.102601528167725,
+Split: train, epoch: 3, metrics: accuracy: 0.752 ; iou: 0.048 ; dice: 0.059 ; sensitivity: 0.065 ; auroc: 0.740
+Split: val, epoch: 3, metrics: accuracy: 0.744 ; iou: 0.046 ; dice: 0.056 ; sensitivity: 0.062 ; auroc: 0.736
+Finish iter: 0, loss 1.0365633964538574
+Finish iter: 20, loss 1.1443166732788086
+Finish iter: 40, loss 1.2481820583343506
+Training epoch: 4, loss: 1.0898499488830566, time elapsed: 14.206110000610352,
+Split: train, epoch: 4, metrics: accuracy: 0.755 ; iou: 0.044 ; dice: 0.054 ; sensitivity: 0.058 ; auroc: 0.748
+Split: val, epoch: 4, metrics: accuracy: 0.750 ; iou: 0.042 ; dice: 0.051 ; sensitivity: 0.055 ; auroc: 0.737
+Finish iter: 0, loss 1.3259706497192383
+Finish iter: 20, loss 1.0770094394683838
+Finish iter: 40, loss 1.085079550743103
+Training epoch: 5, loss: 1.168434739112854, time elapsed: 14.10783052444458,
+Split: train, epoch: 5, metrics: accuracy: 0.753 ; iou: 0.056 ; dice: 0.068 ; sensitivity: 0.080 ; auroc: 0.772
+Split: val, epoch: 5, metrics: accuracy: 0.740 ; iou: 0.051 ; dice: 0.064 ; sensitivity: 0.074 ; auroc: 0.762
+Finish iter: 0, loss 1.091817855834961
+Finish iter: 20, loss 1.290366768836975
+Finish iter: 40, loss 0.9554197192192078
+Training epoch: 6, loss: 0.9414164423942566, time elapsed: 14.118464946746826,
+Split: train, epoch: 6, metrics: accuracy: 0.750 ; iou: 0.057 ; dice: 0.072 ; sensitivity: 0.088 ; auroc: 0.793
+Split: val, epoch: 6, metrics: accuracy: 0.737 ; iou: 0.055 ; dice: 0.068 ; sensitivity: 0.084 ; auroc: 0.780
+Finish iter: 0, loss 0.9789884686470032
+Finish iter: 20, loss 1.0577291250228882
+Finish iter: 40, loss 0.9887535572052002
+Training epoch: 7, loss: 1.0256879329681396, time elapsed: 14.188621282577515,
+Split: train, epoch: 7, metrics: accuracy: 0.754 ; iou: 0.043 ; dice: 0.052 ; sensitivity: 0.057 ; auroc: 0.791
+Split: val, epoch: 7, metrics: accuracy: 0.750 ; iou: 0.041 ; dice: 0.049 ; sensitivity: 0.053 ; auroc: 0.775
+Finish iter: 0, loss 1.0350322723388672
+Finish iter: 20, loss 1.0338042974472046
+Finish iter: 40, loss 0.9299870133399963
+Training epoch: 8, loss: 0.9479866027832031, time elapsed: 14.128355979919434,
+Split: train, epoch: 8, metrics: accuracy: 0.762 ; iou: 0.053 ; dice: 0.066 ; sensitivity: 0.074 ; auroc: 0.809
+Split: val, epoch: 8, metrics: accuracy: 0.753 ; iou: 0.049 ; dice: 0.060 ; sensitivity: 0.068 ; auroc: 0.799
+Finish iter: 0, loss 0.9235024452209473
+Finish iter: 20, loss 1.0727115869522095
+Finish iter: 40, loss 1.0406262874603271
+Training epoch: 9, loss: 0.9860016703605652, time elapsed: 14.114902019500732,
+Split: train, epoch: 9, metrics: accuracy: 0.757 ; iou: 0.055 ; dice: 0.067 ; sensitivity: 0.085 ; auroc: 0.815
+Split: val, epoch: 9, metrics: accuracy: 0.742 ; iou: 0.050 ; dice: 0.062 ; sensitivity: 0.077 ; auroc: 0.791
+Finish iter: 0, loss 0.985650897026062
+Finish iter: 20, loss 1.0663173198699951
+Finish iter: 40, loss 1.004648208618164
+Training epoch: 10, loss: 0.8842795491218567, time elapsed: 14.13089656829834,
+Split: train, epoch: 10, metrics: accuracy: 0.765 ; iou: 0.056 ; dice: 0.069 ; sensitivity: 0.084 ; auroc: 0.824
+Split: val, epoch: 10, metrics: accuracy: 0.752 ; iou: 0.050 ; dice: 0.063 ; sensitivity: 0.074 ; auroc: 0.799
+Finish iter: 0, loss 1.131564974784851
+Finish iter: 20, loss 1.0371224880218506
+Finish iter: 40, loss 1.031145453453064
+Training epoch: 11, loss: 1.056241512298584, time elapsed: 14.133874654769897,
+Split: train, epoch: 11, metrics: accuracy: 0.766 ; iou: 0.058 ; dice: 0.072 ; sensitivity: 0.093 ; auroc: 0.835
+Split: val, epoch: 11, metrics: accuracy: 0.747 ; iou: 0.052 ; dice: 0.064 ; sensitivity: 0.080 ; auroc: 0.810
+Finish iter: 0, loss 0.7913128733634949
+Finish iter: 20, loss 1.1624349355697632
+Finish iter: 40, loss 0.9781816601753235
+Training epoch: 12, loss: 0.9899518489837646, time elapsed: 14.165428638458252,
+Split: train, epoch: 12, metrics: accuracy: 0.763 ; iou: 0.051 ; dice: 0.063 ; sensitivity: 0.070 ; auroc: 0.837
+Split: val, epoch: 12, metrics: accuracy: 0.754 ; iou: 0.046 ; dice: 0.057 ; sensitivity: 0.062 ; auroc: 0.805
+Finish iter: 0, loss 1.000619888305664
+Finish iter: 20, loss 0.8326042890548706
+Finish iter: 40, loss 1.0329941511154175
+Training epoch: 13, loss: 1.0365381240844727, time elapsed: 14.114107370376587,
+Split: train, epoch: 13, metrics: accuracy: 0.772 ; iou: 0.063 ; dice: 0.077 ; sensitivity: 0.104 ; auroc: 0.862
+Split: val, epoch: 13, metrics: accuracy: 0.753 ; iou: 0.057 ; dice: 0.072 ; sensitivity: 0.095 ; auroc: 0.822
+Finish iter: 0, loss 0.8014386892318726
+Finish iter: 20, loss 0.8916961550712585
+Finish iter: 40, loss 1.0258210897445679
+Training epoch: 14, loss: 1.1625022888183594, time elapsed: 14.199778318405151,
+Split: train, epoch: 14, metrics: accuracy: 0.769 ; iou: 0.058 ; dice: 0.071 ; sensitivity: 0.079 ; auroc: 0.869
+Split: val, epoch: 14, metrics: accuracy: 0.757 ; iou: 0.050 ; dice: 0.061 ; sensitivity: 0.067 ; auroc: 0.824
+Finish iter: 0, loss 0.9470001459121704
+Finish iter: 20, loss 0.7913888692855835
+Finish iter: 40, loss 0.8362037539482117
+Training epoch: 15, loss: 0.8959851861000061, time elapsed: 14.16773533821106,
+Split: train, epoch: 15, metrics: accuracy: 0.777 ; iou: 0.065 ; dice: 0.078 ; sensitivity: 0.093 ; auroc: 0.880
+Split: val, epoch: 15, metrics: accuracy: 0.757 ; iou: 0.053 ; dice: 0.066 ; sensitivity: 0.076 ; auroc: 0.830
+Finish iter: 0, loss 0.9510034918785095
+Finish iter: 20, loss 0.9183884263038635
+Finish iter: 40, loss 0.9155233502388
+Training epoch: 16, loss: 0.8410858511924744, time elapsed: 14.117194890975952,
+Split: train, epoch: 16, metrics: accuracy: 0.779 ; iou: 0.066 ; dice: 0.081 ; sensitivity: 0.097 ; auroc: 0.897
+Split: val, epoch: 16, metrics: accuracy: 0.762 ; iou: 0.056 ; dice: 0.069 ; sensitivity: 0.081 ; auroc: 0.848
+Finish iter: 0, loss 1.041634440422058
+Finish iter: 20, loss 0.7194638252258301
+Finish iter: 40, loss 0.7653244733810425
+Training epoch: 17, loss: 0.8529906868934631, time elapsed: 14.133733749389648,
+Split: train, epoch: 17, metrics: accuracy: 0.786 ; iou: 0.081 ; dice: 0.101 ; sensitivity: 0.133 ; auroc: 0.901
+Split: val, epoch: 17, metrics: accuracy: 0.751 ; iou: 0.066 ; dice: 0.084 ; sensitivity: 0.112 ; auroc: 0.851
+Finish iter: 0, loss 0.8739256858825684
+Finish iter: 20, loss 0.6929190754890442
+Finish iter: 40, loss 0.9401921629905701
+Training epoch: 18, loss: 0.9821901917457581, time elapsed: 14.198784112930298,
+Split: train, epoch: 18, metrics: accuracy: 0.778 ; iou: 0.077 ; dice: 0.096 ; sensitivity: 0.128 ; auroc: 0.901
+Split: val, epoch: 18, metrics: accuracy: 0.757 ; iou: 0.064 ; dice: 0.080 ; sensitivity: 0.106 ; auroc: 0.866
+Finish iter: 0, loss 0.7484284043312073
+Finish iter: 20, loss 0.9375872015953064
+Finish iter: 40, loss 1.1373746395111084
+Training epoch: 19, loss: 0.8734035491943359, time elapsed: 14.142710208892822,
+Split: train, epoch: 19, metrics: accuracy: 0.775 ; iou: 0.081 ; dice: 0.101 ; sensitivity: 0.123 ; auroc: 0.852
+Split: val, epoch: 19, metrics: accuracy: 0.756 ; iou: 0.067 ; dice: 0.085 ; sensitivity: 0.097 ; auroc: 0.812
+Finish iter: 0, loss 1.0486012697219849
+Finish iter: 20, loss 0.8040556907653809
+Finish iter: 40, loss 0.8091868758201599
+Training epoch: 20, loss: 0.8465021252632141, time elapsed: 14.116075038909912,
+Split: train, epoch: 20, metrics: accuracy: 0.793 ; iou: 0.093 ; dice: 0.112 ; sensitivity: 0.125 ; auroc: 0.908
+Split: val, epoch: 20, metrics: accuracy: 0.770 ; iou: 0.067 ; dice: 0.083 ; sensitivity: 0.090 ; auroc: 0.854
+Finish iter: 0, loss 0.9427516460418701
+Finish iter: 20, loss 0.8130577206611633
+Finish iter: 40, loss 0.8014737963676453
+Training epoch: 21, loss: 0.9164231419563293, time elapsed: 14.104123592376709,
+Split: train, epoch: 21, metrics: accuracy: 0.809 ; iou: 0.118 ; dice: 0.144 ; sensitivity: 0.169 ; auroc: 0.935
+Split: val, epoch: 21, metrics: accuracy: 0.777 ; iou: 0.082 ; dice: 0.101 ; sensitivity: 0.118 ; auroc: 0.873
+Finish iter: 0, loss 0.7213491201400757
+Finish iter: 20, loss 0.6091193556785583
+Finish iter: 40, loss 0.661188542842865
+Training epoch: 22, loss: 0.8680770397186279, time elapsed: 14.227665901184082,
+Split: train, epoch: 22, metrics: accuracy: 0.806 ; iou: 0.114 ; dice: 0.141 ; sensitivity: 0.195 ; auroc: 0.942
+Split: val, epoch: 22, metrics: accuracy: 0.761 ; iou: 0.089 ; dice: 0.113 ; sensitivity: 0.153 ; auroc: 0.892
+Finish iter: 0, loss 0.8399738669395447
+Finish iter: 20, loss 0.6176077127456665
+Finish iter: 40, loss 0.6383964419364929
+Training epoch: 23, loss: 0.7889478802680969, time elapsed: 14.197652816772461,
+Split: train, epoch: 23, metrics: accuracy: 0.803 ; iou: 0.115 ; dice: 0.137 ; sensitivity: 0.181 ; auroc: 0.932
+Split: val, epoch: 23, metrics: accuracy: 0.760 ; iou: 0.086 ; dice: 0.106 ; sensitivity: 0.141 ; auroc: 0.880
+Finish iter: 0, loss 0.6098286509513855
+Finish iter: 20, loss 0.7894441485404968
+Finish iter: 40, loss 0.7152763605117798
+Training epoch: 24, loss: 0.6784312725067139, time elapsed: 14.181186199188232,
+Split: train, epoch: 24, metrics: accuracy: 0.810 ; iou: 0.124 ; dice: 0.149 ; sensitivity: 0.186 ; auroc: 0.944
+Split: val, epoch: 24, metrics: accuracy: 0.769 ; iou: 0.080 ; dice: 0.098 ; sensitivity: 0.119 ; auroc: 0.868
+Finish iter: 0, loss 0.6069386005401611
+Finish iter: 20, loss 0.6406872272491455
+Finish iter: 40, loss 0.8435198664665222
+Training epoch: 25, loss: 0.6770038604736328, time elapsed: 14.145949125289917,
+Split: train, epoch: 25, metrics: accuracy: 0.821 ; iou: 0.151 ; dice: 0.171 ; sensitivity: 0.219 ; auroc: 0.955
+Split: val, epoch: 25, metrics: accuracy: 0.773 ; iou: 0.090 ; dice: 0.112 ; sensitivity: 0.140 ; auroc: 0.889
+Finish iter: 0, loss 0.5147349834442139
+Finish iter: 20, loss 0.6099548935890198
+Finish iter: 40, loss 0.6002313494682312
+Training epoch: 26, loss: 0.820955753326416, time elapsed: 14.146149635314941,
+Split: train, epoch: 26, metrics: accuracy: 0.828 ; iou: 0.171 ; dice: 0.200 ; sensitivity: 0.268 ; auroc: 0.964
+Split: val, epoch: 26, metrics: accuracy: 0.763 ; iou: 0.096 ; dice: 0.122 ; sensitivity: 0.154 ; auroc: 0.891
+Finish iter: 0, loss 0.6004958748817444
+Finish iter: 20, loss 0.5988314747810364
+Finish iter: 40, loss 0.5383517742156982
+Training epoch: 27, loss: 0.4710089862346649, time elapsed: 14.22868800163269,
+Split: train, epoch: 27, metrics: accuracy: 0.821 ; iou: 0.168 ; dice: 0.199 ; sensitivity: 0.248 ; auroc: 0.961
+Split: val, epoch: 27, metrics: accuracy: 0.764 ; iou: 0.086 ; dice: 0.106 ; sensitivity: 0.131 ; auroc: 0.890
+Finish iter: 0, loss 0.48556387424468994
+Finish iter: 20, loss 0.6662251353263855
+Finish iter: 40, loss 0.738307774066925
+Training epoch: 28, loss: 0.39483386278152466, time elapsed: 14.145155429840088,
+Split: train, epoch: 28, metrics: accuracy: 0.828 ; iou: 0.172 ; dice: 0.200 ; sensitivity: 0.239 ; auroc: 0.967
+Split: val, epoch: 28, metrics: accuracy: 0.775 ; iou: 0.097 ; dice: 0.121 ; sensitivity: 0.141 ; auroc: 0.890
+Finish iter: 0, loss 0.46392810344696045
+Finish iter: 20, loss 0.6051920056343079
+Finish iter: 40, loss 0.5777578353881836
+Training epoch: 29, loss: 0.5124880075454712, time elapsed: 14.230145454406738,
+Split: train, epoch: 29, metrics: accuracy: 0.838 ; iou: 0.201 ; dice: 0.223 ; sensitivity: 0.288 ; auroc: 0.965
+Split: val, epoch: 29, metrics: accuracy: 0.771 ; iou: 0.103 ; dice: 0.127 ; sensitivity: 0.156 ; auroc: 0.892
+Finish iter: 0, loss 0.4254872500896454
+Finish iter: 20, loss 0.5844521522521973
+Finish iter: 40, loss 0.4686209559440613
+Training epoch: 30, loss: 0.5805281400680542, time elapsed: 14.185039281845093,
+Split: train, epoch: 30, metrics: accuracy: 0.844 ; iou: 0.229 ; dice: 0.256 ; sensitivity: 0.323 ; auroc: 0.969
+Split: val, epoch: 30, metrics: accuracy: 0.773 ; iou: 0.106 ; dice: 0.134 ; sensitivity: 0.155 ; auroc: 0.881
+Vision_task_1.py:548: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`).
+  fig, axarr = plt.subplots(rows, cols, gridspec_kw=gridspec_kw, figsize=(15, 9))
+Finish iter: 0, loss 0.4979903995990753
+Finish iter: 20, loss 0.3989292085170746
+Finish iter: 40, loss 0.445762038230896
+Training epoch: 31, loss: 0.7235075235366821, time elapsed: 14.163080930709839,
+Split: train, epoch: 31, metrics: accuracy: 0.829 ; iou: 0.197 ; dice: 0.227 ; sensitivity: 0.278 ; auroc: 0.967
+Split: val, epoch: 31, metrics: accuracy: 0.767 ; iou: 0.100 ; dice: 0.128 ; sensitivity: 0.143 ; auroc: 0.887
+Finish iter: 0, loss 0.5074720978736877
+Finish iter: 20, loss 0.5753201246261597
+Finish iter: 40, loss 0.5483967661857605
+Training epoch: 32, loss: 0.5363089442253113, time elapsed: 14.195523023605347,
+Split: train, epoch: 32, metrics: accuracy: 0.853 ; iou: 0.271 ; dice: 0.292 ; sensitivity: 0.345 ; auroc: 0.974
+Split: val, epoch: 32, metrics: accuracy: 0.779 ; iou: 0.115 ; dice: 0.139 ; sensitivity: 0.157 ; auroc: 0.894
+Finish iter: 0, loss 0.4488614797592163
+Finish iter: 20, loss 0.47277122735977173
+Finish iter: 40, loss 0.4215763509273529
+Training epoch: 33, loss: 0.5826355814933777, time elapsed: 14.142944574356079,
+Split: train, epoch: 33, metrics: accuracy: 0.855 ; iou: 0.287 ; dice: 0.316 ; sensitivity: 0.406 ; auroc: 0.976
+Split: val, epoch: 33, metrics: accuracy: 0.750 ; iou: 0.125 ; dice: 0.160 ; sensitivity: 0.195 ; auroc: 0.904
+Finish iter: 0, loss 0.43031740188598633
+Finish iter: 20, loss 0.5213782787322998
+Finish iter: 40, loss 0.45711594820022583
+Training epoch: 34, loss: 0.45749109983444214, time elapsed: 14.150948762893677,
+Split: train, epoch: 34, metrics: accuracy: 0.856 ; iou: 0.278 ; dice: 0.305 ; sensitivity: 0.359 ; auroc: 0.977
+Split: val, epoch: 34, metrics: accuracy: 0.779 ; iou: 0.120 ; dice: 0.152 ; sensitivity: 0.166 ; auroc: 0.899
+Finish iter: 0, loss 0.47966766357421875
+Finish iter: 20, loss 0.3794126808643341
+Finish iter: 40, loss 0.486879825592041
+Training epoch: 35, loss: 0.5766919255256653, time elapsed: 14.335216522216797,
+Split: train, epoch: 35, metrics: accuracy: 0.870 ; iou: 0.336 ; dice: 0.355 ; sensitivity: 0.440 ; auroc: 0.982
+Split: val, epoch: 35, metrics: accuracy: 0.777 ; iou: 0.147 ; dice: 0.180 ; sensitivity: 0.209 ; auroc: 0.899
+Finish iter: 0, loss 0.42599478363990784
+Finish iter: 20, loss 0.35305124521255493
+Finish iter: 40, loss 0.41100001335144043
+Training epoch: 36, loss: 0.6539871096611023, time elapsed: 14.162545919418335,
+Split: train, epoch: 36, metrics: accuracy: 0.873 ; iou: 0.361 ; dice: 0.363 ; sensitivity: 0.462 ; auroc: 0.981
+Split: val, epoch: 36, metrics: accuracy: 0.773 ; iou: 0.137 ; dice: 0.173 ; sensitivity: 0.206 ; auroc: 0.901
+Finish iter: 0, loss 0.47362083196640015
+Finish iter: 20, loss 0.3324376344680786
+Finish iter: 40, loss 0.4318816661834717
+Training epoch: 37, loss: 0.3390245735645294, time elapsed: 14.161818981170654,
+Split: train, epoch: 37, metrics: accuracy: 0.872 ; iou: 0.338 ; dice: 0.370 ; sensitivity: 0.461 ; auroc: 0.983
+Split: val, epoch: 37, metrics: accuracy: 0.770 ; iou: 0.130 ; dice: 0.168 ; sensitivity: 0.200 ; auroc: 0.894
+Finish iter: 0, loss 0.3888895809650421
+Finish iter: 20, loss 0.5227469801902771
+Finish iter: 40, loss 0.35175463557243347
+Training epoch: 38, loss: 0.5691311359405518, time elapsed: 14.182109594345093,
+Split: train, epoch: 38, metrics: accuracy: 0.879 ; iou: 0.378 ; dice: 0.384 ; sensitivity: 0.500 ; auroc: 0.983
+Split: val, epoch: 38, metrics: accuracy: 0.766 ; iou: 0.149 ; dice: 0.180 ; sensitivity: 0.225 ; auroc: 0.894
+Finish iter: 0, loss 0.39861157536506653
+Finish iter: 20, loss 0.3646829128265381
+Finish iter: 40, loss 0.5667228102684021
+Training epoch: 39, loss: 0.37971097230911255, time elapsed: 14.151285886764526,
+Split: train, epoch: 39, metrics: accuracy: 0.876 ; iou: 0.387 ; dice: 0.388 ; sensitivity: 0.463 ; auroc: 0.982
+Split: val, epoch: 39, metrics: accuracy: 0.784 ; iou: 0.137 ; dice: 0.163 ; sensitivity: 0.175 ; auroc: 0.891
+Finish iter: 0, loss 0.2971406877040863
+Finish iter: 20, loss 0.30560192465782166
+Finish iter: 40, loss 0.3603328764438629
+Training epoch: 40, loss: 0.3579448163509369, time elapsed: 14.309107780456543,
+Split: train, epoch: 40, metrics: accuracy: 0.895 ; iou: 0.435 ; dice: 0.443 ; sensitivity: 0.560 ; auroc: 0.989
+Split: val, epoch: 40, metrics: accuracy: 0.770 ; iou: 0.158 ; dice: 0.200 ; sensitivity: 0.227 ; auroc: 0.903
+Finish iter: 0, loss 0.358028769493103
+Finish iter: 20, loss 0.3303283452987671
+Finish iter: 40, loss 0.4725877046585083
+Training epoch: 41, loss: 0.38128113746643066, time elapsed: 14.183855295181274,
+Split: train, epoch: 41, metrics: accuracy: 0.881 ; iou: 0.395 ; dice: 0.401 ; sensitivity: 0.508 ; auroc: 0.986
+Split: val, epoch: 41, metrics: accuracy: 0.767 ; iou: 0.135 ; dice: 0.171 ; sensitivity: 0.206 ; auroc: 0.899
+Finish iter: 0, loss 0.39660659432411194
+Finish iter: 20, loss 0.3645581901073456
+Finish iter: 40, loss 0.3401104807853699
+Training epoch: 42, loss: 0.38645225763320923, time elapsed: 14.232219457626343,
+Split: train, epoch: 42, metrics: accuracy: 0.874 ; iou: 0.383 ; dice: 0.399 ; sensitivity: 0.510 ; auroc: 0.985
+Split: val, epoch: 42, metrics: accuracy: 0.747 ; iou: 0.137 ; dice: 0.174 ; sensitivity: 0.218 ; auroc: 0.898
+Finish iter: 0, loss 0.3159523904323578
+Finish iter: 20, loss 0.2708817720413208
+Finish iter: 40, loss 0.36342641711235046
+Training epoch: 43, loss: 0.48830828070640564, time elapsed: 14.180638790130615,
+Split: train, epoch: 43, metrics: accuracy: 0.895 ; iou: 0.454 ; dice: 0.461 ; sensitivity: 0.570 ; auroc: 0.988
+Split: val, epoch: 43, metrics: accuracy: 0.769 ; iou: 0.148 ; dice: 0.184 ; sensitivity: 0.215 ; auroc: 0.908
+Finish iter: 0, loss 0.3283687233924866
+Finish iter: 20, loss 0.27025431394577026
+Finish iter: 40, loss 0.31870439648628235
+Training epoch: 44, loss: 0.6090850830078125, time elapsed: 14.166215896606445,
+Split: train, epoch: 44, metrics: accuracy: 0.897 ; iou: 0.455 ; dice: 0.429 ; sensitivity: 0.542 ; auroc: 0.988
+Split: val, epoch: 44, metrics: accuracy: 0.784 ; iou: 0.142 ; dice: 0.175 ; sensitivity: 0.194 ; auroc: 0.897
+Finish iter: 0, loss 0.40219607949256897
+Finish iter: 20, loss 0.30075329542160034
+Finish iter: 40, loss 0.3616116940975189
+Training epoch: 45, loss: 0.34758082032203674, time elapsed: 14.173766613006592,
+Split: train, epoch: 45, metrics: accuracy: 0.899 ; iou: 0.477 ; dice: 0.446 ; sensitivity: 0.556 ; auroc: 0.988
+Split: val, epoch: 45, metrics: accuracy: 0.778 ; iou: 0.132 ; dice: 0.165 ; sensitivity: 0.173 ; auroc: 0.892
+Finish iter: 0, loss 0.2656886875629425
+Finish iter: 20, loss 0.3049974739551544
+Finish iter: 40, loss 0.2986454367637634
+Training epoch: 46, loss: 0.3191660940647125, time elapsed: 14.244545221328735,
+Split: train, epoch: 46, metrics: accuracy: 0.913 ; iou: 0.519 ; dice: 0.504 ; sensitivity: 0.619 ; auroc: 0.990
+Split: val, epoch: 46, metrics: accuracy: 0.781 ; iou: 0.164 ; dice: 0.200 ; sensitivity: 0.228 ; auroc: 0.901
+Finish iter: 0, loss 0.2994205951690674
+Finish iter: 20, loss 0.321244478225708
+Finish iter: 40, loss 0.24994589388370514
+Training epoch: 47, loss: 0.4098933935165405, time elapsed: 14.214981317520142,
+Split: train, epoch: 47, metrics: accuracy: 0.914 ; iou: 0.531 ; dice: 0.501 ; sensitivity: 0.645 ; auroc: 0.991
+Split: val, epoch: 47, metrics: accuracy: 0.770 ; iou: 0.163 ; dice: 0.202 ; sensitivity: 0.228 ; auroc: 0.901
+Finish iter: 0, loss 0.2472013682126999
+Finish iter: 20, loss 0.28705862164497375
+Finish iter: 40, loss 0.42427828907966614
+Training epoch: 48, loss: 0.2539220452308655, time elapsed: 14.215569257736206,
+Split: train, epoch: 48, metrics: accuracy: 0.892 ; iou: 0.451 ; dice: 0.456 ; sensitivity: 0.535 ; auroc: 0.987
+Split: val, epoch: 48, metrics: accuracy: 0.776 ; iou: 0.126 ; dice: 0.163 ; sensitivity: 0.165 ; auroc: 0.874
+Finish iter: 0, loss 0.3834768533706665
+Finish iter: 20, loss 0.3756406009197235
+Finish iter: 40, loss 0.3004573583602905
+Training epoch: 49, loss: 0.29218652844429016, time elapsed: 14.215274810791016,
+Split: train, epoch: 49, metrics: accuracy: 0.898 ; iou: 0.498 ; dice: 0.477 ; sensitivity: 0.604 ; auroc: 0.991
+Split: val, epoch: 49, metrics: accuracy: 0.766 ; iou: 0.135 ; dice: 0.173 ; sensitivity: 0.185 ; auroc: 0.900
+Finish iter: 0, loss 0.22298477590084076
+Finish iter: 20, loss 0.3950263559818268
+Finish iter: 40, loss 0.33971038460731506
+Training epoch: 50, loss: 0.294304758310318, time elapsed: 14.18737244606018,
+Split: train, epoch: 50, metrics: accuracy: 0.906 ; iou: 0.508 ; dice: 0.479 ; sensitivity: 0.600 ; auroc: 0.990
+Split: val, epoch: 50, metrics: accuracy: 0.771 ; iou: 0.151 ; dice: 0.186 ; sensitivity: 0.212 ; auroc: 0.898
+Finish iter: 0, loss 0.2424062192440033
+Finish iter: 20, loss 0.1856134831905365
+Finish iter: 40, loss 0.2678205668926239
+Training epoch: 51, loss: 0.2978302538394928, time elapsed: 14.225781202316284,
+Split: train, epoch: 51, metrics: accuracy: 0.921 ; iou: 0.568 ; dice: 0.541 ; sensitivity: 0.684 ; auroc: 0.993
+Split: val, epoch: 51, metrics: accuracy: 0.768 ; iou: 0.149 ; dice: 0.183 ; sensitivity: 0.212 ; auroc: 0.909
+Finish iter: 0, loss 0.2620919942855835
+Finish iter: 20, loss 0.22848378121852875
+Finish iter: 40, loss 0.2748282253742218
+Training epoch: 52, loss: 0.28156742453575134, time elapsed: 14.2247474193573,
+Split: train, epoch: 52, metrics: accuracy: 0.932 ; iou: 0.625 ; dice: 0.574 ; sensitivity: 0.715 ; auroc: 0.994
+Split: val, epoch: 52, metrics: accuracy: 0.780 ; iou: 0.167 ; dice: 0.207 ; sensitivity: 0.230 ; auroc: 0.903
+Finish iter: 0, loss 0.14283551275730133
+Finish iter: 20, loss 0.2826818823814392
+Finish iter: 40, loss 0.16383492946624756
+Training epoch: 53, loss: 0.23324914276599884, time elapsed: 14.29964828491211,
+Split: train, epoch: 53, metrics: accuracy: 0.940 ; iou: 0.687 ; dice: 0.627 ; sensitivity: 0.760 ; auroc: 0.995
+Split: val, epoch: 53, metrics: accuracy: 0.780 ; iou: 0.174 ; dice: 0.209 ; sensitivity: 0.232 ; auroc: 0.905
+Finish iter: 0, loss 0.18906858563423157
+Finish iter: 20, loss 0.2560163140296936
+Finish iter: 40, loss 0.22291558980941772
+Training epoch: 54, loss: 0.24455544352531433, time elapsed: 14.22062373161316,
+Split: train, epoch: 54, metrics: accuracy: 0.941 ; iou: 0.689 ; dice: 0.629 ; sensitivity: 0.778 ; auroc: 0.995
+Split: val, epoch: 54, metrics: accuracy: 0.778 ; iou: 0.166 ; dice: 0.212 ; sensitivity: 0.229 ; auroc: 0.901
+Finish iter: 0, loss 0.17884062230587006
+Finish iter: 20, loss 0.19135403633117676
+Finish iter: 40, loss 0.2893405556678772
+Training epoch: 55, loss: 0.2849237620830536, time elapsed: 14.198501825332642,
+Split: train, epoch: 55, metrics: accuracy: 0.937 ; iou: 0.667 ; dice: 0.599 ; sensitivity: 0.750 ; auroc: 0.995
+Split: val, epoch: 55, metrics: accuracy: 0.776 ; iou: 0.177 ; dice: 0.221 ; sensitivity: 0.237 ; auroc: 0.903
+Finish iter: 0, loss 0.23529726266860962
+Finish iter: 20, loss 0.20152334868907928
+Finish iter: 40, loss 0.24143289029598236
+Training epoch: 56, loss: 0.26160067319869995, time elapsed: 14.253047704696655,
+Split: train, epoch: 56, metrics: accuracy: 0.937 ; iou: 0.671 ; dice: 0.595 ; sensitivity: 0.760 ; auroc: 0.995
+Split: val, epoch: 56, metrics: accuracy: 0.776 ; iou: 0.168 ; dice: 0.207 ; sensitivity: 0.232 ; auroc: 0.900
+Finish iter: 0, loss 0.14573217928409576
+Finish iter: 20, loss 0.21924421191215515
+Finish iter: 40, loss 0.2182566523551941
+Training epoch: 57, loss: 0.2238348126411438, time elapsed: 14.198594808578491,
+Split: train, epoch: 57, metrics: accuracy: 0.930 ; iou: 0.630 ; dice: 0.569 ; sensitivity: 0.719 ; auroc: 0.994
+Split: val, epoch: 57, metrics: accuracy: 0.773 ; iou: 0.158 ; dice: 0.195 ; sensitivity: 0.220 ; auroc: 0.893
+Finish iter: 0, loss 0.27867674827575684
+Finish iter: 20, loss 0.22365911304950714
+Finish iter: 40, loss 0.23250573873519897
+Training epoch: 58, loss: 0.2705163061618805, time elapsed: 14.240953922271729,
+Split: train, epoch: 58, metrics: accuracy: 0.927 ; iou: 0.606 ; dice: 0.573 ; sensitivity: 0.715 ; auroc: 0.994
+Split: val, epoch: 58, metrics: accuracy: 0.775 ; iou: 0.157 ; dice: 0.195 ; sensitivity: 0.229 ; auroc: 0.888
+Finish iter: 0, loss 0.3025858998298645
+Finish iter: 20, loss 0.3053882122039795
+Finish iter: 40, loss 0.1833859533071518
+Training epoch: 59, loss: 0.1785728484392166, time elapsed: 14.253154277801514,
+Split: train, epoch: 59, metrics: accuracy: 0.933 ; iou: 0.651 ; dice: 0.602 ; sensitivity: 0.732 ; auroc: 0.995
+Split: val, epoch: 59, metrics: accuracy: 0.774 ; iou: 0.157 ; dice: 0.194 ; sensitivity: 0.211 ; auroc: 0.890
+Finish iter: 0, loss 0.19033946096897125
+Finish iter: 20, loss 0.16097861528396606
+Finish iter: 40, loss 0.2749304175376892
+Training epoch: 60, loss: 0.21238838136196136, time elapsed: 14.236856460571289,
+Split: train, epoch: 60, metrics: accuracy: 0.936 ; iou: 0.665 ; dice: 0.601 ; sensitivity: 0.755 ; auroc: 0.994
+Split: val, epoch: 60, metrics: accuracy: 0.769 ; iou: 0.177 ; dice: 0.213 ; sensitivity: 0.259 ; auroc: 0.889
+Finish iter: 0, loss 0.20676752924919128
+Finish iter: 20, loss 0.164846733212471
+Finish iter: 40, loss 0.21655665338039398
+Training epoch: 61, loss: 0.16988788545131683, time elapsed: 14.228694200515747,
+Split: train, epoch: 61, metrics: accuracy: 0.952 ; iou: 0.770 ; dice: 0.686 ; sensitivity: 0.857 ; auroc: 0.997
+Split: val, epoch: 61, metrics: accuracy: 0.773 ; iou: 0.194 ; dice: 0.241 ; sensitivity: 0.277 ; auroc: 0.904
+Finish iter: 0, loss 0.15399757027626038
+Finish iter: 20, loss 0.15251517295837402
+Finish iter: 40, loss 0.1924557238817215
+Training epoch: 62, loss: 0.17798395454883575, time elapsed: 14.233957529067993,
+Split: train, epoch: 62, metrics: accuracy: 0.941 ; iou: 0.711 ; dice: 0.641 ; sensitivity: 0.811 ; auroc: 0.996
+Split: val, epoch: 62, metrics: accuracy: 0.764 ; iou: 0.158 ; dice: 0.198 ; sensitivity: 0.237 ; auroc: 0.905
+Finish iter: 0, loss 0.19355544447898865
+Finish iter: 20, loss 0.1463545858860016
+Finish iter: 40, loss 0.2012835144996643
+Training epoch: 63, loss: 0.17626667022705078, time elapsed: 14.240091562271118,
+Split: train, epoch: 63, metrics: accuracy: 0.949 ; iou: 0.750 ; dice: 0.659 ; sensitivity: 0.820 ; auroc: 0.997
+Split: val, epoch: 63, metrics: accuracy: 0.778 ; iou: 0.163 ; dice: 0.201 ; sensitivity: 0.231 ; auroc: 0.900
+Finish iter: 0, loss 0.21783457696437836
+Finish iter: 20, loss 0.13385926187038422
+Finish iter: 40, loss 0.17926381528377533
+Training epoch: 64, loss: 0.2304299771785736, time elapsed: 14.293568849563599,
+Split: train, epoch: 64, metrics: accuracy: 0.941 ; iou: 0.703 ; dice: 0.631 ; sensitivity: 0.788 ; auroc: 0.996
+Split: val, epoch: 64, metrics: accuracy: 0.767 ; iou: 0.165 ; dice: 0.204 ; sensitivity: 0.244 ; auroc: 0.892
+Finish iter: 0, loss 0.18085475265979767
+Finish iter: 20, loss 0.13907988369464874
+Finish iter: 40, loss 0.15271686017513275
+Training epoch: 65, loss: 0.19448621571063995, time elapsed: 14.202028751373291,
+Split: train, epoch: 65, metrics: accuracy: 0.956 ; iou: 0.789 ; dice: 0.689 ; sensitivity: 0.860 ; auroc: 0.997
+Split: val, epoch: 65, metrics: accuracy: 0.779 ; iou: 0.180 ; dice: 0.217 ; sensitivity: 0.246 ; auroc: 0.902
+Finish iter: 0, loss 0.14603464305400848
+Finish iter: 20, loss 0.17715750634670258
+Finish iter: 40, loss 0.16893744468688965
+Training epoch: 66, loss: 0.18726319074630737, time elapsed: 14.17725133895874,
+Split: train, epoch: 66, metrics: accuracy: 0.957 ; iou: 0.791 ; dice: 0.700 ; sensitivity: 0.856 ; auroc: 0.998
+Split: val, epoch: 66, metrics: accuracy: 0.783 ; iou: 0.178 ; dice: 0.216 ; sensitivity: 0.244 ; auroc: 0.900
+Finish iter: 0, loss 0.1294345259666443
+Finish iter: 20, loss 0.1410195529460907
+Finish iter: 40, loss 0.12547782063484192
+Training epoch: 67, loss: 0.1572602242231369, time elapsed: 14.23302149772644,
+Split: train, epoch: 67, metrics: accuracy: 0.960 ; iou: 0.811 ; dice: 0.711 ; sensitivity: 0.889 ; auroc: 0.998
+Split: val, epoch: 67, metrics: accuracy: 0.774 ; iou: 0.191 ; dice: 0.233 ; sensitivity: 0.269 ; auroc: 0.909
+Finish iter: 0, loss 0.1221088320016861
+Finish iter: 20, loss 0.18380534648895264
+Finish iter: 40, loss 0.10742969065904617
+Training epoch: 68, loss: 0.14563678205013275, time elapsed: 14.203348159790039,
+Split: train, epoch: 68, metrics: accuracy: 0.962 ; iou: 0.819 ; dice: 0.712 ; sensitivity: 0.872 ; auroc: 0.998
+Split: val, epoch: 68, metrics: accuracy: 0.775 ; iou: 0.167 ; dice: 0.209 ; sensitivity: 0.225 ; auroc: 0.897
+Finish iter: 0, loss 0.12444217503070831
+Finish iter: 20, loss 0.12323281168937683
+Finish iter: 40, loss 0.13400231301784515
+Training epoch: 69, loss: 0.11865234375, time elapsed: 14.239912748336792,
+Split: train, epoch: 69, metrics: accuracy: 0.964 ; iou: 0.833 ; dice: 0.735 ; sensitivity: 0.889 ; auroc: 0.999
+Split: val, epoch: 69, metrics: accuracy: 0.776 ; iou: 0.174 ; dice: 0.215 ; sensitivity: 0.241 ; auroc: 0.899
+Finish iter: 0, loss 0.0953683853149414
+Finish iter: 20, loss 0.1516980528831482
+Finish iter: 40, loss 0.10953575372695923
+Training epoch: 70, loss: 0.1240486204624176, time elapsed: 14.229260444641113,
+Split: train, epoch: 70, metrics: accuracy: 0.966 ; iou: 0.847 ; dice: 0.730 ; sensitivity: 0.906 ; auroc: 0.999
+Split: val, epoch: 70, metrics: accuracy: 0.777 ; iou: 0.184 ; dice: 0.227 ; sensitivity: 0.253 ; auroc: 0.895
+Finish iter: 0, loss 0.11271143704652786
+Finish iter: 20, loss 0.1125970110297203
+Finish iter: 40, loss 0.09835923463106155
+Training epoch: 71, loss: 0.11076372861862183, time elapsed: 14.203441619873047,
+Split: train, epoch: 71, metrics: accuracy: 0.967 ; iou: 0.849 ; dice: 0.727 ; sensitivity: 0.897 ; auroc: 0.999
+Split: val, epoch: 71, metrics: accuracy: 0.786 ; iou: 0.186 ; dice: 0.231 ; sensitivity: 0.250 ; auroc: 0.904
+Finish iter: 0, loss 0.09730610251426697
+Finish iter: 20, loss 0.16773612797260284
+Finish iter: 40, loss 0.09051656723022461
+Training epoch: 72, loss: 0.09754469245672226, time elapsed: 14.270503759384155,
+Split: train, epoch: 72, metrics: accuracy: 0.967 ; iou: 0.850 ; dice: 0.727 ; sensitivity: 0.914 ; auroc: 0.999
+Split: val, epoch: 72, metrics: accuracy: 0.777 ; iou: 0.181 ; dice: 0.227 ; sensitivity: 0.254 ; auroc: 0.911
+Finish iter: 0, loss 0.09128671139478683
+Finish iter: 20, loss 0.10306151956319809
+Finish iter: 40, loss 0.09828101098537445
+Training epoch: 73, loss: 0.0953560546040535, time elapsed: 14.331264734268188,
+Split: train, epoch: 73, metrics: accuracy: 0.968 ; iou: 0.857 ; dice: 0.743 ; sensitivity: 0.913 ; auroc: 0.999
+Split: val, epoch: 73, metrics: accuracy: 0.784 ; iou: 0.184 ; dice: 0.222 ; sensitivity: 0.251 ; auroc: 0.892
+Finish iter: 0, loss 0.07644443958997726
+Finish iter: 20, loss 0.1001206710934639
+Finish iter: 40, loss 0.10178934782743454
+Training epoch: 74, loss: 0.0928899496793747, time elapsed: 14.287842035293579,
+Split: train, epoch: 74, metrics: accuracy: 0.967 ; iou: 0.851 ; dice: 0.737 ; sensitivity: 0.903 ; auroc: 0.999
+Split: val, epoch: 74, metrics: accuracy: 0.780 ; iou: 0.177 ; dice: 0.218 ; sensitivity: 0.242 ; auroc: 0.894
+Finish iter: 0, loss 0.15714894235134125
+Finish iter: 20, loss 0.0940735787153244
+Finish iter: 40, loss 0.09689134359359741
+Training epoch: 75, loss: 0.11996745318174362, time elapsed: 14.249199867248535,
+Split: train, epoch: 75, metrics: accuracy: 0.967 ; iou: 0.845 ; dice: 0.752 ; sensitivity: 0.896 ; auroc: 0.999
+Split: val, epoch: 75, metrics: accuracy: 0.778 ; iou: 0.170 ; dice: 0.208 ; sensitivity: 0.234 ; auroc: 0.888
+Finish iter: 0, loss 0.1008203849196434
+Finish iter: 20, loss 0.09911085665225983
+Finish iter: 40, loss 0.08094098418951035
+Training epoch: 76, loss: 0.08050193637609482, time elapsed: 14.26767635345459,
+Split: train, epoch: 76, metrics: accuracy: 0.968 ; iou: 0.857 ; dice: 0.751 ; sensitivity: 0.917 ; auroc: 0.999
+Split: val, epoch: 76, metrics: accuracy: 0.777 ; iou: 0.179 ; dice: 0.220 ; sensitivity: 0.248 ; auroc: 0.903
+Finish iter: 0, loss 0.062446773052215576
+Finish iter: 20, loss 0.09878763556480408
+Finish iter: 40, loss 0.10713252425193787
+Training epoch: 77, loss: 0.12843777239322662, time elapsed: 14.21148419380188,
+Split: train, epoch: 77, metrics: accuracy: 0.970 ; iou: 0.862 ; dice: 0.755 ; sensitivity: 0.920 ; auroc: 0.999
+Split: val, epoch: 77, metrics: accuracy: 0.778 ; iou: 0.179 ; dice: 0.219 ; sensitivity: 0.247 ; auroc: 0.897
+Finish iter: 0, loss 0.11757703870534897
+Finish iter: 20, loss 0.1111413836479187
+Finish iter: 40, loss 0.10790377855300903
+Training epoch: 78, loss: 0.09557244926691055, time elapsed: 14.218093395233154,
+Split: train, epoch: 78, metrics: accuracy: 0.970 ; iou: 0.862 ; dice: 0.758 ; sensitivity: 0.923 ; auroc: 0.999
+Split: val, epoch: 78, metrics: accuracy: 0.776 ; iou: 0.187 ; dice: 0.229 ; sensitivity: 0.258 ; auroc: 0.893
+Finish iter: 0, loss 0.12954974174499512
+Finish iter: 20, loss 0.10127729922533035
+Finish iter: 40, loss 0.09370622783899307
+Training epoch: 79, loss: 0.08680080622434616, time elapsed: 14.278224468231201,
+Split: train, epoch: 79, metrics: accuracy: 0.971 ; iou: 0.860 ; dice: 0.752 ; sensitivity: 0.914 ; auroc: 0.999
+Split: val, epoch: 79, metrics: accuracy: 0.778 ; iou: 0.179 ; dice: 0.227 ; sensitivity: 0.245 ; auroc: 0.892
+Finish iter: 0, loss 0.07046777009963989
+Finish iter: 20, loss 0.09414958953857422
+Finish iter: 40, loss 0.07567530870437622
+Training epoch: 80, loss: 0.0807095319032669, time elapsed: 14.331663370132446,
+Split: train, epoch: 80, metrics: accuracy: 0.972 ; iou: 0.870 ; dice: 0.753 ; sensitivity: 0.922 ; auroc: 0.999
+Split: val, epoch: 80, metrics: accuracy: 0.780 ; iou: 0.176 ; dice: 0.217 ; sensitivity: 0.243 ; auroc: 0.894
+Finish iter: 0, loss 0.08796317875385284
+Finish iter: 20, loss 0.08104518055915833
+Finish iter: 40, loss 0.07199884206056595
+Training epoch: 81, loss: 0.08425986021757126, time elapsed: 14.261202573776245,
+Split: train, epoch: 81, metrics: accuracy: 0.972 ; iou: 0.873 ; dice: 0.764 ; sensitivity: 0.926 ; auroc: 0.999
+Split: val, epoch: 81, metrics: accuracy: 0.779 ; iou: 0.181 ; dice: 0.224 ; sensitivity: 0.249 ; auroc: 0.897
+Finish iter: 0, loss 0.06511184573173523
+Finish iter: 20, loss 0.08610367029905319
+Finish iter: 40, loss 0.0670737624168396
+Training epoch: 82, loss: 0.08776139467954636, time elapsed: 14.272761106491089,
+Split: train, epoch: 82, metrics: accuracy: 0.973 ; iou: 0.875 ; dice: 0.766 ; sensitivity: 0.923 ; auroc: 0.999
+Split: val, epoch: 82, metrics: accuracy: 0.781 ; iou: 0.185 ; dice: 0.226 ; sensitivity: 0.254 ; auroc: 0.893
+Finish iter: 0, loss 0.09436788409948349
+Finish iter: 20, loss 0.07773599028587341
+Finish iter: 40, loss 0.07305780053138733
+Training epoch: 83, loss: 0.07447268068790436, time elapsed: 14.28981900215149,
+Split: train, epoch: 83, metrics: accuracy: 0.974 ; iou: 0.880 ; dice: 0.780 ; sensitivity: 0.942 ; auroc: 0.999
+Split: val, epoch: 83, metrics: accuracy: 0.777 ; iou: 0.187 ; dice: 0.230 ; sensitivity: 0.264 ; auroc: 0.898
+Finish iter: 0, loss 0.08047142624855042
+Finish iter: 20, loss 0.07297801226377487
+Finish iter: 40, loss 0.08676464855670929
+Training epoch: 84, loss: 0.05566621571779251, time elapsed: 14.23711371421814,
+Split: train, epoch: 84, metrics: accuracy: 0.974 ; iou: 0.875 ; dice: 0.765 ; sensitivity: 0.917 ; auroc: 1.000
+Split: val, epoch: 84, metrics: accuracy: 0.777 ; iou: 0.174 ; dice: 0.219 ; sensitivity: 0.238 ; auroc: 0.893
+Finish iter: 0, loss 0.061172228306531906
+Finish iter: 20, loss 0.06193986535072327
+Finish iter: 40, loss 0.0678938627243042
+Training epoch: 85, loss: 0.09586656093597412, time elapsed: 14.259970426559448,
+Split: train, epoch: 85, metrics: accuracy: 0.975 ; iou: 0.881 ; dice: 0.772 ; sensitivity: 0.928 ; auroc: 0.999
+Split: val, epoch: 85, metrics: accuracy: 0.779 ; iou: 0.184 ; dice: 0.227 ; sensitivity: 0.252 ; auroc: 0.893
+Finish iter: 0, loss 0.056319303810596466
+Finish iter: 20, loss 0.08591353893280029
+Finish iter: 40, loss 0.07013511657714844
+Training epoch: 86, loss: 0.08365420252084732, time elapsed: 14.264237642288208,
+Split: train, epoch: 86, metrics: accuracy: 0.975 ; iou: 0.883 ; dice: 0.766 ; sensitivity: 0.931 ; auroc: 0.999
+Split: val, epoch: 86, metrics: accuracy: 0.781 ; iou: 0.178 ; dice: 0.223 ; sensitivity: 0.244 ; auroc: 0.891
+Finish iter: 0, loss 0.09430652111768723
+Finish iter: 20, loss 0.08703086525201797
+Finish iter: 40, loss 0.0720740258693695
+Training epoch: 87, loss: 0.0788334310054779, time elapsed: 14.23141360282898,
+Split: train, epoch: 87, metrics: accuracy: 0.975 ; iou: 0.880 ; dice: 0.762 ; sensitivity: 0.922 ; auroc: 1.000
+Split: val, epoch: 87, metrics: accuracy: 0.783 ; iou: 0.182 ; dice: 0.219 ; sensitivity: 0.243 ; auroc: 0.893
+Finish iter: 0, loss 0.09749682992696762
+Finish iter: 20, loss 0.06413374841213226
+Finish iter: 40, loss 0.05268526077270508
+Training epoch: 88, loss: 0.08013634383678436, time elapsed: 14.260412216186523,
+Split: train, epoch: 88, metrics: accuracy: 0.976 ; iou: 0.886 ; dice: 0.779 ; sensitivity: 0.928 ; auroc: 1.000
+Split: val, epoch: 88, metrics: accuracy: 0.780 ; iou: 0.183 ; dice: 0.225 ; sensitivity: 0.250 ; auroc: 0.890
+Finish iter: 0, loss 0.061329275369644165
+Finish iter: 20, loss 0.06607617437839508
+Finish iter: 40, loss 0.05802029371261597
+Training epoch: 89, loss: 0.06998120993375778, time elapsed: 14.280216932296753,
+Split: train, epoch: 89, metrics: accuracy: 0.976 ; iou: 0.886 ; dice: 0.762 ; sensitivity: 0.930 ; auroc: 1.000
+Split: val, epoch: 89, metrics: accuracy: 0.777 ; iou: 0.175 ; dice: 0.217 ; sensitivity: 0.240 ; auroc: 0.898
+Finish iter: 0, loss 0.052738502621650696
+Finish iter: 20, loss 0.05409625172615051
+Finish iter: 40, loss 0.06590472906827927
+Training epoch: 90, loss: 0.06673353910446167, time elapsed: 14.2341890335083,
+Split: train, epoch: 90, metrics: accuracy: 0.976 ; iou: 0.886 ; dice: 0.759 ; sensitivity: 0.921 ; auroc: 1.000
+Split: val, epoch: 90, metrics: accuracy: 0.785 ; iou: 0.180 ; dice: 0.223 ; sensitivity: 0.242 ; auroc: 0.888
+Finish iter: 0, loss 0.06481233984231949
+Finish iter: 20, loss 0.06493526697158813
+Finish iter: 40, loss 0.08611453324556351
+Training epoch: 91, loss: 0.04679950326681137, time elapsed: 14.269489526748657,
+Split: train, epoch: 91, metrics: accuracy: 0.975 ; iou: 0.887 ; dice: 0.781 ; sensitivity: 0.936 ; auroc: 1.000
+Split: val, epoch: 91, metrics: accuracy: 0.775 ; iou: 0.172 ; dice: 0.211 ; sensitivity: 0.241 ; auroc: 0.888
+Finish iter: 0, loss 0.059397824108600616
+Finish iter: 20, loss 0.0543287917971611
+Finish iter: 40, loss 0.08956203609704971
+Training epoch: 92, loss: 0.08964376896619797, time elapsed: 14.279570817947388,
+Split: train, epoch: 92, metrics: accuracy: 0.976 ; iou: 0.888 ; dice: 0.777 ; sensitivity: 0.922 ; auroc: 0.999
+Split: val, epoch: 92, metrics: accuracy: 0.779 ; iou: 0.170 ; dice: 0.213 ; sensitivity: 0.230 ; auroc: 0.888
+Finish iter: 0, loss 0.06178692728281021
+Finish iter: 20, loss 0.07388502359390259
+Finish iter: 40, loss 0.06917182356119156
+Training epoch: 93, loss: 0.0751253142952919, time elapsed: 14.28796935081482,
+Split: train, epoch: 93, metrics: accuracy: 0.978 ; iou: 0.896 ; dice: 0.776 ; sensitivity: 0.939 ; auroc: 1.000
+Split: val, epoch: 93, metrics: accuracy: 0.781 ; iou: 0.184 ; dice: 0.224 ; sensitivity: 0.253 ; auroc: 0.888
+Finish iter: 0, loss 0.05900600180029869
+Finish iter: 20, loss 0.0672805905342102
+Finish iter: 40, loss 0.04171460494399071
+Training epoch: 94, loss: 0.0585285946726799, time elapsed: 14.303530931472778,
+Split: train, epoch: 94, metrics: accuracy: 0.978 ; iou: 0.896 ; dice: 0.774 ; sensitivity: 0.945 ; auroc: 0.999
+Split: val, epoch: 94, metrics: accuracy: 0.774 ; iou: 0.175 ; dice: 0.216 ; sensitivity: 0.246 ; auroc: 0.886
+Finish iter: 0, loss 0.06492569297552109
+Finish iter: 20, loss 0.06120406463742256
+Finish iter: 40, loss 0.053497809916734695
+Training epoch: 95, loss: 0.08060366660356522, time elapsed: 14.252591133117676,
+Split: train, epoch: 95, metrics: accuracy: 0.977 ; iou: 0.895 ; dice: 0.775 ; sensitivity: 0.933 ; auroc: 1.000
+Split: val, epoch: 95, metrics: accuracy: 0.781 ; iou: 0.185 ; dice: 0.232 ; sensitivity: 0.252 ; auroc: 0.889
+Finish iter: 0, loss 0.0641937181353569
+Finish iter: 20, loss 0.06609068810939789
+Finish iter: 40, loss 0.04858698323369026
+Training epoch: 96, loss: 0.06264373660087585, time elapsed: 14.339917659759521,
+Split: train, epoch: 96, metrics: accuracy: 0.978 ; iou: 0.896 ; dice: 0.786 ; sensitivity: 0.933 ; auroc: 1.000
+Split: val, epoch: 96, metrics: accuracy: 0.782 ; iou: 0.181 ; dice: 0.226 ; sensitivity: 0.247 ; auroc: 0.890
+Finish iter: 0, loss 0.047900378704071045
+Finish iter: 20, loss 0.06717784702777863
+Finish iter: 40, loss 0.058400075882673264
+Training epoch: 97, loss: 0.04599577933549881, time elapsed: 14.242795705795288,
+Split: train, epoch: 97, metrics: accuracy: 0.978 ; iou: 0.899 ; dice: 0.771 ; sensitivity: 0.931 ; auroc: 1.000
+Split: val, epoch: 97, metrics: accuracy: 0.782 ; iou: 0.175 ; dice: 0.218 ; sensitivity: 0.234 ; auroc: 0.885
+Finish iter: 0, loss 0.06366802006959915
+Finish iter: 20, loss 0.04742655158042908
+Finish iter: 40, loss 0.06312438100576401
+Training epoch: 98, loss: 0.06408586353063583, time elapsed: 14.269254207611084,
+Split: train, epoch: 98, metrics: accuracy: 0.979 ; iou: 0.901 ; dice: 0.792 ; sensitivity: 0.941 ; auroc: 1.000
+Split: val, epoch: 98, metrics: accuracy: 0.783 ; iou: 0.186 ; dice: 0.229 ; sensitivity: 0.257 ; auroc: 0.888
+Finish iter: 0, loss 0.05985236540436745
+Finish iter: 20, loss 0.06754468381404877
+Finish iter: 40, loss 0.05881635844707489
+Training epoch: 99, loss: 0.06761844456195831, time elapsed: 14.277685165405273,
+Split: train, epoch: 99, metrics: accuracy: 0.978 ; iou: 0.899 ; dice: 0.790 ; sensitivity: 0.946 ; auroc: 1.000
+Split: val, epoch: 99, metrics: accuracy: 0.772 ; iou: 0.177 ; dice: 0.223 ; sensitivity: 0.252 ; auroc: 0.881
+Finish iter: 0, loss 0.0572282038629055
+Finish iter: 20, loss 0.07780374586582184
+Finish iter: 40, loss 0.04725421592593193
+Training epoch: 100, loss: 0.05558392032980919, time elapsed: 14.250851154327393,
+Split: train, epoch: 100, metrics: accuracy: 0.979 ; iou: 0.902 ; dice: 0.792 ; sensitivity: 0.948 ; auroc: 0.999
+Split: val, epoch: 100, metrics: accuracy: 0.777 ; iou: 0.175 ; dice: 0.218 ; sensitivity: 0.239 ; auroc: 0.888
+Finish iter: 0, loss 0.05968455225229263
+Finish iter: 20, loss 0.05779656767845154
+Finish iter: 40, loss 0.05760348588228226
+Training epoch: 101, loss: 0.05410696566104889, time elapsed: 14.235450267791748,
+Split: train, epoch: 101, metrics: accuracy: 0.976 ; iou: 0.885 ; dice: 0.782 ; sensitivity: 0.925 ; auroc: 0.999
+Split: val, epoch: 101, metrics: accuracy: 0.782 ; iou: 0.173 ; dice: 0.211 ; sensitivity: 0.236 ; auroc: 0.887
+Finish iter: 0, loss 0.08766712248325348
+Finish iter: 20, loss 0.5118659138679504
+Finish iter: 40, loss 0.5546265244483948
+Training epoch: 102, loss: 0.6726392507553101, time elapsed: 14.296911716461182,
+Split: train, epoch: 102, metrics: accuracy: 0.807 ; iou: 0.220 ; dice: 0.260 ; sensitivity: 0.299 ; auroc: 0.927
+Split: val, epoch: 102, metrics: accuracy: 0.750 ; iou: 0.116 ; dice: 0.151 ; sensitivity: 0.169 ; auroc: 0.824
+Finish iter: 0, loss 0.6545733213424683
+Finish iter: 20, loss 0.5772736072540283
+Finish iter: 40, loss 0.5211901068687439
+Training epoch: 103, loss: 0.43982744216918945, time elapsed: 14.285683393478394,
+Split: train, epoch: 103, metrics: accuracy: 0.859 ; iou: 0.334 ; dice: 0.357 ; sensitivity: 0.399 ; auroc: 0.983
+Split: val, epoch: 103, metrics: accuracy: 0.781 ; iou: 0.130 ; dice: 0.166 ; sensitivity: 0.165 ; auroc: 0.894
+Finish iter: 0, loss 0.4078216254711151
+Finish iter: 20, loss 0.46098417043685913
+Finish iter: 40, loss 0.32350990176200867
+Training epoch: 104, loss: 0.37042975425720215, time elapsed: 14.266494035720825,
+Split: train, epoch: 104, metrics: accuracy: 0.915 ; iou: 0.578 ; dice: 0.555 ; sensitivity: 0.663 ; auroc: 0.993
+Split: val, epoch: 104, metrics: accuracy: 0.787 ; iou: 0.174 ; dice: 0.216 ; sensitivity: 0.236 ; auroc: 0.904
+Finish iter: 0, loss 0.2870786488056183
+Finish iter: 20, loss 0.2377835065126419
+Finish iter: 40, loss 0.18589532375335693
+Training epoch: 105, loss: 0.16476798057556152, time elapsed: 14.281132698059082,
+Split: train, epoch: 105, metrics: accuracy: 0.947 ; iou: 0.746 ; dice: 0.660 ; sensitivity: 0.841 ; auroc: 0.997
+Split: val, epoch: 105, metrics: accuracy: 0.778 ; iou: 0.199 ; dice: 0.243 ; sensitivity: 0.279 ; auroc: 0.903
+Finish iter: 0, loss 0.1872185319662094
+Finish iter: 20, loss 0.1771479696035385
+Finish iter: 40, loss 0.2052401751279831
+Training epoch: 106, loss: 0.15805946290493011, time elapsed: 14.360107183456421,
+Split: train, epoch: 106, metrics: accuracy: 0.949 ; iou: 0.747 ; dice: 0.667 ; sensitivity: 0.826 ; auroc: 0.998
+Split: val, epoch: 106, metrics: accuracy: 0.789 ; iou: 0.196 ; dice: 0.240 ; sensitivity: 0.267 ; auroc: 0.897
+Finish iter: 0, loss 0.160124272108078
+Finish iter: 20, loss 0.1542055904865265
+Finish iter: 40, loss 0.11908204108476639
+Training epoch: 107, loss: 0.12072204053401947, time elapsed: 14.339793682098389,
+Split: train, epoch: 107, metrics: accuracy: 0.955 ; iou: 0.764 ; dice: 0.688 ; sensitivity: 0.837 ; auroc: 0.998
+Split: val, epoch: 107, metrics: accuracy: 0.777 ; iou: 0.167 ; dice: 0.205 ; sensitivity: 0.224 ; auroc: 0.872
+Finish iter: 0, loss 0.13609100878238678
+Finish iter: 20, loss 0.11827084422111511
+Finish iter: 40, loss 0.09227894991636276
+Training epoch: 108, loss: 0.10298854857683182, time elapsed: 14.336771726608276,
+Split: train, epoch: 108, metrics: accuracy: 0.964 ; iou: 0.828 ; dice: 0.723 ; sensitivity: 0.880 ; auroc: 0.999
+Split: val, epoch: 108, metrics: accuracy: 0.783 ; iou: 0.182 ; dice: 0.228 ; sensitivity: 0.242 ; auroc: 0.894
+Finish iter: 0, loss 0.0916973203420639
+Finish iter: 20, loss 0.1059294044971466
+Finish iter: 40, loss 0.09601622819900513
+Training epoch: 109, loss: 0.07980038225650787, time elapsed: 14.275437593460083,
+Split: train, epoch: 109, metrics: accuracy: 0.963 ; iou: 0.822 ; dice: 0.745 ; sensitivity: 0.890 ; auroc: 0.999
+Split: val, epoch: 109, metrics: accuracy: 0.771 ; iou: 0.169 ; dice: 0.209 ; sensitivity: 0.234 ; auroc: 0.901
+Finish iter: 0, loss 0.09679520130157471
+Finish iter: 20, loss 0.11544850468635559
+Finish iter: 40, loss 0.10712940990924835
+Training epoch: 110, loss: 0.08322285115718842, time elapsed: 14.317628383636475,
+Split: train, epoch: 110, metrics: accuracy: 0.970 ; iou: 0.865 ; dice: 0.768 ; sensitivity: 0.926 ; auroc: 0.999
+Split: val, epoch: 110, metrics: accuracy: 0.777 ; iou: 0.191 ; dice: 0.233 ; sensitivity: 0.262 ; auroc: 0.900
+Finish iter: 0, loss 0.0792313665151596
+Finish iter: 20, loss 0.07609851658344269
+Finish iter: 40, loss 0.07883237302303314
+Training epoch: 111, loss: 0.0756194218993187, time elapsed: 14.269389629364014,
+Split: train, epoch: 111, metrics: accuracy: 0.975 ; iou: 0.885 ; dice: 0.780 ; sensitivity: 0.931 ; auroc: 1.000
+Split: val, epoch: 111, metrics: accuracy: 0.785 ; iou: 0.191 ; dice: 0.236 ; sensitivity: 0.259 ; auroc: 0.895
+Finish iter: 0, loss 0.06449805200099945
+Finish iter: 20, loss 0.08046010136604309
+Finish iter: 40, loss 0.06693144887685776
+Training epoch: 112, loss: 0.06919163465499878, time elapsed: 14.347450017929077,
+Split: train, epoch: 112, metrics: accuracy: 0.976 ; iou: 0.891 ; dice: 0.784 ; sensitivity: 0.941 ; auroc: 1.000
+Split: val, epoch: 112, metrics: accuracy: 0.785 ; iou: 0.192 ; dice: 0.241 ; sensitivity: 0.265 ; auroc: 0.900
+Finish iter: 0, loss 0.07007388025522232
+Finish iter: 20, loss 0.0748952329158783
+Finish iter: 40, loss 0.07334887981414795
+Training epoch: 113, loss: 0.06731930375099182, time elapsed: 14.344290494918823,
+Split: train, epoch: 113, metrics: accuracy: 0.978 ; iou: 0.899 ; dice: 0.774 ; sensitivity: 0.942 ; auroc: 1.000
+Split: val, epoch: 113, metrics: accuracy: 0.785 ; iou: 0.184 ; dice: 0.227 ; sensitivity: 0.250 ; auroc: 0.890
+Finish iter: 0, loss 0.07014903426170349
+Finish iter: 20, loss 0.0512983463704586
+Finish iter: 40, loss 0.05860577151179314
+Training epoch: 114, loss: 0.05924011394381523, time elapsed: 14.287994384765625,
+Split: train, epoch: 114, metrics: accuracy: 0.980 ; iou: 0.904 ; dice: 0.803 ; sensitivity: 0.942 ; auroc: 1.000
+Split: val, epoch: 114, metrics: accuracy: 0.788 ; iou: 0.192 ; dice: 0.236 ; sensitivity: 0.259 ; auroc: 0.890
+Finish iter: 0, loss 0.04742990806698799
+Finish iter: 20, loss 0.04720069468021393
+Finish iter: 40, loss 0.05248737707734108
+Training epoch: 115, loss: 0.06078571453690529, time elapsed: 14.324737787246704,
+Split: train, epoch: 115, metrics: accuracy: 0.980 ; iou: 0.906 ; dice: 0.800 ; sensitivity: 0.942 ; auroc: 1.000
+Split: val, epoch: 115, metrics: accuracy: 0.784 ; iou: 0.184 ; dice: 0.229 ; sensitivity: 0.247 ; auroc: 0.884
+Finish iter: 0, loss 0.057343337684869766
+Finish iter: 20, loss 0.05420568957924843
+Finish iter: 40, loss 0.05774706229567528
+Training epoch: 116, loss: 0.045986294746398926, time elapsed: 14.330389261245728,
+Split: train, epoch: 116, metrics: accuracy: 0.981 ; iou: 0.908 ; dice: 0.804 ; sensitivity: 0.943 ; auroc: 1.000
+Split: val, epoch: 116, metrics: accuracy: 0.786 ; iou: 0.186 ; dice: 0.230 ; sensitivity: 0.250 ; auroc: 0.891
+Finish iter: 0, loss 0.0554678738117218
+Finish iter: 20, loss 0.04630781337618828
+Finish iter: 40, loss 0.060577213764190674
+Training epoch: 117, loss: 0.044990018010139465, time elapsed: 14.322144031524658,
+Split: train, epoch: 117, metrics: accuracy: 0.981 ; iou: 0.910 ; dice: 0.802 ; sensitivity: 0.945 ; auroc: 1.000
+Split: val, epoch: 117, metrics: accuracy: 0.786 ; iou: 0.192 ; dice: 0.235 ; sensitivity: 0.259 ; auroc: 0.896
+Finish iter: 0, loss 0.06420379132032394
+Finish iter: 20, loss 0.050836026668548584
+Finish iter: 40, loss 0.05703626200556755
+Training epoch: 118, loss: 0.037771571427583694, time elapsed: 14.31635332107544,
+Split: train, epoch: 118, metrics: accuracy: 0.982 ; iou: 0.914 ; dice: 0.806 ; sensitivity: 0.953 ; auroc: 1.000
+Split: val, epoch: 118, metrics: accuracy: 0.786 ; iou: 0.191 ; dice: 0.236 ; sensitivity: 0.261 ; auroc: 0.892
+Finish iter: 0, loss 0.051219236105680466
+Finish iter: 20, loss 0.051773738116025925
+Finish iter: 40, loss 0.06053028628230095
+Training epoch: 119, loss: 0.04244598373770714, time elapsed: 14.317872047424316,
+Split: train, epoch: 119, metrics: accuracy: 0.982 ; iou: 0.916 ; dice: 0.793 ; sensitivity: 0.952 ; auroc: 1.000
+Split: val, epoch: 119, metrics: accuracy: 0.785 ; iou: 0.189 ; dice: 0.231 ; sensitivity: 0.257 ; auroc: 0.891
+Finish iter: 0, loss 0.04520604386925697
+Finish iter: 20, loss 0.04349023476243019
+Finish iter: 40, loss 0.04228175804018974
+Training epoch: 120, loss: 0.04521673917770386, time elapsed: 14.297231674194336,
+Split: train, epoch: 120, metrics: accuracy: 0.982 ; iou: 0.914 ; dice: 0.783 ; sensitivity: 0.952 ; auroc: 1.000
+Split: val, epoch: 120, metrics: accuracy: 0.784 ; iou: 0.190 ; dice: 0.237 ; sensitivity: 0.260 ; auroc: 0.894
+Finish iter: 0, loss 0.03722956031560898
+Finish iter: 20, loss 0.05180881917476654
+Finish iter: 40, loss 0.04110449180006981
+Training epoch: 121, loss: 0.07218054682016373, time elapsed: 14.333003282546997,
+Split: train, epoch: 121, metrics: accuracy: 0.982 ; iou: 0.917 ; dice: 0.805 ; sensitivity: 0.959 ; auroc: 1.000
+Split: val, epoch: 121, metrics: accuracy: 0.781 ; iou: 0.187 ; dice: 0.232 ; sensitivity: 0.258 ; auroc: 0.904
+Finish iter: 0, loss 0.047361165285110474
+Finish iter: 20, loss 0.05723947286605835
+Finish iter: 40, loss 0.043826065957546234
+Training epoch: 122, loss: 0.0479169525206089, time elapsed: 14.393481254577637,
+Split: train, epoch: 122, metrics: accuracy: 0.983 ; iou: 0.918 ; dice: 0.797 ; sensitivity: 0.958 ; auroc: 1.000
+Split: val, epoch: 122, metrics: accuracy: 0.784 ; iou: 0.192 ; dice: 0.239 ; sensitivity: 0.264 ; auroc: 0.895
+Finish iter: 0, loss 0.05623329058289528
+Finish iter: 20, loss 0.04809928312897682
+Finish iter: 40, loss 0.04694560170173645
+Training epoch: 123, loss: 0.04739702492952347, time elapsed: 14.326561450958252,
+Split: train, epoch: 123, metrics: accuracy: 0.983 ; iou: 0.919 ; dice: 0.798 ; sensitivity: 0.956 ; auroc: 1.000
+Split: val, epoch: 123, metrics: accuracy: 0.785 ; iou: 0.188 ; dice: 0.229 ; sensitivity: 0.257 ; auroc: 0.889
+Finish iter: 0, loss 0.0517551526427269
+Finish iter: 20, loss 0.0407569520175457
+Finish iter: 40, loss 0.04985681176185608
+Training epoch: 124, loss: 0.05771075189113617, time elapsed: 14.362282991409302,
+Split: train, epoch: 124, metrics: accuracy: 0.983 ; iou: 0.919 ; dice: 0.802 ; sensitivity: 0.951 ; auroc: 1.000
+Split: val, epoch: 124, metrics: accuracy: 0.786 ; iou: 0.189 ; dice: 0.240 ; sensitivity: 0.256 ; auroc: 0.885
+Finish iter: 0, loss 0.039738625288009644
+Finish iter: 20, loss 0.05186047777533531
+Finish iter: 40, loss 0.047308824956417084
+Training epoch: 125, loss: 0.028957458212971687, time elapsed: 14.305881261825562,
+Split: train, epoch: 125, metrics: accuracy: 0.983 ; iou: 0.922 ; dice: 0.812 ; sensitivity: 0.957 ; auroc: 1.000
+Split: val, epoch: 125, metrics: accuracy: 0.783 ; iou: 0.189 ; dice: 0.239 ; sensitivity: 0.260 ; auroc: 0.893
+Finish iter: 0, loss 0.04826303571462631
+Finish iter: 20, loss 0.05219605192542076
+Finish iter: 40, loss 0.05991918593645096
+Training epoch: 126, loss: 0.06945494562387466, time elapsed: 14.338208675384521,
+Split: train, epoch: 126, metrics: accuracy: 0.984 ; iou: 0.922 ; dice: 0.811 ; sensitivity: 0.954 ; auroc: 1.000
+Split: val, epoch: 126, metrics: accuracy: 0.785 ; iou: 0.188 ; dice: 0.232 ; sensitivity: 0.254 ; auroc: 0.888
+Finish iter: 0, loss 0.05523832514882088
+Finish iter: 20, loss 0.04516998678445816
+Finish iter: 40, loss 0.03843754902482033
+Training epoch: 127, loss: 0.056759465485811234, time elapsed: 14.298723459243774,
+Split: train, epoch: 127, metrics: accuracy: 0.984 ; iou: 0.923 ; dice: 0.815 ; sensitivity: 0.953 ; auroc: 1.000
+Split: val, epoch: 127, metrics: accuracy: 0.783 ; iou: 0.187 ; dice: 0.232 ; sensitivity: 0.254 ; auroc: 0.884
+Finish iter: 0, loss 0.04663129150867462
+Finish iter: 20, loss 0.042770326137542725
+Finish iter: 40, loss 0.04029922932386398
+Training epoch: 128, loss: 0.05317192152142525, time elapsed: 14.409565210342407,
+Split: train, epoch: 128, metrics: accuracy: 0.984 ; iou: 0.925 ; dice: 0.819 ; sensitivity: 0.958 ; auroc: 1.000
+Split: val, epoch: 128, metrics: accuracy: 0.783 ; iou: 0.188 ; dice: 0.231 ; sensitivity: 0.258 ; auroc: 0.887
+Finish iter: 0, loss 0.04310883954167366
+Finish iter: 20, loss 0.04114055633544922
+Finish iter: 40, loss 0.05045333132147789
+Training epoch: 129, loss: 0.04228384047746658, time elapsed: 14.360466003417969,
+Split: train, epoch: 129, metrics: accuracy: 0.983 ; iou: 0.923 ; dice: 0.821 ; sensitivity: 0.955 ; auroc: 1.000
+Split: val, epoch: 129, metrics: accuracy: 0.781 ; iou: 0.180 ; dice: 0.225 ; sensitivity: 0.246 ; auroc: 0.874
+Finish iter: 0, loss 0.05276133492588997
+Finish iter: 20, loss 0.03641697019338608
+Finish iter: 40, loss 0.04183179885149002
+Training epoch: 130, loss: 0.04300295561552048, time elapsed: 14.339673519134521,
+Split: train, epoch: 130, metrics: accuracy: 0.985 ; iou: 0.927 ; dice: 0.809 ; sensitivity: 0.961 ; auroc: 1.000
+Split: val, epoch: 130, metrics: accuracy: 0.785 ; iou: 0.189 ; dice: 0.229 ; sensitivity: 0.258 ; auroc: 0.888
+Finish iter: 0, loss 0.05169620364904404
+Finish iter: 20, loss 0.03381704166531563
+Finish iter: 40, loss 0.031655047088861465
+Training epoch: 131, loss: 0.04700532555580139, time elapsed: 14.354727745056152,
+Split: train, epoch: 131, metrics: accuracy: 0.985 ; iou: 0.927 ; dice: 0.807 ; sensitivity: 0.960 ; auroc: 1.000
+Split: val, epoch: 131, metrics: accuracy: 0.784 ; iou: 0.187 ; dice: 0.231 ; sensitivity: 0.257 ; auroc: 0.886
+Finish iter: 0, loss 0.03374220430850983
+Finish iter: 20, loss 0.03424447029829025
+Finish iter: 40, loss 0.04939047992229462
+Training epoch: 132, loss: 0.045143112540245056, time elapsed: 14.319599151611328,
+Split: train, epoch: 132, metrics: accuracy: 0.984 ; iou: 0.926 ; dice: 0.810 ; sensitivity: 0.956 ; auroc: 1.000
+Split: val, epoch: 132, metrics: accuracy: 0.783 ; iou: 0.183 ; dice: 0.228 ; sensitivity: 0.249 ; auroc: 0.876
+Finish iter: 0, loss 0.03971865773200989
+Finish iter: 20, loss 0.034585122019052505
+Finish iter: 40, loss 0.04095008596777916
+Training epoch: 133, loss: 0.046076856553554535, time elapsed: 14.333866596221924,
+Split: train, epoch: 133, metrics: accuracy: 0.984 ; iou: 0.926 ; dice: 0.818 ; sensitivity: 0.953 ; auroc: 1.000
+Split: val, epoch: 133, metrics: accuracy: 0.786 ; iou: 0.188 ; dice: 0.227 ; sensitivity: 0.256 ; auroc: 0.883
+Finish iter: 0, loss 0.03161850944161415
+Finish iter: 20, loss 0.04299600422382355
+Finish iter: 40, loss 0.03610529378056526
+Training epoch: 134, loss: 0.052578505128622055, time elapsed: 14.365522861480713,
+Split: train, epoch: 134, metrics: accuracy: 0.985 ; iou: 0.927 ; dice: 0.816 ; sensitivity: 0.960 ; auroc: 1.000
+Split: val, epoch: 134, metrics: accuracy: 0.783 ; iou: 0.187 ; dice: 0.234 ; sensitivity: 0.256 ; auroc: 0.887
+Finish iter: 0, loss 0.03715897724032402
+Finish iter: 20, loss 0.0436413399875164
+Finish iter: 40, loss 0.047964759171009064
+Training epoch: 135, loss: 0.0489618256688118, time elapsed: 14.350149154663086,
+Split: train, epoch: 135, metrics: accuracy: 0.985 ; iou: 0.928 ; dice: 0.817 ; sensitivity: 0.963 ; auroc: 1.000
+Split: val, epoch: 135, metrics: accuracy: 0.782 ; iou: 0.189 ; dice: 0.239 ; sensitivity: 0.264 ; auroc: 0.886
+Finish iter: 0, loss 0.03496767580509186
+Finish iter: 20, loss 0.040237948298454285
+Finish iter: 40, loss 0.05015759542584419
+Training epoch: 136, loss: 0.0479426383972168, time elapsed: 14.319380521774292,
+Split: train, epoch: 136, metrics: accuracy: 0.985 ; iou: 0.931 ; dice: 0.815 ; sensitivity: 0.962 ; auroc: 1.000
+Split: val, epoch: 136, metrics: accuracy: 0.783 ; iou: 0.186 ; dice: 0.226 ; sensitivity: 0.255 ; auroc: 0.887
+Finish iter: 0, loss 0.047692470252513885
+Finish iter: 20, loss 0.031359296292066574
+Finish iter: 40, loss 0.0418425053358078
+Training epoch: 137, loss: 0.038514237850904465, time elapsed: 14.329493761062622,
+Split: train, epoch: 137, metrics: accuracy: 0.986 ; iou: 0.933 ; dice: 0.802 ; sensitivity: 0.960 ; auroc: 1.000
+Split: val, epoch: 137, metrics: accuracy: 0.784 ; iou: 0.185 ; dice: 0.228 ; sensitivity: 0.253 ; auroc: 0.875
+Finish iter: 0, loss 0.03866744041442871
+Finish iter: 20, loss 0.04538646340370178
+Finish iter: 40, loss 0.04023819789290428
+Training epoch: 138, loss: 0.03825419023633003, time elapsed: 14.38061261177063,
+Split: train, epoch: 138, metrics: accuracy: 0.985 ; iou: 0.930 ; dice: 0.813 ; sensitivity: 0.964 ; auroc: 1.000
+Split: val, epoch: 138, metrics: accuracy: 0.783 ; iou: 0.190 ; dice: 0.231 ; sensitivity: 0.265 ; auroc: 0.884
+Finish iter: 0, loss 0.032402053475379944
+Finish iter: 20, loss 0.03741384670138359
+Finish iter: 40, loss 0.04787195473909378
+Training epoch: 139, loss: 0.03837781026959419, time elapsed: 14.290796756744385,
+Split: train, epoch: 139, metrics: accuracy: 0.985 ; iou: 0.929 ; dice: 0.822 ; sensitivity: 0.962 ; auroc: 1.000
+Split: val, epoch: 139, metrics: accuracy: 0.781 ; iou: 0.187 ; dice: 0.235 ; sensitivity: 0.259 ; auroc: 0.886
+Finish iter: 0, loss 0.03750622272491455
+Finish iter: 20, loss 0.05125531926751137
+Finish iter: 40, loss 0.0722639188170433
+Training epoch: 140, loss: 0.038967713713645935, time elapsed: 14.37645936012268,
+Split: train, epoch: 140, metrics: accuracy: 0.985 ; iou: 0.928 ; dice: 0.822 ; sensitivity: 0.960 ; auroc: 1.000
+Split: val, epoch: 140, metrics: accuracy: 0.781 ; iou: 0.189 ; dice: 0.229 ; sensitivity: 0.261 ; auroc: 0.891
+Finish iter: 0, loss 0.031456295400857925
+Finish iter: 20, loss 0.037975989282131195
+Finish iter: 40, loss 0.03419050574302673
+Training epoch: 141, loss: 0.03578554838895798, time elapsed: 14.346085786819458,
+Split: train, epoch: 141, metrics: accuracy: 0.986 ; iou: 0.932 ; dice: 0.808 ; sensitivity: 0.962 ; auroc: 1.000
+Split: val, epoch: 141, metrics: accuracy: 0.784 ; iou: 0.187 ; dice: 0.230 ; sensitivity: 0.255 ; auroc: 0.880
+Finish iter: 0, loss 0.04055599868297577
+Finish iter: 20, loss 0.0332966223359108
+Finish iter: 40, loss 0.034102797508239746
+Training epoch: 142, loss: 0.0397539883852005, time elapsed: 14.373726844787598,
+Split: train, epoch: 142, metrics: accuracy: 0.986 ; iou: 0.931 ; dice: 0.822 ; sensitivity: 0.963 ; auroc: 1.000
+Split: val, epoch: 142, metrics: accuracy: 0.784 ; iou: 0.192 ; dice: 0.233 ; sensitivity: 0.263 ; auroc: 0.888
+Finish iter: 0, loss 0.054916128516197205
+Finish iter: 20, loss 0.031852610409259796
+Finish iter: 40, loss 0.05029110610485077
+Training epoch: 143, loss: 0.04108009114861488, time elapsed: 14.367966890335083,
+Split: train, epoch: 143, metrics: accuracy: 0.985 ; iou: 0.931 ; dice: 0.811 ; sensitivity: 0.962 ; auroc: 1.000
+Split: val, epoch: 143, metrics: accuracy: 0.784 ; iou: 0.189 ; dice: 0.235 ; sensitivity: 0.260 ; auroc: 0.887
+Finish iter: 0, loss 0.04251471161842346
+Finish iter: 20, loss 0.03509622439742088
+Finish iter: 40, loss 0.03943772614002228
+Training epoch: 144, loss: 0.03976474702358246, time elapsed: 14.38209319114685,
+Split: train, epoch: 144, metrics: accuracy: 0.985 ; iou: 0.930 ; dice: 0.830 ; sensitivity: 0.958 ; auroc: 1.000
+Split: val, epoch: 144, metrics: accuracy: 0.782 ; iou: 0.185 ; dice: 0.237 ; sensitivity: 0.254 ; auroc: 0.881
+Finish iter: 0, loss 0.04059986770153046
+Finish iter: 20, loss 0.04264926537871361
+Finish iter: 40, loss 0.039624735713005066
+Training epoch: 145, loss: 0.047753237187862396, time elapsed: 14.37645673751831,
+Split: train, epoch: 145, metrics: accuracy: 0.986 ; iou: 0.934 ; dice: 0.797 ; sensitivity: 0.967 ; auroc: 1.000
+Split: val, epoch: 145, metrics: accuracy: 0.780 ; iou: 0.186 ; dice: 0.229 ; sensitivity: 0.258 ; auroc: 0.874
+Finish iter: 0, loss 0.03442396968603134
+Finish iter: 20, loss 0.03235132247209549
+Finish iter: 40, loss 0.03610431030392647
+Training epoch: 146, loss: 0.061559852212667465, time elapsed: 14.375880002975464,
+Split: train, epoch: 146, metrics: accuracy: 0.986 ; iou: 0.934 ; dice: 0.824 ; sensitivity: 0.968 ; auroc: 1.000
+Split: val, epoch: 146, metrics: accuracy: 0.780 ; iou: 0.189 ; dice: 0.236 ; sensitivity: 0.261 ; auroc: 0.886
+Finish iter: 0, loss 0.027751335874199867
+Finish iter: 20, loss 0.03501807898283005
+Finish iter: 40, loss 0.03333539888262749
+Training epoch: 147, loss: 0.05852703005075455, time elapsed: 14.359562873840332,
+Split: train, epoch: 147, metrics: accuracy: 0.985 ; iou: 0.927 ; dice: 0.825 ; sensitivity: 0.960 ; auroc: 1.000
+Split: val, epoch: 147, metrics: accuracy: 0.780 ; iou: 0.182 ; dice: 0.227 ; sensitivity: 0.251 ; auroc: 0.882
+Finish iter: 0, loss 0.04036642983555794
+Finish iter: 20, loss 0.0370158888399601
+Finish iter: 40, loss 0.037638019770383835
+Training epoch: 148, loss: 0.046512704342603683, time elapsed: 14.396103143692017,
+Split: train, epoch: 148, metrics: accuracy: 0.985 ; iou: 0.929 ; dice: 0.821 ; sensitivity: 0.960 ; auroc: 1.000
+Split: val, epoch: 148, metrics: accuracy: 0.784 ; iou: 0.181 ; dice: 0.227 ; sensitivity: 0.249 ; auroc: 0.880
+Finish iter: 0, loss 0.043257538229227066
+Finish iter: 20, loss 0.040992382913827896
+Finish iter: 40, loss 0.04027622193098068
+Training epoch: 149, loss: 0.03365839272737503, time elapsed: 14.372018098831177,
+Split: train, epoch: 149, metrics: accuracy: 0.985 ; iou: 0.929 ; dice: 0.818 ; sensitivity: 0.959 ; auroc: 1.000
+Split: val, epoch: 149, metrics: accuracy: 0.783 ; iou: 0.186 ; dice: 0.234 ; sensitivity: 0.259 ; auroc: 0.883
+Finish iter: 0, loss 0.03449457883834839
+Finish iter: 20, loss 0.0404990129172802
+Finish iter: 40, loss 0.03923701494932175
+Training epoch: 150, loss: 0.04667169600725174, time elapsed: 14.372170209884644,
+Split: train, epoch: 150, metrics: accuracy: 0.986 ; iou: 0.932 ; dice: 0.806 ; sensitivity: 0.959 ; auroc: 1.000
+Split: val, epoch: 150, metrics: accuracy: 0.783 ; iou: 0.190 ; dice: 0.234 ; sensitivity: 0.261 ; auroc: 0.891
+Finish iter: 0, loss 0.037943508476018906
+Finish iter: 20, loss 0.03623409569263458
+Finish iter: 40, loss 0.037026297301054
+Training epoch: 151, loss: 0.02886621654033661, time elapsed: 14.375272989273071,
+Split: train, epoch: 151, metrics: accuracy: 0.986 ; iou: 0.934 ; dice: 0.805 ; sensitivity: 0.967 ; auroc: 1.000
+Split: val, epoch: 151, metrics: accuracy: 0.782 ; iou: 0.190 ; dice: 0.231 ; sensitivity: 0.264 ; auroc: 0.884
+Finish iter: 0, loss 0.0515461228787899
+Finish iter: 20, loss 0.03203480318188667
+Finish iter: 40, loss 0.03556292504072189
+Training epoch: 152, loss: 0.027851831167936325, time elapsed: 14.41541314125061,
+Split: train, epoch: 152, metrics: accuracy: 0.987 ; iou: 0.938 ; dice: 0.823 ; sensitivity: 0.961 ; auroc: 1.000
+Split: val, epoch: 152, metrics: accuracy: 0.785 ; iou: 0.190 ; dice: 0.229 ; sensitivity: 0.256 ; auroc: 0.877
+Finish iter: 0, loss 0.035378407686948776
+Finish iter: 20, loss 0.03968420624732971
+Finish iter: 40, loss 0.037014782428741455
+Training epoch: 153, loss: 0.03270631283521652, time elapsed: 14.3877272605896,
+Split: train, epoch: 153, metrics: accuracy: 0.988 ; iou: 0.941 ; dice: 0.824 ; sensitivity: 0.966 ; auroc: 1.000
+Split: val, epoch: 153, metrics: accuracy: 0.784 ; iou: 0.187 ; dice: 0.234 ; sensitivity: 0.256 ; auroc: 0.877
+Finish iter: 0, loss 0.023052817210555077
+Finish iter: 20, loss 0.02496073767542839
+Finish iter: 40, loss 0.03200073167681694
+Training epoch: 154, loss: 0.047013696283102036, time elapsed: 14.394870042800903,
+Split: train, epoch: 154, metrics: accuracy: 0.988 ; iou: 0.942 ; dice: 0.830 ; sensitivity: 0.970 ; auroc: 1.000
+Split: val, epoch: 154, metrics: accuracy: 0.783 ; iou: 0.188 ; dice: 0.237 ; sensitivity: 0.259 ; auroc: 0.886
+Finish iter: 0, loss 0.03610137104988098
+Finish iter: 20, loss 0.02736596390604973
+Finish iter: 40, loss 0.02924138680100441
+Training epoch: 155, loss: 0.03237151354551315, time elapsed: 14.374819278717041,
+Split: train, epoch: 155, metrics: accuracy: 0.988 ; iou: 0.940 ; dice: 0.820 ; sensitivity: 0.963 ; auroc: 1.000
+Split: val, epoch: 155, metrics: accuracy: 0.784 ; iou: 0.191 ; dice: 0.239 ; sensitivity: 0.262 ; auroc: 0.880
+Finish iter: 0, loss 0.03611128404736519
+Finish iter: 20, loss 0.03474980592727661
+Finish iter: 40, loss 0.02912254072725773
+Training epoch: 156, loss: 0.023254001513123512, time elapsed: 14.43018913269043,
+Split: train, epoch: 156, metrics: accuracy: 0.987 ; iou: 0.940 ; dice: 0.827 ; sensitivity: 0.967 ; auroc: 1.000
+Split: val, epoch: 156, metrics: accuracy: 0.782 ; iou: 0.183 ; dice: 0.232 ; sensitivity: 0.255 ; auroc: 0.887
+Finish iter: 0, loss 0.03559492155909538
+Finish iter: 20, loss 0.033289503306150436
+Finish iter: 40, loss 0.027817895635962486
+Training epoch: 157, loss: 0.03561019524931908, time elapsed: 14.38295602798462,
+Split: train, epoch: 157, metrics: accuracy: 0.988 ; iou: 0.942 ; dice: 0.831 ; sensitivity: 0.971 ; auroc: 1.000
+Split: val, epoch: 157, metrics: accuracy: 0.781 ; iou: 0.185 ; dice: 0.233 ; sensitivity: 0.256 ; auroc: 0.873
+Finish iter: 0, loss 0.028887487947940826
+Finish iter: 20, loss 0.029649948701262474
+Finish iter: 40, loss 0.03786143660545349
+Training epoch: 158, loss: 0.032191891223192215, time elapsed: 14.430108070373535,
+Split: train, epoch: 158, metrics: accuracy: 0.988 ; iou: 0.942 ; dice: 0.830 ; sensitivity: 0.962 ; auroc: 1.000
+Split: val, epoch: 158, metrics: accuracy: 0.784 ; iou: 0.187 ; dice: 0.236 ; sensitivity: 0.256 ; auroc: 0.869
+Finish iter: 0, loss 0.04074695706367493
+Finish iter: 20, loss 0.028391048312187195
+Finish iter: 40, loss 0.034177735447883606
+Training epoch: 159, loss: 0.026843518018722534, time elapsed: 14.363374471664429,
+Split: train, epoch: 159, metrics: accuracy: 0.988 ; iou: 0.941 ; dice: 0.832 ; sensitivity: 0.963 ; auroc: 1.000
+Split: val, epoch: 159, metrics: accuracy: 0.782 ; iou: 0.181 ; dice: 0.225 ; sensitivity: 0.250 ; auroc: 0.873
+Finish iter: 0, loss 0.03726733848452568
+Finish iter: 20, loss 0.024938272312283516
+Finish iter: 40, loss 0.03862153738737106
+Training epoch: 160, loss: 0.031288739293813705, time elapsed: 14.340298652648926,
+Split: train, epoch: 160, metrics: accuracy: 0.987 ; iou: 0.938 ; dice: 0.821 ; sensitivity: 0.964 ; auroc: 1.000
+Split: val, epoch: 160, metrics: accuracy: 0.780 ; iou: 0.177 ; dice: 0.226 ; sensitivity: 0.243 ; auroc: 0.870
+Finish iter: 0, loss 0.030677301809191704
+Finish iter: 20, loss 0.03074936755001545
+Finish iter: 40, loss 0.02865023910999298
+Training epoch: 161, loss: 0.03691200166940689, time elapsed: 14.412539720535278,
+Split: train, epoch: 161, metrics: accuracy: 0.987 ; iou: 0.940 ; dice: 0.825 ; sensitivity: 0.964 ; auroc: 1.000
+Split: val, epoch: 161, metrics: accuracy: 0.784 ; iou: 0.188 ; dice: 0.237 ; sensitivity: 0.258 ; auroc: 0.871
+Finish iter: 0, loss 0.028510957956314087
+Finish iter: 20, loss 0.04113426432013512
+Finish iter: 40, loss 0.02758762799203396
+Training epoch: 162, loss: 0.034699711948633194, time elapsed: 14.43682050704956,
+Split: train, epoch: 162, metrics: accuracy: 0.988 ; iou: 0.940 ; dice: 0.843 ; sensitivity: 0.963 ; auroc: 1.000
+Split: val, epoch: 162, metrics: accuracy: 0.783 ; iou: 0.190 ; dice: 0.242 ; sensitivity: 0.261 ; auroc: 0.877
+Finish iter: 0, loss 0.03654775768518448
+Finish iter: 20, loss 0.028759915381669998
+Finish iter: 40, loss 0.025965815410017967
+Training epoch: 163, loss: 0.030007096007466316, time elapsed: 14.40882396697998,
+Split: train, epoch: 163, metrics: accuracy: 0.989 ; iou: 0.945 ; dice: 0.835 ; sensitivity: 0.967 ; auroc: 1.000
+Split: val, epoch: 163, metrics: accuracy: 0.784 ; iou: 0.191 ; dice: 0.237 ; sensitivity: 0.262 ; auroc: 0.878
+Finish iter: 0, loss 0.027857931330800056
+Finish iter: 20, loss 0.04451273754239082
+Finish iter: 40, loss 0.030532754957675934
+Training epoch: 164, loss: 0.03388232737779617, time elapsed: 14.414143085479736,
+Split: train, epoch: 164, metrics: accuracy: 0.988 ; iou: 0.943 ; dice: 0.835 ; sensitivity: 0.974 ; auroc: 1.000
+Split: val, epoch: 164, metrics: accuracy: 0.778 ; iou: 0.183 ; dice: 0.225 ; sensitivity: 0.256 ; auroc: 0.877
+Finish iter: 0, loss 0.03169598430395126
+Finish iter: 20, loss 0.02749522589147091
+Finish iter: 40, loss 0.030154919251799583
+Training epoch: 165, loss: 0.041031721979379654, time elapsed: 14.371822357177734,
+Split: train, epoch: 165, metrics: accuracy: 0.988 ; iou: 0.943 ; dice: 0.820 ; sensitivity: 0.970 ; auroc: 1.000
+Split: val, epoch: 165, metrics: accuracy: 0.780 ; iou: 0.187 ; dice: 0.233 ; sensitivity: 0.260 ; auroc: 0.876
+Finish iter: 0, loss 0.03768986836075783
+Finish iter: 20, loss 0.02872680127620697
+Finish iter: 40, loss 0.026963701471686363
+Training epoch: 166, loss: 0.03422914072871208, time elapsed: 14.397218227386475,
+Split: train, epoch: 166, metrics: accuracy: 0.988 ; iou: 0.942 ; dice: 0.824 ; sensitivity: 0.971 ; auroc: 1.000
+Split: val, epoch: 166, metrics: accuracy: 0.782 ; iou: 0.188 ; dice: 0.235 ; sensitivity: 0.262 ; auroc: 0.876
+Finish iter: 0, loss 0.034285303205251694
+Finish iter: 20, loss 0.02375182881951332
+Finish iter: 40, loss 0.022825544700026512
+Training epoch: 167, loss: 0.029668500646948814, time elapsed: 14.384622812271118,
+Split: train, epoch: 167, metrics: accuracy: 0.988 ; iou: 0.942 ; dice: 0.822 ; sensitivity: 0.959 ; auroc: 1.000
+Split: val, epoch: 167, metrics: accuracy: 0.786 ; iou: 0.184 ; dice: 0.225 ; sensitivity: 0.248 ; auroc: 0.877
+Finish iter: 0, loss 0.028251394629478455
+Finish iter: 20, loss 0.03236917778849602
+Finish iter: 40, loss 0.031422119587659836
+Training epoch: 168, loss: 0.034029342234134674, time elapsed: 14.377790927886963,
+Split: train, epoch: 168, metrics: accuracy: 0.989 ; iou: 0.945 ; dice: 0.824 ; sensitivity: 0.974 ; auroc: 1.000
+Split: val, epoch: 168, metrics: accuracy: 0.784 ; iou: 0.192 ; dice: 0.236 ; sensitivity: 0.265 ; auroc: 0.885
+Finish iter: 0, loss 0.033175352960824966
+Finish iter: 20, loss 0.03011302649974823
+Finish iter: 40, loss 0.027138665318489075
+Training epoch: 169, loss: 0.02957572042942047, time elapsed: 14.407001733779907,
+Split: train, epoch: 169, metrics: accuracy: 0.988 ; iou: 0.944 ; dice: 0.824 ; sensitivity: 0.972 ; auroc: 1.000
+Split: val, epoch: 169, metrics: accuracy: 0.779 ; iou: 0.184 ; dice: 0.232 ; sensitivity: 0.257 ; auroc: 0.880
+Finish iter: 0, loss 0.0334702767431736
+Finish iter: 20, loss 0.027355490252375603
+Finish iter: 40, loss 0.02734353393316269
+Training epoch: 170, loss: 0.030179088935256004, time elapsed: 14.382221698760986,
+Split: train, epoch: 170, metrics: accuracy: 0.989 ; iou: 0.944 ; dice: 0.825 ; sensitivity: 0.964 ; auroc: 1.000
+Split: val, epoch: 170, metrics: accuracy: 0.783 ; iou: 0.186 ; dice: 0.233 ; sensitivity: 0.252 ; auroc: 0.885
+Finish iter: 0, loss 0.03018622286617756
+Finish iter: 20, loss 0.031190115958452225
+Finish iter: 40, loss 0.028085049241781235
+Training epoch: 171, loss: 0.03566532954573631, time elapsed: 14.435274362564087,
+Split: train, epoch: 171, metrics: accuracy: 0.989 ; iou: 0.947 ; dice: 0.837 ; sensitivity: 0.974 ; auroc: 1.000
+Split: val, epoch: 171, metrics: accuracy: 0.782 ; iou: 0.191 ; dice: 0.237 ; sensitivity: 0.265 ; auroc: 0.870
+Finish iter: 0, loss 0.0282346960157156
+Finish iter: 20, loss 0.02060752920806408
+Finish iter: 40, loss 0.031641438603401184
+Training epoch: 172, loss: 0.028621511533856392, time elapsed: 14.44263744354248,
+Split: train, epoch: 172, metrics: accuracy: 0.988 ; iou: 0.942 ; dice: 0.838 ; sensitivity: 0.968 ; auroc: 1.000
+Split: val, epoch: 172, metrics: accuracy: 0.778 ; iou: 0.179 ; dice: 0.218 ; sensitivity: 0.252 ; auroc: 0.883
+Finish iter: 0, loss 0.03671015426516533
+Finish iter: 20, loss 0.03013145923614502
+Finish iter: 40, loss 0.03417854756116867
+Training epoch: 173, loss: 0.03132210671901703, time elapsed: 14.400572061538696,
+Split: train, epoch: 173, metrics: accuracy: 0.988 ; iou: 0.943 ; dice: 0.821 ; sensitivity: 0.968 ; auroc: 1.000
+Split: val, epoch: 173, metrics: accuracy: 0.780 ; iou: 0.183 ; dice: 0.231 ; sensitivity: 0.256 ; auroc: 0.881
+Finish iter: 0, loss 0.028388982638716698
+Finish iter: 20, loss 0.0399240180850029
+Finish iter: 40, loss 0.028896866366267204
+Training epoch: 174, loss: 0.030873404815793037, time elapsed: 14.659319400787354,
+Split: train, epoch: 174, metrics: accuracy: 0.988 ; iou: 0.940 ; dice: 0.829 ; sensitivity: 0.968 ; auroc: 1.000
+Split: val, epoch: 174, metrics: accuracy: 0.780 ; iou: 0.182 ; dice: 0.230 ; sensitivity: 0.254 ; auroc: 0.873
+Finish iter: 0, loss 0.03286890685558319
+Finish iter: 20, loss 0.0294005386531353
+Finish iter: 40, loss 0.036238592118024826
+Training epoch: 175, loss: 0.029452582821249962, time elapsed: 14.429639339447021,
+Split: train, epoch: 175, metrics: accuracy: 0.988 ; iou: 0.942 ; dice: 0.825 ; sensitivity: 0.968 ; auroc: 1.000
+Split: val, epoch: 175, metrics: accuracy: 0.781 ; iou: 0.185 ; dice: 0.233 ; sensitivity: 0.257 ; auroc: 0.876
+Finish iter: 0, loss 0.041483450680971146
+Finish iter: 20, loss 0.03155440464615822
+Finish iter: 40, loss 0.039597295224666595
+Training epoch: 176, loss: 0.02921423316001892, time elapsed: 14.476742506027222,
+Split: train, epoch: 176, metrics: accuracy: 0.988 ; iou: 0.944 ; dice: 0.834 ; sensitivity: 0.973 ; auroc: 1.000
+Split: val, epoch: 176, metrics: accuracy: 0.780 ; iou: 0.185 ; dice: 0.231 ; sensitivity: 0.259 ; auroc: 0.877
+Finish iter: 0, loss 0.032880157232284546
+Finish iter: 20, loss 0.029881436377763748
+Finish iter: 40, loss 0.02960129640996456
+Training epoch: 177, loss: 0.028281759470701218, time elapsed: 14.440188884735107,
+Split: train, epoch: 177, metrics: accuracy: 0.988 ; iou: 0.944 ; dice: 0.837 ; sensitivity: 0.968 ; auroc: 1.000
+Split: val, epoch: 177, metrics: accuracy: 0.784 ; iou: 0.188 ; dice: 0.233 ; sensitivity: 0.259 ; auroc: 0.887
+Finish iter: 0, loss 0.022071650251746178
+Finish iter: 20, loss 0.028754189610481262
+Finish iter: 40, loss 0.030252588912844658
+Training epoch: 178, loss: 0.04745057597756386, time elapsed: 14.436775922775269,
+Split: train, epoch: 178, metrics: accuracy: 0.986 ; iou: 0.930 ; dice: 0.813 ; sensitivity: 0.967 ; auroc: 1.000
+Split: val, epoch: 178, metrics: accuracy: 0.778 ; iou: 0.182 ; dice: 0.228 ; sensitivity: 0.259 ; auroc: 0.880
+Finish iter: 0, loss 0.03641877323389053
+Finish iter: 20, loss 0.3663085997104645
+Finish iter: 40, loss 1.1413079500198364
+Training epoch: 179, loss: 1.126775860786438, time elapsed: 14.454002380371094,
+Split: train, epoch: 179, metrics: accuracy: 0.661 ; iou: 0.097 ; dice: 0.125 ; sensitivity: 0.201 ; auroc: 0.863
+Split: val, epoch: 179, metrics: accuracy: 0.618 ; iou: 0.072 ; dice: 0.098 ; sensitivity: 0.151 ; auroc: 0.806
+Finish iter: 0, loss 0.8071869015693665
+Finish iter: 20, loss 0.8256765604019165
+Finish iter: 40, loss 0.6571850180625916
+Training epoch: 180, loss: 0.6307215094566345, time elapsed: 14.39578652381897,
+Split: train, epoch: 180, metrics: accuracy: 0.839 ; iou: 0.274 ; dice: 0.306 ; sensitivity: 0.331 ; auroc: 0.975
+Split: val, epoch: 180, metrics: accuracy: 0.776 ; iou: 0.110 ; dice: 0.140 ; sensitivity: 0.145 ; auroc: 0.889
+Finish iter: 0, loss 0.5466924905776978
+Finish iter: 20, loss 0.5854668617248535
+Finish iter: 40, loss 0.3780861794948578
+Training epoch: 181, loss: 0.3154745399951935, time elapsed: 14.463200330734253,
+Split: train, epoch: 181, metrics: accuracy: 0.897 ; iou: 0.489 ; dice: 0.468 ; sensitivity: 0.592 ; auroc: 0.990
+Split: val, epoch: 181, metrics: accuracy: 0.775 ; iou: 0.152 ; dice: 0.186 ; sensitivity: 0.204 ; auroc: 0.910
+Finish iter: 0, loss 0.3053607642650604
+Finish iter: 20, loss 0.2322259098291397
+Finish iter: 40, loss 0.3001011312007904
+Training epoch: 182, loss: 0.2401234358549118, time elapsed: 14.434345722198486,
+Split: train, epoch: 182, metrics: accuracy: 0.903 ; iou: 0.555 ; dice: 0.544 ; sensitivity: 0.726 ; auroc: 0.994
+Split: val, epoch: 182, metrics: accuracy: 0.740 ; iou: 0.170 ; dice: 0.213 ; sensitivity: 0.280 ; auroc: 0.900
+Finish iter: 0, loss 0.25852832198143005
+Finish iter: 20, loss 0.20887738466262817
+Finish iter: 40, loss 0.15366892516613007
+Training epoch: 183, loss: 0.21735703945159912, time elapsed: 14.40479326248169,
+Split: train, epoch: 183, metrics: accuracy: 0.954 ; iou: 0.785 ; dice: 0.685 ; sensitivity: 0.869 ; auroc: 0.998
+Split: val, epoch: 183, metrics: accuracy: 0.779 ; iou: 0.205 ; dice: 0.247 ; sensitivity: 0.288 ; auroc: 0.908
+Finish iter: 0, loss 0.1509707272052765
+Finish iter: 20, loss 0.11529745161533356
+Finish iter: 40, loss 0.12780441343784332
+Training epoch: 184, loss: 0.13021498918533325, time elapsed: 14.440308809280396,
+Split: train, epoch: 184, metrics: accuracy: 0.961 ; iou: 0.816 ; dice: 0.711 ; sensitivity: 0.885 ; auroc: 0.999
+Split: val, epoch: 184, metrics: accuracy: 0.785 ; iou: 0.194 ; dice: 0.236 ; sensitivity: 0.263 ; auroc: 0.896
+Finish iter: 0, loss 0.10185209661722183
+Finish iter: 20, loss 0.1212761178612709
+Finish iter: 40, loss 0.10003344714641571
+Training epoch: 185, loss: 0.1448812633752823, time elapsed: 14.450664043426514,
+Split: train, epoch: 185, metrics: accuracy: 0.968 ; iou: 0.845 ; dice: 0.738 ; sensitivity: 0.902 ; auroc: 0.999
+Split: val, epoch: 185, metrics: accuracy: 0.790 ; iou: 0.195 ; dice: 0.245 ; sensitivity: 0.266 ; auroc: 0.892
+Finish iter: 0, loss 0.11245661973953247
+Finish iter: 20, loss 0.0773511454463005
+Finish iter: 40, loss 0.09105202555656433
+Training epoch: 186, loss: 0.08487103134393692, time elapsed: 14.501266479492188,
+Split: train, epoch: 186, metrics: accuracy: 0.974 ; iou: 0.883 ; dice: 0.769 ; sensitivity: 0.942 ; auroc: 1.000
+Split: val, epoch: 186, metrics: accuracy: 0.788 ; iou: 0.204 ; dice: 0.256 ; sensitivity: 0.284 ; auroc: 0.896
+Finish iter: 0, loss 0.0585346519947052
+Finish iter: 20, loss 0.0649900808930397
+Finish iter: 40, loss 0.0722467377781868
+Training epoch: 187, loss: 0.08231612294912338, time elapsed: 14.5213942527771,
+Split: train, epoch: 187, metrics: accuracy: 0.979 ; iou: 0.904 ; dice: 0.783 ; sensitivity: 0.938 ; auroc: 1.000
+Split: val, epoch: 187, metrics: accuracy: 0.790 ; iou: 0.192 ; dice: 0.237 ; sensitivity: 0.255 ; auroc: 0.896
+Finish iter: 0, loss 0.05161115154623985
+Finish iter: 20, loss 0.052300408482551575
+Finish iter: 40, loss 0.06568555533885956
+Training epoch: 188, loss: 0.05142613872885704, time elapsed: 14.440868139266968,
+Split: train, epoch: 188, metrics: accuracy: 0.982 ; iou: 0.917 ; dice: 0.801 ; sensitivity: 0.960 ; auroc: 1.000
+Split: val, epoch: 188, metrics: accuracy: 0.787 ; iou: 0.198 ; dice: 0.238 ; sensitivity: 0.269 ; auroc: 0.888
+Finish iter: 0, loss 0.04777400940656662
+Finish iter: 20, loss 0.04043829068541527
+Finish iter: 40, loss 0.048555705696344376
+Training epoch: 189, loss: 0.04948638379573822, time elapsed: 14.468778371810913,
+Split: train, epoch: 189, metrics: accuracy: 0.984 ; iou: 0.925 ; dice: 0.796 ; sensitivity: 0.962 ; auroc: 0.999
+Split: val, epoch: 189, metrics: accuracy: 0.790 ; iou: 0.199 ; dice: 0.242 ; sensitivity: 0.271 ; auroc: 0.890
+Finish iter: 0, loss 0.05054058879613876
+Finish iter: 20, loss 0.041281428188085556
+Finish iter: 40, loss 0.041506942361593246
+Training epoch: 190, loss: 0.03604529798030853, time elapsed: 14.431366682052612,
+Split: train, epoch: 190, metrics: accuracy: 0.985 ; iou: 0.931 ; dice: 0.815 ; sensitivity: 0.960 ; auroc: 1.000
+Split: val, epoch: 190, metrics: accuracy: 0.790 ; iou: 0.195 ; dice: 0.243 ; sensitivity: 0.264 ; auroc: 0.873
+Finish iter: 0, loss 0.03746679052710533
+Finish iter: 20, loss 0.04458729922771454
+Finish iter: 40, loss 0.039267875254154205
+Training epoch: 191, loss: 0.04088328406214714, time elapsed: 14.511814832687378,
+Split: train, epoch: 191, metrics: accuracy: 0.986 ; iou: 0.934 ; dice: 0.808 ; sensitivity: 0.963 ; auroc: 1.000
+Split: val, epoch: 191, metrics: accuracy: 0.790 ; iou: 0.197 ; dice: 0.238 ; sensitivity: 0.267 ; auroc: 0.880
+Finish iter: 0, loss 0.029590440914034843
+Finish iter: 20, loss 0.03691212460398674
+Finish iter: 40, loss 0.03499425947666168
+Training epoch: 192, loss: 0.059095218777656555, time elapsed: 14.43888235092163,
+Split: train, epoch: 192, metrics: accuracy: 0.987 ; iou: 0.939 ; dice: 0.815 ; sensitivity: 0.967 ; auroc: 1.000
+Split: val, epoch: 192, metrics: accuracy: 0.789 ; iou: 0.198 ; dice: 0.243 ; sensitivity: 0.268 ; auroc: 0.882
+Finish iter: 0, loss 0.036158639937639236
+Finish iter: 20, loss 0.03691336140036583
+Finish iter: 40, loss 0.03358207643032074
+Training epoch: 193, loss: 0.05358293280005455, time elapsed: 14.520340919494629,
+Split: train, epoch: 193, metrics: accuracy: 0.988 ; iou: 0.941 ; dice: 0.815 ; sensitivity: 0.965 ; auroc: 1.000
+Split: val, epoch: 193, metrics: accuracy: 0.789 ; iou: 0.195 ; dice: 0.241 ; sensitivity: 0.265 ; auroc: 0.886
+Finish iter: 0, loss 0.026570400223135948
+Finish iter: 20, loss 0.04119334742426872
+Finish iter: 40, loss 0.029071951285004616
+Training epoch: 194, loss: 0.03727397322654724, time elapsed: 14.452706575393677,
+Split: train, epoch: 194, metrics: accuracy: 0.988 ; iou: 0.941 ; dice: 0.823 ; sensitivity: 0.965 ; auroc: 1.000
+Split: val, epoch: 194, metrics: accuracy: 0.789 ; iou: 0.194 ; dice: 0.239 ; sensitivity: 0.264 ; auroc: 0.882
+Finish iter: 0, loss 0.02999391034245491
+Finish iter: 20, loss 0.029910437762737274
+Finish iter: 40, loss 0.03713041916489601
+Training epoch: 195, loss: 0.033047664910554886, time elapsed: 14.477813959121704,
+Split: train, epoch: 195, metrics: accuracy: 0.988 ; iou: 0.943 ; dice: 0.827 ; sensitivity: 0.965 ; auroc: 1.000
+Split: val, epoch: 195, metrics: accuracy: 0.788 ; iou: 0.196 ; dice: 0.245 ; sensitivity: 0.265 ; auroc: 0.875
+Finish iter: 0, loss 0.024532873183488846
+Finish iter: 20, loss 0.027472570538520813
+Finish iter: 40, loss 0.032162051647901535
+Training epoch: 196, loss: 0.03315712511539459, time elapsed: 14.466563940048218,
+Split: train, epoch: 196, metrics: accuracy: 0.989 ; iou: 0.946 ; dice: 0.829 ; sensitivity: 0.968 ; auroc: 1.000
+Split: val, epoch: 196, metrics: accuracy: 0.789 ; iou: 0.195 ; dice: 0.242 ; sensitivity: 0.266 ; auroc: 0.886
+Finish iter: 0, loss 0.025515008717775345
+Finish iter: 20, loss 0.029144706204533577
+Finish iter: 40, loss 0.029744623228907585
+Training epoch: 197, loss: 0.03039359487593174, time elapsed: 14.498368501663208,
+Split: train, epoch: 197, metrics: accuracy: 0.989 ; iou: 0.946 ; dice: 0.823 ; sensitivity: 0.967 ; auroc: 1.000
+Split: val, epoch: 197, metrics: accuracy: 0.788 ; iou: 0.194 ; dice: 0.238 ; sensitivity: 0.263 ; auroc: 0.877
+Finish iter: 0, loss 0.029321076348423958
+Finish iter: 20, loss 0.02569233812391758
+Finish iter: 40, loss 0.0249538104981184
+Training epoch: 198, loss: 0.02555888146162033, time elapsed: 14.46439814567566,
+Split: train, epoch: 198, metrics: accuracy: 0.989 ; iou: 0.948 ; dice: 0.835 ; sensitivity: 0.972 ; auroc: 1.000
+Split: val, epoch: 198, metrics: accuracy: 0.788 ; iou: 0.195 ; dice: 0.245 ; sensitivity: 0.266 ; auroc: 0.882
+Finish iter: 0, loss 0.04091788828372955
+Finish iter: 20, loss 0.029440201818943024
+Finish iter: 40, loss 0.02476217783987522
+Training epoch: 199, loss: 0.03807039558887482, time elapsed: 14.440168857574463,
+Split: train, epoch: 199, metrics: accuracy: 0.990 ; iou: 0.949 ; dice: 0.838 ; sensitivity: 0.972 ; auroc: 1.000
+Split: val, epoch: 199, metrics: accuracy: 0.788 ; iou: 0.195 ; dice: 0.234 ; sensitivity: 0.266 ; auroc: 0.885
+Finish iter: 0, loss 0.022665120661258698
+Finish iter: 20, loss 0.026874614879488945
+Finish iter: 40, loss 0.02779117412865162
+Training epoch: 200, loss: 0.028130382299423218, time elapsed: 14.410825252532959,
+Split: train, epoch: 200, metrics: accuracy: 0.990 ; iou: 0.949 ; dice: 0.827 ; sensitivity: 0.969 ; auroc: 1.000
+Split: val, epoch: 200, metrics: accuracy: 0.788 ; iou: 0.195 ; dice: 0.242 ; sensitivity: 0.264 ; auroc: 0.879
+Finish iter: 0, loss 0.02627618983387947
+Finish iter: 20, loss 0.026049433276057243
+Finish iter: 40, loss 0.026707226410508156
+Training epoch: 201, loss: 0.020457368344068527, time elapsed: 14.461184740066528,
+Split: train, epoch: 201, metrics: accuracy: 0.990 ; iou: 0.950 ; dice: 0.848 ; sensitivity: 0.968 ; auroc: 1.000
+Split: val, epoch: 201, metrics: accuracy: 0.788 ; iou: 0.195 ; dice: 0.243 ; sensitivity: 0.264 ; auroc: 0.876
+Finish iter: 0, loss 0.02497738227248192
+Finish iter: 20, loss 0.027926286682486534
+Finish iter: 40, loss 0.020251911133527756
+Training epoch: 202, loss: 0.02405654452741146, time elapsed: 14.48846435546875,
+Split: train, epoch: 202, metrics: accuracy: 0.990 ; iou: 0.950 ; dice: 0.826 ; sensitivity: 0.974 ; auroc: 1.000
+Split: val, epoch: 202, metrics: accuracy: 0.788 ; iou: 0.198 ; dice: 0.245 ; sensitivity: 0.271 ; auroc: 0.874
+Finish iter: 0, loss 0.021668996661901474
+Finish iter: 20, loss 0.02794690430164337
+Finish iter: 40, loss 0.026354191824793816
+Training epoch: 203, loss: 0.026709802448749542, time elapsed: 14.460543870925903,
+Split: train, epoch: 203, metrics: accuracy: 0.990 ; iou: 0.952 ; dice: 0.841 ; sensitivity: 0.974 ; auroc: 1.000
+Split: val, epoch: 203, metrics: accuracy: 0.788 ; iou: 0.195 ; dice: 0.239 ; sensitivity: 0.266 ; auroc: 0.877
+Finish iter: 0, loss 0.025909453630447388
+Finish iter: 20, loss 0.027189500629901886
+Finish iter: 40, loss 0.03177662566304207
+Training epoch: 204, loss: 0.02563868835568428, time elapsed: 14.45339822769165,
+Split: train, epoch: 204, metrics: accuracy: 0.990 ; iou: 0.952 ; dice: 0.842 ; sensitivity: 0.973 ; auroc: 1.000
+Split: val, epoch: 204, metrics: accuracy: 0.788 ; iou: 0.193 ; dice: 0.238 ; sensitivity: 0.262 ; auroc: 0.872
+Finish iter: 0, loss 0.022053392603993416
+Finish iter: 20, loss 0.0293339304625988
+Finish iter: 40, loss 0.022555068135261536
+Training epoch: 205, loss: 0.02264878712594509, time elapsed: 14.478745222091675,
+Split: train, epoch: 205, metrics: accuracy: 0.991 ; iou: 0.953 ; dice: 0.841 ; sensitivity: 0.971 ; auroc: 1.000
+Split: val, epoch: 205, metrics: accuracy: 0.788 ; iou: 0.195 ; dice: 0.240 ; sensitivity: 0.265 ; auroc: 0.879
+Finish iter: 0, loss 0.025858797132968903
+Finish iter: 20, loss 0.028510933741927147
+Finish iter: 40, loss 0.02671673148870468
+Training epoch: 206, loss: 0.026511384174227715, time elapsed: 14.464110374450684,
+Split: train, epoch: 206, metrics: accuracy: 0.991 ; iou: 0.953 ; dice: 0.837 ; sensitivity: 0.974 ; auroc: 1.000
+Split: val, epoch: 206, metrics: accuracy: 0.788 ; iou: 0.196 ; dice: 0.252 ; sensitivity: 0.268 ; auroc: 0.870
+Finish iter: 0, loss 0.02094908617436886
+Finish iter: 20, loss 0.030747508630156517
+Finish iter: 40, loss 0.023013336583971977
+Training epoch: 207, loss: 0.02532210387289524, time elapsed: 14.538532972335815,
+Split: train, epoch: 207, metrics: accuracy: 0.990 ; iou: 0.952 ; dice: 0.832 ; sensitivity: 0.970 ; auroc: 0.999
+Split: val, epoch: 207, metrics: accuracy: 0.789 ; iou: 0.196 ; dice: 0.240 ; sensitivity: 0.266 ; auroc: 0.871
+Finish iter: 0, loss 0.02434415929019451
+Finish iter: 20, loss 0.019406074658036232
+Finish iter: 40, loss 0.029707664623856544
+Training epoch: 208, loss: 0.02570679597556591, time elapsed: 14.448563814163208,
+Split: train, epoch: 208, metrics: accuracy: 0.991 ; iou: 0.953 ; dice: 0.831 ; sensitivity: 0.972 ; auroc: 0.999
+Split: val, epoch: 208, metrics: accuracy: 0.787 ; iou: 0.193 ; dice: 0.240 ; sensitivity: 0.264 ; auroc: 0.872
+Finish iter: 0, loss 0.018809765577316284
+Finish iter: 20, loss 0.02589825727045536
+Finish iter: 40, loss 0.02594899572432041
+Training epoch: 209, loss: 0.03228480741381645, time elapsed: 14.428849697113037,
+Split: train, epoch: 209, metrics: accuracy: 0.991 ; iou: 0.953 ; dice: 0.843 ; sensitivity: 0.974 ; auroc: 1.000
+Split: val, epoch: 209, metrics: accuracy: 0.788 ; iou: 0.196 ; dice: 0.238 ; sensitivity: 0.268 ; auroc: 0.876
+Finish iter: 0, loss 0.028710724785923958
+Finish iter: 20, loss 0.023839203640818596
+Finish iter: 40, loss 0.029905257746577263
+Training epoch: 210, loss: 0.025127220898866653, time elapsed: 14.554517030715942,
+Split: train, epoch: 210, metrics: accuracy: 0.990 ; iou: 0.954 ; dice: 0.845 ; sensitivity: 0.972 ; auroc: 1.000
+Split: val, epoch: 210, metrics: accuracy: 0.787 ; iou: 0.192 ; dice: 0.235 ; sensitivity: 0.262 ; auroc: 0.867
+Finish iter: 0, loss 0.020602449774742126
+Finish iter: 20, loss 0.029098035767674446
+Finish iter: 40, loss 0.026562072336673737
+Training epoch: 211, loss: 0.03043981082737446, time elapsed: 14.533752202987671,
+Split: train, epoch: 211, metrics: accuracy: 0.991 ; iou: 0.955 ; dice: 0.841 ; sensitivity: 0.972 ; auroc: 1.000
+Split: val, epoch: 211, metrics: accuracy: 0.788 ; iou: 0.196 ; dice: 0.240 ; sensitivity: 0.265 ; auroc: 0.866
+Finish iter: 0, loss 0.0227799192070961
+Finish iter: 20, loss 0.023774361237883568
+Finish iter: 40, loss 0.02186693623661995
+Training epoch: 212, loss: 0.031048009172081947, time elapsed: 14.520156383514404,
+Split: train, epoch: 212, metrics: accuracy: 0.991 ; iou: 0.954 ; dice: 0.832 ; sensitivity: 0.972 ; auroc: 1.000
+Split: val, epoch: 212, metrics: accuracy: 0.787 ; iou: 0.193 ; dice: 0.237 ; sensitivity: 0.263 ; auroc: 0.880
+Finish iter: 0, loss 0.031162884086370468
+Finish iter: 20, loss 0.020321937277913094
+Finish iter: 40, loss 0.018033765256404877
+Training epoch: 213, loss: 0.028684450313448906, time elapsed: 14.446860313415527,
+Split: train, epoch: 213, metrics: accuracy: 0.991 ; iou: 0.954 ; dice: 0.830 ; sensitivity: 0.968 ; auroc: 1.000
+Split: val, epoch: 213, metrics: accuracy: 0.790 ; iou: 0.194 ; dice: 0.238 ; sensitivity: 0.262 ; auroc: 0.876
+Finish iter: 0, loss 0.02892490290105343
+Finish iter: 20, loss 0.02916289120912552
+Finish iter: 40, loss 0.02435469627380371
+Training epoch: 214, loss: 0.024657748639583588, time elapsed: 14.519558906555176,
+Split: train, epoch: 214, metrics: accuracy: 0.991 ; iou: 0.954 ; dice: 0.843 ; sensitivity: 0.971 ; auroc: 1.000
+Split: val, epoch: 214, metrics: accuracy: 0.788 ; iou: 0.194 ; dice: 0.238 ; sensitivity: 0.263 ; auroc: 0.873
+Finish iter: 0, loss 0.021323220804333687
+Finish iter: 20, loss 0.02576349675655365
+Finish iter: 40, loss 0.016336053609848022
+Training epoch: 215, loss: 0.022613290697336197, time elapsed: 14.50641393661499,
+Split: train, epoch: 215, metrics: accuracy: 0.991 ; iou: 0.956 ; dice: 0.835 ; sensitivity: 0.977 ; auroc: 1.000
+Split: val, epoch: 215, metrics: accuracy: 0.786 ; iou: 0.198 ; dice: 0.245 ; sensitivity: 0.272 ; auroc: 0.878
+Finish iter: 0, loss 0.0263823289424181
+Finish iter: 20, loss 0.02832338586449623
+Finish iter: 40, loss 0.02858983725309372
+Training epoch: 216, loss: 0.03425349295139313, time elapsed: 14.505680561065674,
+Split: train, epoch: 216, metrics: accuracy: 0.991 ; iou: 0.957 ; dice: 0.823 ; sensitivity: 0.976 ; auroc: 1.000
+Split: val, epoch: 216, metrics: accuracy: 0.787 ; iou: 0.196 ; dice: 0.249 ; sensitivity: 0.269 ; auroc: 0.873
+Finish iter: 0, loss 0.024738309904932976
+Finish iter: 20, loss 0.01985900290310383
+Finish iter: 40, loss 0.019607286900281906
+Training epoch: 217, loss: 0.03247510641813278, time elapsed: 14.483702421188354,
+Split: train, epoch: 217, metrics: accuracy: 0.991 ; iou: 0.956 ; dice: 0.842 ; sensitivity: 0.979 ; auroc: 0.999
+Split: val, epoch: 217, metrics: accuracy: 0.787 ; iou: 0.195 ; dice: 0.240 ; sensitivity: 0.268 ; auroc: 0.874
+Finish iter: 0, loss 0.03081505559384823
+Finish iter: 20, loss 0.026119453832507133
+Finish iter: 40, loss 0.021487532183527946
+Training epoch: 218, loss: 0.0199102945625782, time elapsed: 14.504019021987915,
+Split: train, epoch: 218, metrics: accuracy: 0.991 ; iou: 0.956 ; dice: 0.829 ; sensitivity: 0.975 ; auroc: 1.000
+Split: val, epoch: 218, metrics: accuracy: 0.786 ; iou: 0.194 ; dice: 0.246 ; sensitivity: 0.266 ; auroc: 0.873
+Finish iter: 0, loss 0.02334601804614067
+Finish iter: 20, loss 0.028577247634530067
+Finish iter: 40, loss 0.024535521864891052
+Training epoch: 219, loss: 0.02804286777973175, time elapsed: 14.517598152160645,
+Split: train, epoch: 219, metrics: accuracy: 0.991 ; iou: 0.955 ; dice: 0.836 ; sensitivity: 0.979 ; auroc: 1.000
+Split: val, epoch: 219, metrics: accuracy: 0.786 ; iou: 0.199 ; dice: 0.245 ; sensitivity: 0.274 ; auroc: 0.878
+Finish iter: 0, loss 0.018099596723914146
+Finish iter: 20, loss 0.022432630881667137
+Finish iter: 40, loss 0.0264322180300951
+Training epoch: 220, loss: 0.03154686465859413, time elapsed: 14.552945852279663,
+Split: train, epoch: 220, metrics: accuracy: 0.991 ; iou: 0.957 ; dice: 0.851 ; sensitivity: 0.976 ; auroc: 1.000
+Split: val, epoch: 220, metrics: accuracy: 0.785 ; iou: 0.194 ; dice: 0.243 ; sensitivity: 0.266 ; auroc: 0.867
+Finish iter: 0, loss 0.03132815659046173
+Finish iter: 20, loss 0.019694633781909943
+Finish iter: 40, loss 0.022847602143883705
+Training epoch: 221, loss: 0.020363042131066322, time elapsed: 14.494022846221924,
+Split: train, epoch: 221, metrics: accuracy: 0.991 ; iou: 0.957 ; dice: 0.820 ; sensitivity: 0.977 ; auroc: 1.000
+Split: val, epoch: 221, metrics: accuracy: 0.788 ; iou: 0.198 ; dice: 0.238 ; sensitivity: 0.269 ; auroc: 0.866
+Finish iter: 0, loss 0.01848176121711731
+Finish iter: 20, loss 0.026770584285259247
+Finish iter: 40, loss 0.029538415372371674
+Training epoch: 222, loss: 0.027695652097463608, time elapsed: 14.541791915893555,
+Split: train, epoch: 222, metrics: accuracy: 0.991 ; iou: 0.957 ; dice: 0.837 ; sensitivity: 0.972 ; auroc: 1.000
+Split: val, epoch: 222, metrics: accuracy: 0.788 ; iou: 0.194 ; dice: 0.241 ; sensitivity: 0.265 ; auroc: 0.879
+Finish iter: 0, loss 0.023457346484065056
+Finish iter: 20, loss 0.02276960015296936
+Finish iter: 40, loss 0.023365505039691925
+Training epoch: 223, loss: 0.02003093808889389, time elapsed: 14.562811613082886,
+Split: train, epoch: 223, metrics: accuracy: 0.991 ; iou: 0.956 ; dice: 0.832 ; sensitivity: 0.981 ; auroc: 1.000
+Split: val, epoch: 223, metrics: accuracy: 0.786 ; iou: 0.196 ; dice: 0.242 ; sensitivity: 0.271 ; auroc: 0.880
+Finish iter: 0, loss 0.026792233809828758
+Finish iter: 20, loss 0.03052506223320961
+Finish iter: 40, loss 0.0185230802744627
+Training epoch: 224, loss: 0.024045949801802635, time elapsed: 14.512192010879517,
+Split: train, epoch: 224, metrics: accuracy: 0.991 ; iou: 0.956 ; dice: 0.834 ; sensitivity: 0.976 ; auroc: 1.000
+Split: val, epoch: 224, metrics: accuracy: 0.784 ; iou: 0.190 ; dice: 0.235 ; sensitivity: 0.260 ; auroc: 0.879
+Finish iter: 0, loss 0.024288978427648544
+Finish iter: 20, loss 0.020394761115312576
+Finish iter: 40, loss 0.019586700946092606
+Training epoch: 225, loss: 0.02749657817184925, time elapsed: 14.586951732635498,
+Split: train, epoch: 225, metrics: accuracy: 0.991 ; iou: 0.957 ; dice: 0.854 ; sensitivity: 0.974 ; auroc: 1.000
+Split: val, epoch: 225, metrics: accuracy: 0.786 ; iou: 0.192 ; dice: 0.236 ; sensitivity: 0.260 ; auroc: 0.870
+Finish iter: 0, loss 0.016497936099767685
+Finish iter: 20, loss 0.025553273037075996
+Finish iter: 40, loss 0.03162193298339844
+Training epoch: 226, loss: 0.022082146257162094, time elapsed: 14.581769943237305,
+Split: train, epoch: 226, metrics: accuracy: 0.992 ; iou: 0.959 ; dice: 0.848 ; sensitivity: 0.977 ; auroc: 1.000
+Split: val, epoch: 226, metrics: accuracy: 0.785 ; iou: 0.193 ; dice: 0.244 ; sensitivity: 0.265 ; auroc: 0.871
+Finish iter: 0, loss 0.017086520791053772
+Finish iter: 20, loss 0.019229136407375336
+Finish iter: 40, loss 0.02352389506995678
+Training epoch: 227, loss: 0.030369199812412262, time elapsed: 14.540493249893188,
+Split: train, epoch: 227, metrics: accuracy: 0.992 ; iou: 0.958 ; dice: 0.832 ; sensitivity: 0.976 ; auroc: 1.000
+Split: val, epoch: 227, metrics: accuracy: 0.786 ; iou: 0.191 ; dice: 0.235 ; sensitivity: 0.262 ; auroc: 0.876
+Finish iter: 0, loss 0.02097102254629135
+Finish iter: 20, loss 0.02370629273355007
+Finish iter: 40, loss 0.022831106558442116
+Training epoch: 228, loss: 0.023623183369636536, time elapsed: 14.569565057754517,
+Split: train, epoch: 228, metrics: accuracy: 0.992 ; iou: 0.959 ; dice: 0.840 ; sensitivity: 0.976 ; auroc: 0.999
+Split: val, epoch: 228, metrics: accuracy: 0.787 ; iou: 0.194 ; dice: 0.238 ; sensitivity: 0.264 ; auroc: 0.865
+Finish iter: 0, loss 0.026812322437763214
+Finish iter: 20, loss 0.02701440639793873
+Finish iter: 40, loss 0.026827596127986908
+Training epoch: 229, loss: 0.025942428037524223, time elapsed: 14.52274751663208,
+Split: train, epoch: 229, metrics: accuracy: 0.991 ; iou: 0.958 ; dice: 0.831 ; sensitivity: 0.981 ; auroc: 1.000
+Split: val, epoch: 229, metrics: accuracy: 0.784 ; iou: 0.196 ; dice: 0.244 ; sensitivity: 0.270 ; auroc: 0.877
+Finish iter: 0, loss 0.020350700244307518
+Finish iter: 20, loss 0.02205215021967888
+Finish iter: 40, loss 0.018755564466118813
+Training epoch: 230, loss: 0.01811608485877514, time elapsed: 14.511838912963867,
+Split: train, epoch: 230, metrics: accuracy: 0.991 ; iou: 0.955 ; dice: 0.834 ; sensitivity: 0.978 ; auroc: 1.000
+Split: val, epoch: 230, metrics: accuracy: 0.785 ; iou: 0.190 ; dice: 0.239 ; sensitivity: 0.262 ; auroc: 0.885
+Finish iter: 0, loss 0.02645127661526203
+Finish iter: 20, loss 0.02208423614501953
+Finish iter: 40, loss 0.023857608437538147
+Training epoch: 231, loss: 0.021076388657093048, time elapsed: 14.496191501617432,
+Split: train, epoch: 231, metrics: accuracy: 0.991 ; iou: 0.957 ; dice: 0.844 ; sensitivity: 0.974 ; auroc: 1.000
+Split: val, epoch: 231, metrics: accuracy: 0.785 ; iou: 0.189 ; dice: 0.238 ; sensitivity: 0.258 ; auroc: 0.881
+Finish iter: 0, loss 0.018548425287008286
+Finish iter: 20, loss 0.02302645891904831
+Finish iter: 40, loss 0.022498223930597305
+Training epoch: 232, loss: 0.02102343551814556, time elapsed: 14.491783142089844,
+Split: train, epoch: 232, metrics: accuracy: 0.992 ; iou: 0.958 ; dice: 0.840 ; sensitivity: 0.977 ; auroc: 1.000
+Split: val, epoch: 232, metrics: accuracy: 0.787 ; iou: 0.195 ; dice: 0.242 ; sensitivity: 0.266 ; auroc: 0.883
+Finish iter: 0, loss 0.023128822445869446
+Finish iter: 20, loss 0.021468840539455414
+Finish iter: 40, loss 0.02596646174788475
+Training epoch: 233, loss: 0.01952550746500492, time elapsed: 14.541925191879272,
+Split: train, epoch: 233, metrics: accuracy: 0.991 ; iou: 0.958 ; dice: 0.837 ; sensitivity: 0.980 ; auroc: 1.000
+Split: val, epoch: 233, metrics: accuracy: 0.784 ; iou: 0.195 ; dice: 0.236 ; sensitivity: 0.267 ; auroc: 0.877
+Finish iter: 0, loss 0.02217341959476471
+Finish iter: 20, loss 0.01888972334563732
+Finish iter: 40, loss 0.02661544643342495
+Training epoch: 234, loss: 0.01653902791440487, time elapsed: 14.52725625038147,
+Split: train, epoch: 234, metrics: accuracy: 0.991 ; iou: 0.957 ; dice: 0.830 ; sensitivity: 0.975 ; auroc: 1.000
+Split: val, epoch: 234, metrics: accuracy: 0.786 ; iou: 0.193 ; dice: 0.236 ; sensitivity: 0.263 ; auroc: 0.882
+Finish iter: 0, loss 0.025062179192900658
+Finish iter: 20, loss 0.023828333243727684
+Finish iter: 40, loss 0.02860865369439125
+Training epoch: 235, loss: 0.024472475051879883, time elapsed: 14.50621509552002,
+Split: train, epoch: 235, metrics: accuracy: 0.991 ; iou: 0.958 ; dice: 0.854 ; sensitivity: 0.979 ; auroc: 1.000
+Split: val, epoch: 235, metrics: accuracy: 0.785 ; iou: 0.193 ; dice: 0.241 ; sensitivity: 0.266 ; auroc: 0.875
+Finish iter: 0, loss 0.024791613221168518
+Finish iter: 20, loss 0.023289959877729416
+Finish iter: 40, loss 0.018796097487211227
+Training epoch: 236, loss: 0.03097696043550968, time elapsed: 14.54110336303711,
+Split: train, epoch: 236, metrics: accuracy: 0.991 ; iou: 0.958 ; dice: 0.850 ; sensitivity: 0.979 ; auroc: 1.000
+Split: val, epoch: 236, metrics: accuracy: 0.785 ; iou: 0.190 ; dice: 0.236 ; sensitivity: 0.261 ; auroc: 0.879
+Finish iter: 0, loss 0.01924959011375904
+Finish iter: 20, loss 0.018104923889040947
+Finish iter: 40, loss 0.022309470921754837
+Training epoch: 237, loss: 0.020353205502033234, time elapsed: 14.51587986946106,
+Split: train, epoch: 237, metrics: accuracy: 0.991 ; iou: 0.956 ; dice: 0.823 ; sensitivity: 0.975 ; auroc: 1.000
+Split: val, epoch: 237, metrics: accuracy: 0.782 ; iou: 0.190 ; dice: 0.234 ; sensitivity: 0.262 ; auroc: 0.873
+Finish iter: 0, loss 0.022124309092760086
+Finish iter: 20, loss 0.023092038929462433
+Finish iter: 40, loss 0.02389533258974552
+Training epoch: 238, loss: 0.02378760650753975, time elapsed: 14.615671396255493,
+Split: train, epoch: 238, metrics: accuracy: 0.991 ; iou: 0.956 ; dice: 0.839 ; sensitivity: 0.978 ; auroc: 1.000
+Split: val, epoch: 238, metrics: accuracy: 0.786 ; iou: 0.196 ; dice: 0.241 ; sensitivity: 0.269 ; auroc: 0.881
+Finish iter: 0, loss 0.021925706416368484
+Finish iter: 20, loss 0.024497082456946373
+Finish iter: 40, loss 0.027638297528028488
+Training epoch: 239, loss: 0.024026324972510338, time elapsed: 14.549440145492554,
+Split: train, epoch: 239, metrics: accuracy: 0.991 ; iou: 0.957 ; dice: 0.856 ; sensitivity: 0.975 ; auroc: 1.000
+Split: val, epoch: 239, metrics: accuracy: 0.785 ; iou: 0.191 ; dice: 0.238 ; sensitivity: 0.262 ; auroc: 0.873
+Finish iter: 0, loss 0.025925662368535995
+Finish iter: 20, loss 0.02410866692662239
+Finish iter: 40, loss 0.021158471703529358
+Training epoch: 240, loss: 0.019533950835466385, time elapsed: 14.527464389801025,
+Split: train, epoch: 240, metrics: accuracy: 0.991 ; iou: 0.957 ; dice: 0.818 ; sensitivity: 0.976 ; auroc: 1.000
+Split: val, epoch: 240, metrics: accuracy: 0.782 ; iou: 0.186 ; dice: 0.225 ; sensitivity: 0.255 ; auroc: 0.881
+Finish iter: 0, loss 0.02327004075050354
+Finish iter: 20, loss 0.024986794218420982
+Finish iter: 40, loss 0.02174031175673008
+Training epoch: 241, loss: 0.020841499790549278, time elapsed: 14.508685827255249,
+Split: train, epoch: 241, metrics: accuracy: 0.991 ; iou: 0.957 ; dice: 0.839 ; sensitivity: 0.977 ; auroc: 1.000
+Split: val, epoch: 241, metrics: accuracy: 0.786 ; iou: 0.194 ; dice: 0.244 ; sensitivity: 0.267 ; auroc: 0.877
+Finish iter: 0, loss 0.02114933170378208
+Finish iter: 20, loss 0.025277171283960342
+Finish iter: 40, loss 0.023861272260546684
+Training epoch: 242, loss: 0.032621804624795914, time elapsed: 14.605745077133179,
+Split: train, epoch: 242, metrics: accuracy: 0.991 ; iou: 0.959 ; dice: 0.852 ; sensitivity: 0.977 ; auroc: 1.000
+Split: val, epoch: 242, metrics: accuracy: 0.785 ; iou: 0.191 ; dice: 0.243 ; sensitivity: 0.262 ; auroc: 0.873
+Finish iter: 0, loss 0.020169256255030632
+Finish iter: 20, loss 0.023404616862535477
+Finish iter: 40, loss 0.02201496623456478
+Training epoch: 243, loss: 0.023257488384842873, time elapsed: 14.53230333328247,
+Split: train, epoch: 243, metrics: accuracy: 0.992 ; iou: 0.960 ; dice: 0.844 ; sensitivity: 0.980 ; auroc: 1.000
+Split: val, epoch: 243, metrics: accuracy: 0.787 ; iou: 0.200 ; dice: 0.245 ; sensitivity: 0.276 ; auroc: 0.880
+Finish iter: 0, loss 0.015813227742910385
+Finish iter: 20, loss 0.02679046243429184
+Finish iter: 40, loss 0.019830893725156784
+Training epoch: 244, loss: 0.029577570036053658, time elapsed: 14.528835535049438,
+Split: train, epoch: 244, metrics: accuracy: 0.992 ; iou: 0.961 ; dice: 0.848 ; sensitivity: 0.981 ; auroc: 1.000
+Split: val, epoch: 244, metrics: accuracy: 0.786 ; iou: 0.195 ; dice: 0.242 ; sensitivity: 0.269 ; auroc: 0.876
+Finish iter: 0, loss 0.01863911934196949
+Finish iter: 20, loss 0.02198236994445324
+Finish iter: 40, loss 0.029142895713448524
+Training epoch: 245, loss: 0.015594246797263622, time elapsed: 14.552933931350708,
+Split: train, epoch: 245, metrics: accuracy: 0.992 ; iou: 0.958 ; dice: 0.839 ; sensitivity: 0.970 ; auroc: 1.000
+Split: val, epoch: 245, metrics: accuracy: 0.785 ; iou: 0.190 ; dice: 0.234 ; sensitivity: 0.258 ; auroc: 0.878
+Finish iter: 0, loss 0.023202182725071907
+Finish iter: 20, loss 0.016854718327522278
+Finish iter: 40, loss 0.021470945328474045
+Training epoch: 246, loss: 0.018185904249548912, time elapsed: 14.539072275161743,
+Split: train, epoch: 246, metrics: accuracy: 0.992 ; iou: 0.962 ; dice: 0.836 ; sensitivity: 0.978 ; auroc: 1.000
+Split: val, epoch: 246, metrics: accuracy: 0.787 ; iou: 0.196 ; dice: 0.242 ; sensitivity: 0.269 ; auroc: 0.872
+Finish iter: 0, loss 0.020989324897527695
+Finish iter: 20, loss 0.01881510019302368
+Finish iter: 40, loss 0.01872091181576252
+Training epoch: 247, loss: 0.021020885556936264, time elapsed: 14.543640375137329,
+Split: train, epoch: 247, metrics: accuracy: 0.992 ; iou: 0.961 ; dice: 0.855 ; sensitivity: 0.978 ; auroc: 1.000
+Split: val, epoch: 247, metrics: accuracy: 0.784 ; iou: 0.190 ; dice: 0.239 ; sensitivity: 0.259 ; auroc: 0.878
+Finish iter: 0, loss 0.01929919607937336
+Finish iter: 20, loss 0.01996488682925701
+Finish iter: 40, loss 0.018508225679397583
+Training epoch: 248, loss: 0.016992127522826195, time elapsed: 14.558847427368164,
+Split: train, epoch: 248, metrics: accuracy: 0.992 ; iou: 0.962 ; dice: 0.843 ; sensitivity: 0.979 ; auroc: 1.000
+Split: val, epoch: 248, metrics: accuracy: 0.786 ; iou: 0.193 ; dice: 0.240 ; sensitivity: 0.265 ; auroc: 0.873
+Finish iter: 0, loss 0.014553152956068516
+Finish iter: 20, loss 0.01774408482015133
+Finish iter: 40, loss 0.0194548387080431
+Training epoch: 249, loss: 0.023563215509057045, time elapsed: 14.549559593200684,
+Split: train, epoch: 249, metrics: accuracy: 0.992 ; iou: 0.962 ; dice: 0.863 ; sensitivity: 0.980 ; auroc: 1.000
+Split: val, epoch: 249, metrics: accuracy: 0.784 ; iou: 0.196 ; dice: 0.239 ; sensitivity: 0.269 ; auroc: 0.870
+Finish iter: 0, loss 0.017827127128839493
+Finish iter: 20, loss 0.019576340913772583
+Finish iter: 40, loss 0.021230362355709076
+Training epoch: 250, loss: 0.025023169815540314, time elapsed: 14.58286738395691,
+Split: train, epoch: 250, metrics: accuracy: 0.993 ; iou: 0.963 ; dice: 0.837 ; sensitivity: 0.981 ; auroc: 1.000
+Split: val, epoch: 250, metrics: accuracy: 0.784 ; iou: 0.191 ; dice: 0.242 ; sensitivity: 0.264 ; auroc: 0.877
+Finish iter: 0, loss 0.019219599664211273
+Finish iter: 20, loss 0.02124818228185177
+Finish iter: 40, loss 0.02009991742670536
+Training epoch: 251, loss: 0.018733862787485123, time elapsed: 14.512803554534912,
+Split: train, epoch: 251, metrics: accuracy: 0.992 ; iou: 0.961 ; dice: 0.854 ; sensitivity: 0.980 ; auroc: 1.000
+Split: val, epoch: 251, metrics: accuracy: 0.785 ; iou: 0.193 ; dice: 0.236 ; sensitivity: 0.267 ; auroc: 0.881
+Finish iter: 0, loss 0.021964555606245995
+Finish iter: 20, loss 0.023678209632635117
+Finish iter: 40, loss 0.023503974080085754
+Training epoch: 252, loss: 0.02246374823153019, time elapsed: 14.55153512954712,
+Split: train, epoch: 252, metrics: accuracy: 0.992 ; iou: 0.961 ; dice: 0.839 ; sensitivity: 0.981 ; auroc: 0.999
+Split: val, epoch: 252, metrics: accuracy: 0.785 ; iou: 0.194 ; dice: 0.236 ; sensitivity: 0.270 ; auroc: 0.875
+Finish iter: 0, loss 0.017221178859472275
+Finish iter: 20, loss 0.024611474946141243
+Finish iter: 40, loss 0.026131512597203255
+Training epoch: 253, loss: 0.014667275361716747, time elapsed: 14.51767349243164,
+Split: train, epoch: 253, metrics: accuracy: 0.992 ; iou: 0.962 ; dice: 0.837 ; sensitivity: 0.979 ; auroc: 0.999
+Split: val, epoch: 253, metrics: accuracy: 0.787 ; iou: 0.198 ; dice: 0.243 ; sensitivity: 0.273 ; auroc: 0.883
+Finish iter: 0, loss 0.016604512929916382
+Finish iter: 20, loss 0.01907286047935486
+Finish iter: 40, loss 0.022224711254239082
+Training epoch: 254, loss: 0.022046994417905807, time elapsed: 14.573943614959717,
+Split: train, epoch: 254, metrics: accuracy: 0.992 ; iou: 0.959 ; dice: 0.847 ; sensitivity: 0.981 ; auroc: 1.000
+Split: val, epoch: 254, metrics: accuracy: 0.781 ; iou: 0.194 ; dice: 0.239 ; sensitivity: 0.271 ; auroc: 0.880
+Finish iter: 0, loss 0.017273541539907455
+Finish iter: 20, loss 0.024430688470602036
+Finish iter: 40, loss 0.021838124841451645
+Training epoch: 255, loss: 0.01606346294283867, time elapsed: 14.55621862411499,
+Split: train, epoch: 255, metrics: accuracy: 0.991 ; iou: 0.954 ; dice: 0.837 ; sensitivity: 0.976 ; auroc: 0.999
+Split: val, epoch: 255, metrics: accuracy: 0.782 ; iou: 0.188 ; dice: 0.234 ; sensitivity: 0.258 ; auroc: 0.880
+Finish iter: 0, loss 0.021747872233390808
+Finish iter: 20, loss 0.02823222428560257
+Finish iter: 40, loss 0.6473723649978638
+Training epoch: 256, loss: 1.0154430866241455, time elapsed: 14.588127613067627,
+Split: train, epoch: 256, metrics: accuracy: 0.588 ; iou: 0.126 ; dice: 0.168 ; sensitivity: 0.272 ; auroc: 0.851
+Split: val, epoch: 256, metrics: accuracy: 0.532 ; iou: 0.089 ; dice: 0.123 ; sensitivity: 0.199 ; auroc: 0.782
+Finish iter: 0, loss 0.7562083601951599
+Finish iter: 20, loss 0.720181941986084
+Finish iter: 40, loss 0.4045705199241638
+Training epoch: 257, loss: 0.7081012725830078, time elapsed: 14.530138492584229,
+Split: train, epoch: 257, metrics: accuracy: 0.845 ; iou: 0.305 ; dice: 0.319 ; sensitivity: 0.403 ; auroc: 0.974
+Split: val, epoch: 257, metrics: accuracy: 0.767 ; iou: 0.133 ; dice: 0.168 ; sensitivity: 0.195 ; auroc: 0.896
+Finish iter: 0, loss 0.5886016488075256
+Finish iter: 20, loss 0.3502081632614136
+Finish iter: 40, loss 0.2865714132785797
+Training epoch: 258, loss: 0.27813637256622314, time elapsed: 14.588501691818237,
+Split: train, epoch: 258, metrics: accuracy: 0.914 ; iou: 0.580 ; dice: 0.555 ; sensitivity: 0.682 ; auroc: 0.995
+Split: val, epoch: 258, metrics: accuracy: 0.777 ; iou: 0.156 ; dice: 0.192 ; sensitivity: 0.219 ; auroc: 0.894
+Finish iter: 0, loss 0.22149257361888885
+Finish iter: 20, loss 0.19595114886760712
+Finish iter: 40, loss 0.18850751221179962
+Training epoch: 259, loss: 0.1984582245349884, time elapsed: 14.584755897521973,
+Split: train, epoch: 259, metrics: accuracy: 0.941 ; iou: 0.704 ; dice: 0.638 ; sensitivity: 0.790 ; auroc: 0.997
+Split: val, epoch: 259, metrics: accuracy: 0.775 ; iou: 0.176 ; dice: 0.219 ; sensitivity: 0.238 ; auroc: 0.901
+Finish iter: 0, loss 0.133997842669487
+Finish iter: 20, loss 0.2352471649646759
+Finish iter: 40, loss 0.18720170855522156
+Training epoch: 260, loss: 0.13121120631694794, time elapsed: 14.589956521987915,
+Split: train, epoch: 260, metrics: accuracy: 0.954 ; iou: 0.767 ; dice: 0.691 ; sensitivity: 0.860 ; auroc: 0.998
+Split: val, epoch: 260, metrics: accuracy: 0.783 ; iou: 0.195 ; dice: 0.243 ; sensitivity: 0.276 ; auroc: 0.898
+Finish iter: 0, loss 0.23652204871177673
+Finish iter: 20, loss 0.13751797378063202
+Finish iter: 40, loss 0.12504377961158752
+Training epoch: 261, loss: 0.15240135788917542, time elapsed: 14.536916494369507,
+Split: train, epoch: 261, metrics: accuracy: 0.968 ; iou: 0.844 ; dice: 0.732 ; sensitivity: 0.913 ; auroc: 0.999
+Split: val, epoch: 261, metrics: accuracy: 0.785 ; iou: 0.185 ; dice: 0.228 ; sensitivity: 0.253 ; auroc: 0.898
+Finish iter: 0, loss 0.11262626200914383
+Finish iter: 20, loss 0.10826022922992706
+Finish iter: 40, loss 0.07167501002550125
+Training epoch: 262, loss: 0.09691326320171356, time elapsed: 14.567527055740356,
+Split: train, epoch: 262, metrics: accuracy: 0.972 ; iou: 0.860 ; dice: 0.753 ; sensitivity: 0.908 ; auroc: 0.999
+Split: val, epoch: 262, metrics: accuracy: 0.792 ; iou: 0.187 ; dice: 0.225 ; sensitivity: 0.243 ; auroc: 0.893
+Finish iter: 0, loss 0.14570645987987518
+Finish iter: 20, loss 0.09524580091238022
+Finish iter: 40, loss 0.06585466861724854
+Training epoch: 263, loss: 0.08084271848201752, time elapsed: 14.63817310333252,
+Split: train, epoch: 263, metrics: accuracy: 0.979 ; iou: 0.904 ; dice: 0.775 ; sensitivity: 0.942 ; auroc: 1.000
+Split: val, epoch: 263, metrics: accuracy: 0.789 ; iou: 0.195 ; dice: 0.235 ; sensitivity: 0.260 ; auroc: 0.890
+Finish iter: 0, loss 0.06716948002576828
+Finish iter: 20, loss 0.05324249714612961
+Finish iter: 40, loss 0.038206301629543304
+Training epoch: 264, loss: 0.04329973831772804, time elapsed: 14.559252977371216,
+Split: train, epoch: 264, metrics: accuracy: 0.984 ; iou: 0.923 ; dice: 0.804 ; sensitivity: 0.955 ; auroc: 1.000
+Split: val, epoch: 264, metrics: accuracy: 0.790 ; iou: 0.196 ; dice: 0.240 ; sensitivity: 0.261 ; auroc: 0.884
+Finish iter: 0, loss 0.04266365244984627
+Finish iter: 20, loss 0.04236876592040062
+Finish iter: 40, loss 0.04019033536314964
+Training epoch: 265, loss: 0.051702070981264114, time elapsed: 14.577627420425415,
+Split: train, epoch: 265, metrics: accuracy: 0.986 ; iou: 0.935 ; dice: 0.818 ; sensitivity: 0.965 ; auroc: 1.000
+Split: val, epoch: 265, metrics: accuracy: 0.792 ; iou: 0.199 ; dice: 0.245 ; sensitivity: 0.267 ; auroc: 0.890
+Finish iter: 0, loss 0.03935360535979271
+Finish iter: 20, loss 0.043807122856378555
+Finish iter: 40, loss 0.04846757650375366
+Training epoch: 266, loss: 0.03244972229003906, time elapsed: 14.598314762115479,
+Split: train, epoch: 266, metrics: accuracy: 0.988 ; iou: 0.943 ; dice: 0.827 ; sensitivity: 0.969 ; auroc: 1.000
+Split: val, epoch: 266, metrics: accuracy: 0.790 ; iou: 0.196 ; dice: 0.240 ; sensitivity: 0.262 ; auroc: 0.886
+Finish iter: 0, loss 0.03601120784878731
+Finish iter: 20, loss 0.02983231656253338
+Finish iter: 40, loss 0.03610750287771225
+Training epoch: 267, loss: 0.035519517958164215, time elapsed: 14.588914394378662,
+Split: train, epoch: 267, metrics: accuracy: 0.989 ; iou: 0.947 ; dice: 0.840 ; sensitivity: 0.973 ; auroc: 1.000
+Split: val, epoch: 267, metrics: accuracy: 0.789 ; iou: 0.198 ; dice: 0.241 ; sensitivity: 0.267 ; auroc: 0.885
+Finish iter: 0, loss 0.03348848223686218
+Finish iter: 20, loss 0.029435381293296814
+Finish iter: 40, loss 0.029241783544421196
+Training epoch: 268, loss: 0.031342241913080215, time elapsed: 14.609384775161743,
+Split: train, epoch: 268, metrics: accuracy: 0.990 ; iou: 0.950 ; dice: 0.817 ; sensitivity: 0.969 ; auroc: 1.000
+Split: val, epoch: 268, metrics: accuracy: 0.790 ; iou: 0.196 ; dice: 0.242 ; sensitivity: 0.261 ; auroc: 0.880
+Finish iter: 0, loss 0.030554236844182014
+Finish iter: 20, loss 0.03722498565912247
+Finish iter: 40, loss 0.02937682531774044
+Training epoch: 269, loss: 0.027684058994054794, time elapsed: 14.596653699874878,
+Split: train, epoch: 269, metrics: accuracy: 0.990 ; iou: 0.954 ; dice: 0.821 ; sensitivity: 0.976 ; auroc: 1.000
+Split: val, epoch: 269, metrics: accuracy: 0.788 ; iou: 0.194 ; dice: 0.241 ; sensitivity: 0.262 ; auroc: 0.880
+Finish iter: 0, loss 0.029711121693253517
+Finish iter: 20, loss 0.02049599215388298
+Finish iter: 40, loss 0.026506060734391212
+Training epoch: 270, loss: 0.020720800384879112, time elapsed: 14.558393955230713,
+Split: train, epoch: 270, metrics: accuracy: 0.991 ; iou: 0.955 ; dice: 0.827 ; sensitivity: 0.974 ; auroc: 1.000
+Split: val, epoch: 270, metrics: accuracy: 0.788 ; iou: 0.195 ; dice: 0.235 ; sensitivity: 0.264 ; auroc: 0.881
+Finish iter: 0, loss 0.02211337350308895
+Finish iter: 20, loss 0.023434501141309738
+Finish iter: 40, loss 0.024287015199661255
+Training epoch: 271, loss: 0.0361783392727375, time elapsed: 14.604703426361084,
+Split: train, epoch: 271, metrics: accuracy: 0.991 ; iou: 0.957 ; dice: 0.823 ; sensitivity: 0.976 ; auroc: 1.000
+Split: val, epoch: 271, metrics: accuracy: 0.791 ; iou: 0.200 ; dice: 0.250 ; sensitivity: 0.270 ; auroc: 0.877
+Finish iter: 0, loss 0.022238677367568016
+Finish iter: 20, loss 0.02670004405081272
+Finish iter: 40, loss 0.02388460375368595
+Training epoch: 272, loss: 0.0322587750852108, time elapsed: 15.753606796264648,
+Split: train, epoch: 272, metrics: accuracy: 0.992 ; iou: 0.959 ; dice: 0.826 ; sensitivity: 0.976 ; auroc: 1.000
+Split: val, epoch: 272, metrics: accuracy: 0.790 ; iou: 0.198 ; dice: 0.243 ; sensitivity: 0.267 ; auroc: 0.873
+Finish iter: 0, loss 0.022733408957719803
+Finish iter: 20, loss 0.032995086163282394
+Finish iter: 40, loss 0.024081015959382057
+Training epoch: 273, loss: 0.023595692589879036, time elapsed: 14.60355544090271,
+Split: train, epoch: 273, metrics: accuracy: 0.992 ; iou: 0.959 ; dice: 0.832 ; sensitivity: 0.980 ; auroc: 1.000
+Split: val, epoch: 273, metrics: accuracy: 0.788 ; iou: 0.198 ; dice: 0.239 ; sensitivity: 0.270 ; auroc: 0.869
+Finish iter: 0, loss 0.026725532487034798
+Finish iter: 20, loss 0.0205092690885067
+Finish iter: 40, loss 0.03250628709793091
+Training epoch: 274, loss: 0.02766849845647812, time elapsed: 14.637818574905396,
+Split: train, epoch: 274, metrics: accuracy: 0.990 ; iou: 0.953 ; dice: 0.841 ; sensitivity: 0.974 ; auroc: 1.000
+Split: val, epoch: 274, metrics: accuracy: 0.789 ; iou: 0.198 ; dice: 0.243 ; sensitivity: 0.270 ; auroc: 0.870
+Finish iter: 0, loss 0.02646695263683796
+Finish iter: 20, loss 0.024700507521629333
+Finish iter: 40, loss 0.024421118199825287
+Training epoch: 275, loss: 0.023437561467289925, time elapsed: 14.600597381591797,
+Split: train, epoch: 275, metrics: accuracy: 0.991 ; iou: 0.958 ; dice: 0.832 ; sensitivity: 0.974 ; auroc: 1.000
+Split: val, epoch: 275, metrics: accuracy: 0.789 ; iou: 0.197 ; dice: 0.242 ; sensitivity: 0.265 ; auroc: 0.869
+Finish iter: 0, loss 0.02790962904691696
+Finish iter: 20, loss 0.019207896664738655
+Finish iter: 40, loss 0.02049652859568596
+Training epoch: 276, loss: 0.01993206888437271, time elapsed: 14.590813636779785,
+Split: train, epoch: 276, metrics: accuracy: 0.992 ; iou: 0.961 ; dice: 0.844 ; sensitivity: 0.978 ; auroc: 1.000
+Split: val, epoch: 276, metrics: accuracy: 0.790 ; iou: 0.197 ; dice: 0.235 ; sensitivity: 0.265 ; auroc: 0.882
+Finish iter: 0, loss 0.019092561677098274
+Finish iter: 20, loss 0.02693747542798519
+Finish iter: 40, loss 0.026712466031312943
+Training epoch: 277, loss: 0.02789737470448017, time elapsed: 14.560023784637451,
+Split: train, epoch: 277, metrics: accuracy: 0.992 ; iou: 0.962 ; dice: 0.849 ; sensitivity: 0.977 ; auroc: 1.000
+Split: val, epoch: 277, metrics: accuracy: 0.789 ; iou: 0.199 ; dice: 0.249 ; sensitivity: 0.267 ; auroc: 0.873
+Finish iter: 0, loss 0.023559730499982834
+Finish iter: 20, loss 0.02395676262676716
+Finish iter: 40, loss 0.0217329990118742
+Training epoch: 278, loss: 0.019265323877334595, time elapsed: 14.800615072250366,
+Split: train, epoch: 278, metrics: accuracy: 0.993 ; iou: 0.963 ; dice: 0.834 ; sensitivity: 0.978 ; auroc: 1.000
+Split: val, epoch: 278, metrics: accuracy: 0.789 ; iou: 0.195 ; dice: 0.241 ; sensitivity: 0.265 ; auroc: 0.872
+Finish iter: 0, loss 0.0167335607111454
+Finish iter: 20, loss 0.024980632588267326
+Finish iter: 40, loss 0.0203530453145504
+Training epoch: 279, loss: 0.01621289551258087, time elapsed: 14.546055316925049,
+Split: train, epoch: 279, metrics: accuracy: 0.993 ; iou: 0.963 ; dice: 0.839 ; sensitivity: 0.977 ; auroc: 1.000
+Split: val, epoch: 279, metrics: accuracy: 0.788 ; iou: 0.195 ; dice: 0.239 ; sensitivity: 0.262 ; auroc: 0.869
+Finish iter: 0, loss 0.017234167084097862
+Finish iter: 20, loss 0.02170979045331478
+Finish iter: 40, loss 0.02264912985265255
+Training epoch: 280, loss: 0.024673325940966606, time elapsed: 14.551993370056152,
+Split: train, epoch: 280, metrics: accuracy: 0.993 ; iou: 0.964 ; dice: 0.839 ; sensitivity: 0.980 ; auroc: 1.000
+Split: val, epoch: 280, metrics: accuracy: 0.789 ; iou: 0.196 ; dice: 0.246 ; sensitivity: 0.264 ; auroc: 0.874
+Finish iter: 0, loss 0.018407005816698074
+Finish iter: 20, loss 0.018485868349671364
+Finish iter: 40, loss 0.020710458979010582
+Training epoch: 281, loss: 0.020558776333928108, time elapsed: 14.58273696899414,
+Split: train, epoch: 281, metrics: accuracy: 0.993 ; iou: 0.963 ; dice: 0.860 ; sensitivity: 0.978 ; auroc: 1.000
+Split: val, epoch: 281, metrics: accuracy: 0.789 ; iou: 0.197 ; dice: 0.244 ; sensitivity: 0.267 ; auroc: 0.868
+Finish iter: 0, loss 0.023386599496006966
+Finish iter: 20, loss 0.030741292983293533
+Finish iter: 40, loss 0.01947692409157753
+Training epoch: 282, loss: 0.019579604268074036, time elapsed: 14.569522380828857,
+Split: train, epoch: 282, metrics: accuracy: 0.993 ; iou: 0.964 ; dice: 0.828 ; sensitivity: 0.980 ; auroc: 1.000
+Split: val, epoch: 282, metrics: accuracy: 0.788 ; iou: 0.195 ; dice: 0.239 ; sensitivity: 0.264 ; auroc: 0.876
+Finish iter: 0, loss 0.021707305684685707
+Finish iter: 20, loss 0.023240000009536743
+Finish iter: 40, loss 0.018228700384497643
+Training epoch: 283, loss: 0.01631593145430088, time elapsed: 14.598746538162231,
+Split: train, epoch: 283, metrics: accuracy: 0.993 ; iou: 0.965 ; dice: 0.843 ; sensitivity: 0.980 ; auroc: 1.000
+Split: val, epoch: 283, metrics: accuracy: 0.787 ; iou: 0.194 ; dice: 0.244 ; sensitivity: 0.264 ; auroc: 0.867
+Finish iter: 0, loss 0.024320067837834358
+Finish iter: 20, loss 0.020145045593380928
+Finish iter: 40, loss 0.015369344502687454
+Training epoch: 284, loss: 0.022701481357216835, time elapsed: 14.630022048950195,
+Split: train, epoch: 284, metrics: accuracy: 0.993 ; iou: 0.966 ; dice: 0.835 ; sensitivity: 0.980 ; auroc: 1.000
+Split: val, epoch: 284, metrics: accuracy: 0.788 ; iou: 0.194 ; dice: 0.239 ; sensitivity: 0.263 ; auroc: 0.871
+Finish iter: 0, loss 0.01857028901576996
+Finish iter: 20, loss 0.016235793009400368
+Finish iter: 40, loss 0.019882705062627792
+Training epoch: 285, loss: 0.01895768940448761, time elapsed: 14.567697286605835,
+Split: train, epoch: 285, metrics: accuracy: 0.993 ; iou: 0.965 ; dice: 0.835 ; sensitivity: 0.982 ; auroc: 1.000
+Split: val, epoch: 285, metrics: accuracy: 0.787 ; iou: 0.195 ; dice: 0.246 ; sensitivity: 0.266 ; auroc: 0.869
+Finish iter: 0, loss 0.022856244817376137
+Finish iter: 20, loss 0.014929723925888538
+Finish iter: 40, loss 0.014681222848594189
+Training epoch: 286, loss: 0.02488909289240837, time elapsed: 14.573532819747925,
+Split: train, epoch: 286, metrics: accuracy: 0.993 ; iou: 0.965 ; dice: 0.849 ; sensitivity: 0.980 ; auroc: 1.000
+Split: val, epoch: 286, metrics: accuracy: 0.788 ; iou: 0.195 ; dice: 0.241 ; sensitivity: 0.264 ; auroc: 0.871
+Finish iter: 0, loss 0.01928824931383133
+Finish iter: 20, loss 0.02186170592904091
+Finish iter: 40, loss 0.01653262972831726
+Training epoch: 287, loss: 0.01708417944610119, time elapsed: 14.568543195724487,
+Split: train, epoch: 287, metrics: accuracy: 0.993 ; iou: 0.966 ; dice: 0.849 ; sensitivity: 0.980 ; auroc: 1.000
+Split: val, epoch: 287, metrics: accuracy: 0.789 ; iou: 0.194 ; dice: 0.237 ; sensitivity: 0.262 ; auroc: 0.875
+Finish iter: 0, loss 0.01587025448679924
+Finish iter: 20, loss 0.01427408866584301
+Finish iter: 40, loss 0.01917683705687523
+Training epoch: 288, loss: 0.026886047795414925, time elapsed: 14.560259819030762,
+Split: train, epoch: 288, metrics: accuracy: 0.993 ; iou: 0.965 ; dice: 0.856 ; sensitivity: 0.987 ; auroc: 1.000
+Split: val, epoch: 288, metrics: accuracy: 0.785 ; iou: 0.198 ; dice: 0.246 ; sensitivity: 0.273 ; auroc: 0.878
+Finish iter: 0, loss 0.01802157424390316
+Finish iter: 20, loss 0.020129360258579254
+Finish iter: 40, loss 0.02020903304219246
+Training epoch: 289, loss: 0.02570275403559208, time elapsed: 14.599191427230835,
+Split: train, epoch: 289, metrics: accuracy: 0.993 ; iou: 0.965 ; dice: 0.838 ; sensitivity: 0.980 ; auroc: 1.000
+Split: val, epoch: 289, metrics: accuracy: 0.788 ; iou: 0.194 ; dice: 0.239 ; sensitivity: 0.263 ; auroc: 0.868
+Finish iter: 0, loss 0.020041506737470627
+Finish iter: 20, loss 0.017928343266248703
+Finish iter: 40, loss 0.023637643083930016
+Training epoch: 290, loss: 0.028786364942789078, time elapsed: 14.60442328453064,
+Split: train, epoch: 290, metrics: accuracy: 0.993 ; iou: 0.965 ; dice: 0.846 ; sensitivity: 0.983 ; auroc: 1.000
+Split: val, epoch: 290, metrics: accuracy: 0.787 ; iou: 0.196 ; dice: 0.247 ; sensitivity: 0.268 ; auroc: 0.874
+Finish iter: 0, loss 0.01614958792924881
+Finish iter: 20, loss 0.017449039965867996
+Finish iter: 40, loss 0.018087293952703476
+Training epoch: 291, loss: 0.01806199550628662, time elapsed: 14.644189357757568,
+slurmstepd-gpu20-10: error: *** JOB 4176448 ON gpu20-10 CANCELLED AT 2021-03-31T10:43:25 ***
