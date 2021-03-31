@@ -26,22 +26,24 @@ CITYSCAPES_DATASET_PATH=/HPS/Navami/work/code/nnti/R2U-Net/cityscapes/
 export CITYSCAPES_DATASET=$CITYSCAPES_DATASET_PATH
 python /HPS/Navami/work/code/nnti/cityscapesScripts/cityscapesscripts/preparation/createTrainIdLabelImgs.py
 ```
+Download resnet pretraineed model from https://download.pytorch.org/models/resnet50-19c8e357.pth and update corresponding path in resnet.py
 
 ## Train and Test
 
 For task 1, run Vision_task_1.ipynb jupyter notebook
 
 For tasks 2 and 3, 
-
+```
 python main.py /path/to/expt/logdir
-
+```
 
 ## Test
 
-For tasks 2 and 3, 
+For tasks 2 and 3, download model from Microsoft Teams
 
+```
 python eval.py /path/to/expt/logdir {model_name}.tar
-
+```
 
 
 
